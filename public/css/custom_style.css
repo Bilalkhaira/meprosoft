@@ -1,0 +1,16 @@
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.dropdown-mega{
+    padding-top: 5px;
+}
+
+.dropdown-item {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 700;
+}
