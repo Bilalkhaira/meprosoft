@@ -167,6 +167,7 @@ enhance value from their SAP investments.</p>
         </div>
         <!--/.card -->
         <div class="row gx-md-8 gx-xl-10">
+            
             <div class="col-lg-6">
                 <div class="card bg-soft-leaf mb-10">
                     <div class="card-body p-12 pb-0">
