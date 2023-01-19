@@ -138,8 +138,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown dropdown-mega">
-                            <a class="nav-link" href="#">CONTACT US</a>
-
+                            <a class="nav-link" href="{{ route('contactUs') }}">CONTACT US</a>
                         </li>
 
                         </ul>

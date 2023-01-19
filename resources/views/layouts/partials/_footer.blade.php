@@ -1,72 +1,77 @@
-<footer>
-    <div class="container pt-14 pt-md-18 pb-7">
-      <div class="card bg-soft-primary mb-8">
-        <div class="card-body p-12">
-          <div class="row gx-md-8 gx-xl-12 gy-10">
-            <div class="col-lg-6">
-              <img src="{{ asset('img/icons/lineal/email.svg') }}" class="svg-inject icon-svg icon-svg-sm mb-4" alt="" />
-              <h2 class="display-4 mb-3 pe-lg-10">If you like what you see, let's work together.</h2>
-              <p class="lead pe-lg-12 mb-0">I bring rapid solutions to make the life of my clients easier. Have any questions? Reach out to me from this contact form and I will get back to you shortly.</p>
-            </div>
-            <!-- /column -->
-            <div class="col-lg-6">
-              <form class="contact-form needs-validation" method="post" action="./assets/php/contact.php" novalidate>
-                <div class="messages"></div>
-                <div class="row gx-4">
-                  <div class="col-md-6">
-                    <div class="form-floating mb-4">
-                      <input id="form_name" type="text" name="name" class="form-control border-0" placeholder="Jane" required="required" data-error="First Name is required.">
-                      <label for="form_name">Name *</label>
-                      <div class="valid-feedback"> Looks good! </div>
-                      <div class="invalid-feedback"> Please enter your name. </div>
-                    </div>
-                  </div>
-                  <!-- /column -->
-                  <div class="col-md-6">
-                    <div class="form-floating mb-4">
-                      <input id="form_email" type="email" name="email" class="form-control border-0" placeholder="jane.doe@example.com" required="required" data-error="Valid email is required.">
-                      <label for="form_email">Email *</label>
-                      <div class="valid-feedback"> Looks good! </div>
-                      <div class="invalid-feedback"> Please provide a valid email address. </div>
-                    </div>
-                  </div>
-                  <!-- /column -->
-                  <div class="col-12">
-                    <div class="form-floating mb-4">
-                      <textarea id="form_message" name="message" class="form-control border-0" placeholder="Your message" style="height: 150px" required></textarea>
-                      <label for="form_message">Message *</label>
-                      <div class="valid-feedback"> Looks good! </div>
-                      <div class="invalid-feedback"> Please enter your messsage. </div>
-                    </div>
-                  </div>
-                  <!-- /column -->
-                  <div class="col-12">
-                    <input type="submit" class="btn btn-outline-primary rounded-pill btn-send mb-3" value="Send message">
-                  </div>
-                  <!-- /column -->
-                </div>
-                <!-- /.row -->
-              </form>
-              <!-- /form -->
-            </div>
-            <!-- /column -->
+<footer class="bg-dark text-inverse">
+    <div class="container py-13 py-md-15">
+      <div class="row gy-6 gy-lg-0">
+        <div class="col-md-4 col-lg-3">
+          <div class="widget">
+            <img class="mb-4" src="./assets/img/logo-light.png" srcset="./assets/img/logo-light@2x.png 2x" alt="" />
+            <p class="mb-4">© 2022 Sandbox. <br class="d-none d-lg-block" />All rights reserved.</p>
+            <nav class="nav social social-white">
+              <a href="#"><i class="uil uil-twitter"></i></a>
+              <a href="#"><i class="uil uil-facebook-f"></i></a>
+              <a href="#"><i class="uil uil-dribbble"></i></a>
+              <a href="#"><i class="uil uil-instagram"></i></a>
+              <a href="#"><i class="uil uil-youtube"></i></a>
+            </nav>
+            <!-- /.social -->
           </div>
-          <!-- /.row -->
+          <!-- /.widget -->
         </div>
-        <!--/.card-body -->
+        <!-- /column -->
+        <div class="col-md-4 col-lg-3">
+          <div class="widget">
+            <h4 class="widget-title text-white mb-3">Get in Touch</h4>
+            <address class="pe-xl-15 pe-xxl-17">Moonshine St. 14/05 Light City, London, United Kingdom</address>
+            <a href="mailto:#">info@email.com</a><br /> 00 (123) 456 78 90
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+        <div class="col-md-4 col-lg-3">
+          <div class="widget">
+            <h4 class="widget-title text-white mb-3">Learn More</h4>
+            <ul class="list-unstyled  mb-0">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+        <div class="col-md-12 col-lg-3">
+          <div class="widget">
+            <h4 class="widget-title text-white mb-3">Our Newsletter</h4>
+            <p class="mb-5">Subscribe to our newsletter to get our news & deals delivered to you.</p>
+            <div class="newsletter-wrapper">
+              <!-- Begin Mailchimp Signup Form -->
+              <div id="mc_embed_signup2">
+                <form action="https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a" method="post" id="mc-embedded-subscribe-form2" name="mc-embedded-subscribe-form" class="validate dark-fields" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll2">
+                    <div class="mc-field-group input-group form-floating">
+                      <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email Address" id="mce-EMAIL2">
+                      <label for="mce-EMAIL2">Email Address</label>
+                      <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2" class="btn btn-primary ">
+                    </div>
+                    <div id="mce-responses2" class="clear">
+                      <div class="response" id="mce-error-response2" style="display:none"></div>
+                      <div class="response" id="mce-success-response2" style="display:none"></div>
+                    </div> <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ddc180777a163e0f9f66ee014_4b1bcfa0bc" tabindex="-1" value=""></div>
+                    <div class="clear"></div>
+                  </div>
+                </form>
+              </div>
+              <!--End mc_embed_signup-->
+            </div>
+            <!-- /.newsletter-wrapper -->
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
       </div>
-      <!--/.card -->
-      <div class="d-md-flex align-items-center justify-content-between">
-        <p class="mb-2 mb-lg-0">© 2022 Sandbox. All rights reserved.</p>
-        <nav class="nav social social-muted mb-0 text-md-end">
-          <a href="#"><i class="uil uil-twitter"></i></a>
-          <a href="#"><i class="uil uil-facebook-f"></i></a>
-          <a href="#"><i class="uil uil-dribbble"></i></a>
-          <a href="#"><i class="uil uil-instagram"></i></a>
-          <a href="#"><i class="uil uil-youtube"></i></a>
-        </nav>
-        <!-- /.social -->
-      </div>
+      <!--/.row -->
     </div>
     <!-- /.container -->
   </footer>
