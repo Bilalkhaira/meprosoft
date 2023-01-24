@@ -1,6 +1,4 @@
-@extends('layouts.master')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <section class="wrapper bg-dark text-white">
     <div class="container pt-18 pt-md-20 pb-21 pb-md-21 text-center">
         <div class="row">
@@ -23,7 +21,7 @@
                 <div class="card shadow-lg">
                     <div class="row gx-0">
                         <div class="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-lg-start d-none d-md-block"
-                            data-image-src="{{ asset('img/photos/tm1.jpg') }}">
+                            data-image-src="<?php echo e(asset('img/photos/tm1.jpg')); ?>">
                         </div>
                         <!--/column -->
                         <div class="col-lg-6">
@@ -51,9 +49,9 @@
             <div class="col-xl-10 mx-auto">
                 <div class="row gy-10 gx-lg-8 gx-xl-12">
                     <div class="col-lg-12">
-                        <form class="contact-form needs-validation" method="POST" action="{{ route('saveMsg') }}"
+                        <form class="contact-form needs-validation" method="POST" action="<?php echo e(route('saveMsg')); ?>"
                             novalidate>
-                            @csrf
+                            <?php echo csrf_field(); ?>
                             <div class="messages"></div>
                             <div class="row gx-4">
                                 <div class="col-md-6">
@@ -196,6 +194,13 @@
                             </div>
                         </div>
                         <div class="d-flex flex-row">
+                            <!-- <div>
+                    <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i> </div>
+                  </div> -->
+                            <!-- <div>
+                    <h5 class="mb-1">Phone</h5>
+                    <p>00 (123) 456 78 90 <br />00 (987) 654 32 10</p>
+                  </div> -->
                         </div>
                         <div class="d-flex flex-row">
                             <div>
@@ -255,116 +260,134 @@
                 <hr>
                 <div class="row gy-10 gx-lg-8 gx-xl-12">
 
-                    <!--/column -->
-                    <div class="col-lg-4">
-                        <div>
-                            <h3>US
-                            </h3>
-                        </div>
-                        <div class="d-flex flex-row">
+<!--/column -->
+<div class="col-lg-4">
+    <div>
+        <h3>US
+</h3>
+    </div>
+    <div class="d-flex flex-row">
 
-                            <div>
-                                <div class="icon text-primary fs-28 me-4 mt-n1"> <i
-                                        class="uil uil-location-pin-alt"></i> </div>
-                            </div>
-                            <div>
-                                <h5 class="mb-1">Address</h5>
-                                <address>
-                                    Mesprosoft LLC
+        <div>
+            <div class="icon text-primary fs-28 me-4 mt-n1"> <i
+                    class="uil uil-location-pin-alt"></i> </div>
+        </div>
+        <div>
+        <h5 class="mb-1">Address</h5>
+        <address>
+            Mesprosoft LLC
+            
+2433 FM Road 1092,
+Missouri City,
+Texas – 77459
+United States.</address>
+        </div>
+    </div>
+    <div class="d-flex flex-row">
+        <div>
+            <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i>
+            </div>
+        </div>
+        <div>
+            <h5 class="mb-1">Phone</h5>
+            <p>+1 214 281 8859,<br>
++1 248 613 2392</p>
+        </div>
+    </div>
+    <div class="d-flex flex-row">
+        <div>
+            <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-envelope"></i> </div>
+        </div>
+        <div>
+            <h5 class="mb-1">E-mail</h5>
+            <p class="mb-0"><a href="mailto:sandbox@email.com"
+                    class="link-body">sales.us@mesprosoft.com</a></p>
+            <p><a href="mailto:help@sandbox.com" class="link-body">info.us@mesprosoft.com</a></p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4">
+    <div>
+        <h3>Qatar</h3>
+    </div>
+    <div class="d-flex flex-row">
 
-                                    2433 FM Road 1092,
-                                    Missouri City,
-                                    Texas – 77459
-                                    United States.</address>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div>
-                                <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h5 class="mb-1">Phone</h5>
-                                <p>+1 214 281 8859,<br>
-                                    +1 248 613 2392</p>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div>
-                                <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-envelope"></i> </div>
-                            </div>
-                            <div>
-                                <h5 class="mb-1">E-mail</h5>
-                                <p class="mb-0"><a href="mailto:sandbox@email.com"
-                                        class="link-body">sales.us@mesprosoft.com</a></p>
-                                <p><a href="mailto:help@sandbox.com" class="link-body">info.us@mesprosoft.com</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div>
-                            <h3>Qatar</h3>
-                        </div>
-                        <div class="d-flex flex-row">
-
-                            <div>
-                                <div class="icon text-primary fs-28 me-4 mt-n1"> <i
-                                        class="uil uil-location-pin-alt"></i> </div>
-                            </div>
-                            <div>
-                                <h5 class="mb-1">Address</h5>
-                                <address>Mesprosoft Qatar WLL
-                                    No. 21, 6th Floor,
-                                    Doha Administration Tower,
-                                    Grand Hamad Avenue,
-                                    Bank Street, Doha,
-                                    Qatar.</address>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div>
-                                <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <h5 class="mb-1">Phone</h5>
-                                <p>+ 974 77438545</p>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div>
-                                <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-envelope"></i> </div>
-                            </div>
-                            <div>
-                                <h5 class="mb-1">E-mail</h5>
-                                <p class="mb-0"><a href="mailto:sales@mesprosoft.com"
-                                        class="link-body">sales.qatar@mesprosoft.com</a></p>
-                                <p><a href="mailto:info@mesprosoft.com" class="link-body">info.qatar@mesprosoft.com</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div>
-                            <h3>Registered Office</h3>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <div>
-                                <div class="icon text-primary fs-28 me-4 mt-n1"> <i
-                                        class="uil uil-location-pin-alt"></i> </div>
-                            </div>
-                            <div>
-                                <h5 class="mb-1">Address</h5>
-                                <address>Mesprosoft Pvt. Ltd.
-                                    Anandhashram PO
-                                    Kasaragod dist,
-                                    Kerala, 671531</address>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--/column -->
-                </div>
+        <div>
+            <div class="icon text-primary fs-28 me-4 mt-n1"> <i
+                    class="uil uil-location-pin-alt"></i> </div>
+        </div>
+        <div>
+        <h5 class="mb-1">Address</h5>
+            <address>Mesprosoft Qatar WLL
+No. 21, 6th Floor,
+Doha Administration Tower,
+Grand Hamad Avenue,
+Bank Street, Doha,
+Qatar.</address>
+        </div>
+    </div>
+    <div class="d-flex flex-row">
+        <div>
+<div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i> </div>
+</div>
+        <div>
+<h5 class="mb-1">Phone</h5>
+<p>+ 974 77438545</p>
+</div>
+    </div>
+    <div class="d-flex flex-row">
+        <div>
+            <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-envelope"></i> </div>
+        </div>
+        <div>
+            <h5 class="mb-1">E-mail</h5>
+            <p class="mb-0"><a href="mailto:sales@mesprosoft.com"
+                    class="link-body">sales.qatar@mesprosoft.com</a></p>
+            <p><a href="mailto:info@mesprosoft.com" class="link-body">info.qatar@mesprosoft.com</a></p>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4">
+    <div>
+        <h3>Registered Office</h3>
+    </div>
+    <div class="d-flex flex-row">
+        <div>
+            <div class="icon text-primary fs-28 me-4 mt-n1"> <i
+                    class="uil uil-location-pin-alt"></i> </div>
+        </div>
+        <div>
+        <h5 class="mb-1">Address</h5>
+            <address>Mesprosoft Pvt. Ltd.
+Anandhashram PO
+Kasaragod dist,
+Kerala, 671531</address>
+        </div>
+    </div>
+    <!-- <div class="d-flex flex-row">
+        <div>
+            <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i>
+            </div>
+        </div>
+        <div>
+            <h5 class="mb-1">Phone</h5>
+            <p>+91 20-24444409</p>
+        </div>
+    </div>
+    <div class="d-flex flex-row">
+        <div>
+            <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-envelope"></i> </div>
+        </div>
+        <div>
+            <h5 class="mb-1">E-mail</h5>
+            <p class="mb-0"><a href="mailto:sales@mesprosoft.com"
+                    class="link-body">sales@mesprosoft.com</a></p>
+            <p><a href="mailto:info@mesprosoft.com" class="link-body">info@mesprosoft.com</a></p>
+        </div>
+    </div> -->
+</div>
+<!--/column -->
+</div>
             </div>
             <!-- /column -->
         </div>
@@ -382,4 +405,5 @@
     </div>
     <!-- /.map -->
 </section>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/zubairmohsin/code/sites/meprosoft/resources/views/pages/contactUs.blade.php ENDPATH**/ ?>

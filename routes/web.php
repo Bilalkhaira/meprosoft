@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\HomeController;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\ContactusController;
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\NotificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,13 +38,23 @@ Route::get('/migrate', function () {
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Auth::routes();
 
 Route::get('contactUs', function () {
     return view('pages.contactUs');
 })->name('contactUs');
+
+Route::get('about', function () {
+    return view('pages.about');
+})->name('about');
+
+Route::get('applicationMigrationConversion', function () {
+    return view('pages.services.applicationMigrationConversion');
+})->name('applicationMigrationConversion');
+
+Route::post('saveMsg', [ContactusController::class, 'save'])->name('saveMsg');
 
 
 
@@ -57,5 +69,11 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/dashboard', [HomeController::class, 'index']);
 
-
 });
+
+
+// Notification Routes
+// Route::get('/allNotifiMarkAsRead', [NotificationController::class, 'allNotifiMarkAsRead'])->name('allNotifiMarkAsRead');
+// Route::post('/notifiMarkAsRead', [NotificationController::class, 'notifiMarkAsRead'])->name('notifiMarkAsRead');
+// Route::post('/deleteNotification', [NotificationController::class, 'deleteNotification'])->name('deleteNotification');
+// Route::get('/deleteAllNotification', [NotificationController::class, 'deleteAllNotification'])->name('deleteAllNotification');

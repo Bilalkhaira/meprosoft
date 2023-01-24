@@ -14,3 +14,9 @@
     font-size: 12px;
     font-weight: 700;
 }
+
+.brand_img img{
+    /* width: 100% !important; 
+    max-width: 129% !important;
+    height: auto!important; */
+}

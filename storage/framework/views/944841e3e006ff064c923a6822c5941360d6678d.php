@@ -2,8 +2,8 @@
     <nav class="navbar navbar-expand-lg classic transparent navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
             <div class="navbar-brand w-100">
-                <a href="{{ route('home') }}">
-                    <img src="{{ asset('img/logo-dark.png') }}" srcset="{{ asset('img/logo-dark@2x.png 2x') }}"
+                <a href="<?php echo e(route('home')); ?>">
+                    <img src="<?php echo e(asset('img/logo-dark.png')); ?>" srcset="<?php echo e(asset('img/logo-dark@2x.png 2x')); ?>"
                         alt="" />
                 </a>
             </div>
@@ -21,7 +21,7 @@
                                 <li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle"
                                         href="#" data-bs-toggle="dropdown">Corporate Overview</a>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item"><a class="dropdown-item" href="{{ route('about') }}">About
+                                        <li class="nav-item"><a class="dropdown-item" href="<?php echo e(route('about')); ?>">About
                                                 Mesprosoft</a></li>
                                         <li class="nav-item"><a class="dropdown-item" href="./services2.html">Management
                                                 Team</a>
@@ -41,7 +41,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Our Services</a>
                         <ul class="dropdown-menu">
-                            <li class="nav-item"><a class="dropdown-item" href="{{ route('applicationMigrationConversion') }}">APPLICATION MIGRATION & CONVERSION</a></li>
+                            <li class="nav-item"><a class="dropdown-item" href="<?php echo e(route('applicationMigrationConversion')); ?>">APPLICATION MIGRATION & CONVERSION</a></li>
                             <li class="nav-item"><a class="dropdown-item" href="./onepage.html">ENTERPRISE SOLUTION CONSULTING</a></li>
                             <li class="nav-item"><a class="dropdown-item" href="./onepage.html">GST Migration</a></li>
                             <li class="nav-item"><a class="dropdown-item" href="./onepage.html">IPO COMPLIANCE</a></li>
@@ -126,7 +126,7 @@
                         </ul>
                     </li> -->
                     <li class="nav-item dropdown dropdown-mega">
-                        <a class="nav-link" href="{{ route('contactUs') }}">CONTACT US</a>
+                        <a class="nav-link" href="<?php echo e(route('contactUs')); ?>">CONTACT US</a>
                     </li>
 
                     </ul>
@@ -267,4 +267,4 @@
         <!-- /.container -->
     </div>
     <!-- /.offcanvas -->
-</header>
+</header><?php /**PATH /Users/zubairmohsin/code/sites/meprosoft/resources/views/layouts/partials/_header.blade.php ENDPATH**/ ?>

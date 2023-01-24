@@ -13,11 +13,11 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
-    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
-    <link rel="stylesheet" href="{{ asset('css/plugins.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/aqua.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/dm.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/custom_style.css') }}" />
-    @yield('css')
-</head>
+    <link rel="shortcut icon" href="<?php echo e(asset('img/favicon.png')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('css/plugins.css')); ?>" />
+    <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>" />
+    <link rel="stylesheet" href="<?php echo e(asset('css/aqua.css')); ?>" />
+    <link rel="stylesheet" href="<?php echo e(asset('css/dm.css')); ?>" />
+    <link rel="stylesheet" href="<?php echo e(asset('css/custom_style.css')); ?>" />
+    <?php echo $__env->yieldContent('css'); ?>
+</head><?php /**PATH /Users/zubairmohsin/code/sites/meprosoft/resources/views/layouts/partials/_head.blade.php ENDPATH**/ ?>

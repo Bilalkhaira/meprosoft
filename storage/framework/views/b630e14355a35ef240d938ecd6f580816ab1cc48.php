@@ -1,6 +1,4 @@
-@extends('layouts.master')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <section class="wrapper bg-light">
     <div class="container">
@@ -8,8 +6,8 @@
             <div class="card-body p-md-10 py-xl-11 px-xl-15">
                 <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-center">
                     <div class="col-lg-6 order-lg-2 d-flex position-relative">
-                        <img class="img-fluid ms-auto mx-auto me-lg-8" src="{{ asset('img/photos/co3.png') }}"
-                            srcset="{{ asset('img/photos/co3@2x.png 2x') }}" alt="" data-cue="fadeIn">
+                        <img class="img-fluid ms-auto mx-auto me-lg-8" src="<?php echo e(asset('img/photos/co3.png')); ?>"
+                            srcset="<?php echo e(asset('img/photos/co3@2x.png 2x')); ?>" alt="" data-cue="fadeIn">
                         <div data-cue="slideInRight" data-delay="300">
                             <div class="card shadow-lg position-absolute" style="bottom: 10%; right: -3%;">
                                 <div class="card-body py-4 px-5">
@@ -61,42 +59,42 @@ enhance value from their SAP investments.</p>
             <div class="col-lg-8">
                 <div class="row row-cols-2 row-cols-md-4 gx-0 gx-md-8 gx-xl-12 gy-11 mt-n10 brand_img">
                     <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c10.png') }}" alt="" />
+                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="<?php echo e(asset('img/brands/c10.png')); ?>" alt="" />
                         </figure>
                     </div>
                     <!--/column -->
                     <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c2.png') }}" alt="" />
+                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="<?php echo e(asset('img/brands/c2.png')); ?>" alt="" />
                         </figure>
                     </div>
                     <!--/column -->
                     <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c3.png') }}" alt="" />
+                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="<?php echo e(asset('img/brands/c3.png')); ?>" alt="" />
                         </figure>
                     </div>
                     <!--/column -->
                     <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c4.png') }}" alt="" />
+                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="<?php echo e(asset('img/brands/c4.png')); ?>" alt="" />
                         </figure>
                     </div>
                     <!--/column -->
                     <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c5.png') }}" alt="" />
+                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="<?php echo e(asset('img/brands/c5.png')); ?>" alt="" />
                         </figure>
                     </div>
                     <!--/column -->
                     <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c6.png') }}" alt="" />
+                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="<?php echo e(asset('img/brands/c6.png')); ?>" alt="" />
                         </figure>
                     </div>
                     <!--/column -->
                     <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c7.png') }}" alt="" />
+                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="<?php echo e(asset('img/brands/c7.png')); ?>" alt="" />
                         </figure>
                     </div>
                     <!--/column -->
                     <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c8.png') }}" alt="" />
+                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="<?php echo e(asset('img/brands/c8.png')); ?>" alt="" />
                         </figure>
                     </div>
                     <!--/column -->
@@ -110,8 +108,8 @@ enhance value from their SAP investments.</p>
             <div class="col-md-8 col-lg-6 position-relative">
                 <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1"
                     style="top: -2rem; left: -1.9rem;"></div>
-                <figure class="rounded"><img src="{{ asset('img/photos/about10.jpg') }}"
-                        srcset="{{ asset('img/photos/about10@2x.jpg 2x') }}" alt=""></figure>
+                <figure class="rounded"><img src="<?php echo e(asset('img/photos/about10.jpg')); ?>"
+                        srcset="<?php echo e(asset('img/photos/about10@2x.jpg 2x')); ?>" alt=""></figure>
             </div>
             <!--/column -->
             <div class="col-lg-6">
@@ -124,7 +122,7 @@ enhance value from their SAP investments.</p>
                     <div class="col-md-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/target.svg') }}"
+                                <img src="<?php echo e(asset('img/icons/lineal/target.svg')); ?>"
                                     class="svg-inject icon-svg icon-svg-sm me-4" alt="" />
                             </div>
                             <div>
@@ -137,7 +135,7 @@ enhance value from their SAP investments.</p>
                     <div class="col-md-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/award-2.svg') }}"
+                                <img src="<?php echo e(asset('img/icons/lineal/award-2.svg')); ?>"
                                     class="svg-inject icon-svg icon-svg-sm me-4" alt="" />
                             </div>
                             <div>
@@ -157,8 +155,8 @@ enhance value from their SAP investments.</p>
             <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
                 <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1"
                     style="top: -2rem; right: -1.9rem;"></div>
-                <figure class="rounded"><img src="{{ asset('img/photos/about11.jpg') }}"
-                        srcset="{{ asset('img/photos/about11@2x.jpg 2x') }}" alt=""></figure>
+                <figure class="rounded"><img src="<?php echo e(asset('img/photos/about11.jpg')); ?>"
+                        srcset="<?php echo e(asset('img/photos/about11@2x.jpg 2x')); ?>" alt=""></figure>
             </div>
             <!--/column -->
             <div class="col-lg-6">
@@ -169,7 +167,7 @@ enhance value from their SAP investments.</p>
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/megaphone.svg') }}"
+                                <img src="<?php echo e(asset('img/icons/lineal/megaphone.svg')); ?>"
                                     class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
@@ -182,7 +180,7 @@ enhance value from their SAP investments.</p>
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/target.svg') }}"
+                                <img src="<?php echo e(asset('img/icons/lineal/target.svg')); ?>"
                                     class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
@@ -195,7 +193,7 @@ enhance value from their SAP investments.</p>
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/settings-3.svg') }}"
+                                <img src="<?php echo e(asset('img/icons/lineal/settings-3.svg')); ?>"
                                     class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
@@ -208,7 +206,7 @@ enhance value from their SAP investments.</p>
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/bar-chart.svg') }}"
+                                <img src="<?php echo e(asset('img/icons/lineal/bar-chart.svg')); ?>"
                                     class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
@@ -228,7 +226,7 @@ enhance value from their SAP investments.</p>
             <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
                 <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1"
                     style="top: -2rem; right: -1.9rem;"></div>
-                <figure class="rounded"><img src="{{ asset('img/mesprosoft_products.png') }}" alt=""></figure>
+                <figure class="rounded"><img src="<?php echo e(asset('img/mesprosoft_products.png')); ?>" alt=""></figure>
             </div>
             <!--/column -->
             <div class="col-lg-6">
@@ -239,7 +237,7 @@ enhance value from their SAP investments.</p>
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/megaphone.svg') }}"
+                                <img src="<?php echo e(asset('img/icons/lineal/megaphone.svg')); ?>"
                                     class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
@@ -252,7 +250,7 @@ enhance value from their SAP investments.</p>
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/target.svg') }}"
+                                <img src="<?php echo e(asset('img/icons/lineal/target.svg')); ?>"
                                     class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
@@ -265,7 +263,7 @@ enhance value from their SAP investments.</p>
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/settings-3.svg') }}"
+                                <img src="<?php echo e(asset('img/icons/lineal/settings-3.svg')); ?>"
                                     class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
@@ -278,7 +276,7 @@ enhance value from their SAP investments.</p>
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/bar-chart.svg') }}"
+                                <img src="<?php echo e(asset('img/icons/lineal/bar-chart.svg')); ?>"
                                     class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
@@ -297,8 +295,8 @@ enhance value from their SAP investments.</p>
         <div class="card bg-soft-primary rounded-4 mb-14 mb-md-18">
             <div class="card-body p-md-10 py-xxl-16 position-relative">
                 <div class="position-absolute d-none d-lg-block" style="bottom:0; left:10%; width: 28%; z-index:2">
-                    <figure><img src="{{ asset('img/photos/co2.png') }}"
-                            srcset="{{ asset('img/photos/co2@2x.png 2x') }}" alt=""></figure>
+                    <figure><img src="<?php echo e(asset('img/photos/co2.png')); ?>"
+                            srcset="<?php echo e(asset('img/photos/co2@2x.png 2x')); ?>" alt=""></figure>
                 </div>
                 <div class="row gx-md-0 gx-xl-12 text-center">
                     <div class="col-lg-7 offset-lg-5 col-xl-6">
@@ -333,21 +331,21 @@ enhance value from their SAP investments.</p>
             <div class="col-lg-8 mt-lg-2">
                 <div class="row align-items-center counter-wrapper gy-6 text-center">
                     <div class="col-md-4">
-                        <img src="{{ asset('img/icons/lineal/check.svg') }}"
+                        <img src="<?php echo e(asset('img/icons/lineal/check.svg')); ?>"
                             class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
                         <h3 class="counter">7518</h3>
                         <p>Completed Projects</p>
                     </div>
                     <!--/column -->
                     <div class="col-md-4">
-                        <img src="{{ asset('img/icons/lineal/user.svg') }}"
+                        <img src="<?php echo e(asset('img/icons/lineal/user.svg')); ?>"
                             class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
                         <h3 class="counter">3472</h3>
                         <p>Happy Customers</p>
                     </div>
                     <!--/column -->
                     <div class="col-md-4">
-                        <img src="{{ asset('img/icons/lineal/briefcase-2.svg') }}"
+                        <img src="<?php echo e(asset('img/icons/lineal/briefcase-2.svg')); ?>"
                             class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
                         <h3 class="counter">2184</h3>
                         <p>Expert Employees</p>
@@ -365,8 +363,8 @@ enhance value from their SAP investments.</p>
                     <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0"
                         style="bottom: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0"></div>
                     <div class="card shadow-lg">
-                        <figure class="card-img-top"><img class="img-fluid" src="{{ asset('img/avatars/t1.jpg') }}"
-                                srcset="{{ asset('img/avatars/t1@2x.jpg 2x') }}" alt="" /></figure>
+                        <figure class="card-img-top"><img class="img-fluid" src="<?php echo e(asset('img/avatars/t1.jpg')); ?>"
+                                srcset="<?php echo e(asset('img/avatars/t1@2x.jpg 2x')); ?>" alt="" /></figure>
                         <div class="card-body px-6 py-5">
                             <h4 class="mb-1">Coriss Ambady</h4>
                             <p class="mb-0">Financial Analyst</p>
@@ -383,8 +381,8 @@ enhance value from their SAP investments.</p>
                     <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0"
                         style="bottom: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0"></div>
                     <div class="card shadow-lg">
-                        <figure class="card-img-top"><img class="img-fluid" src="{{ asset('img/avatars/t2.jpg') }}"
-                                srcset="{{ asset('img/avatars/t2@2x.jpg 2x') }}" alt="" /></figure>
+                        <figure class="card-img-top"><img class="img-fluid" src="<?php echo e(asset('img/avatars/t2.jpg')); ?>"
+                                srcset="<?php echo e(asset('img/avatars/t2@2x.jpg 2x')); ?>" alt="" /></figure>
                         <div class="card-body px-6 py-5">
                             <h4 class="mb-1">Cory Zamora</h4>
                             <p class="mb-0">Marketing Specialist</p>
@@ -401,8 +399,8 @@ enhance value from their SAP investments.</p>
                     <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0"
                         style="bottom: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0"></div>
                     <div class="card shadow-lg">
-                        <figure class="card-img-top"><img class="img-fluid" src="{{ asset('img/avatars/t3.jpg') }}"
-                                srcset="{{ asset('img/avatars/t3@2x.jpg 2x') }}" alt="" /></figure>
+                        <figure class="card-img-top"><img class="img-fluid" src="<?php echo e(asset('img/avatars/t3.jpg')); ?>"
+                                srcset="<?php echo e(asset('img/avatars/t3@2x.jpg 2x')); ?>" alt="" /></figure>
                         <div class="card-body px-6 py-5">
                             <h4 class="mb-1">Nikolas Brooten</h4>
                             <p class="mb-0">Sales Manager</p>
@@ -419,8 +417,8 @@ enhance value from their SAP investments.</p>
                     <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0"
                         style="bottom: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0"></div>
                     <div class="card shadow-lg">
-                        <figure class="card-img-top"><img class="img-fluid" src="{{ asset('img/avatars/t4.jpg') }}"
-                                srcset="{{ asset('img/avatars/t4@2x.jpg 2x') }}" alt="" /></figure>
+                        <figure class="card-img-top"><img class="img-fluid" src="<?php echo e(asset('img/avatars/t4.jpg')); ?>"
+                                srcset="<?php echo e(asset('img/avatars/t4@2x.jpg 2x')); ?>" alt="" /></figure>
                         <div class="card-body px-6 py-5">
                             <h4 class="mb-1">Jackie Sanders</h4>
                             <p class="mb-0">Investment Planner</p>
@@ -442,8 +440,8 @@ enhance value from their SAP investments.</p>
                         class="icn-caret-right"></i></a>
                 <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0"
                     style="bottom: -1.8rem; right: -1.5rem; width: 85%; height: 90%; "></div>
-                <figure class="rounded"><img src="{{ asset('img/photos/about12.jpg') }}"
-                        srcset="{{ asset('img/photos/about12@2x.jpg 2x') }}" alt=""></figure>
+                <figure class="rounded"><img src="<?php echo e(asset('img/photos/about12.jpg')); ?>"
+                        srcset="<?php echo e(asset('img/photos/about12@2x.jpg 2x')); ?>" alt=""></figure>
             </div>
             <!--/column -->
             <div class="col-lg-5 col-xl-4 offset-lg-1">
@@ -569,4 +567,5 @@ enhance value from their SAP investments.</p>
     <!-- /.container -->
 </section>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/zubairmohsin/code/sites/meprosoft/resources/views/welcome.blade.php ENDPATH**/ ?>
