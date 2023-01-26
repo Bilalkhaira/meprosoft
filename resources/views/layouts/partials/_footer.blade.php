@@ -4,7 +4,7 @@
         <div class="col-md-4 col-lg-3">
           <div class="widget">
             <img class="mb-4" src="./assets/img/logo-light.png" srcset="./assets/img/logo-light@2x.png 2x" alt="" />
-            <p class="mb-4">© 2022 Sandbox. <br class="d-none d-lg-block" />All rights reserved.</p>
+            <p class="mb-4">© 2022 Mesprosoft. <br class="d-none d-lg-block" />All rights reserved.</p>
             <nav class="nav social social-white">
               <a href="#"><i class="uil uil-twitter"></i></a>
               <a href="#"><i class="uil uil-facebook-f"></i></a>
@@ -20,8 +20,11 @@
         <div class="col-md-4 col-lg-3">
           <div class="widget">
             <h4 class="widget-title text-white mb-3">Get in Touch</h4>
-            <address class="pe-xl-15 pe-xxl-17">Moonshine St. 14/05 Light City, London, United Kingdom</address>
-            <a href="mailto:#">info@email.com</a><br /> 00 (123) 456 78 90
+            <address class="pe-xl-15 pe-xxl-17">Mesprosoft Pvt. Ltd.
+#55,Whitefield Main Road,
+Mahadevpura Post
+Bangalore 560048, India</address>
+            <a href="mailto:#">info@mesprosoft.com</a>
           </div>
           <!-- /.widget -->
         </div>
@@ -30,11 +33,11 @@
           <div class="widget">
             <h4 class="widget-title text-white mb-3">Learn More</h4>
             <ul class="list-unstyled  mb-0">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Our Story</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Products and Solutions</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact Us</a></li>
             </ul>
           </div>
           <!-- /.widget -->

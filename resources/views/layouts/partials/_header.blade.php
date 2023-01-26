@@ -3,7 +3,7 @@
         <div class="container flex-lg-row flex-nowrap align-items-center">
             <div class="navbar-brand w-100">
                 <a href="{{ route('home') }}">
-                    <img src="{{ asset('img/logo-dark.png') }}" srcset="{{ asset('img/logo-dark@2x.png 2x') }}"
+                    <img style="width: 230px !important" src="{{ asset('img/logo-dark.png') }}" srcset="{{ asset('img/logo-dark@2x.png 2x') }}"
                         alt="" />
                 </a>
             </div>
@@ -31,7 +31,7 @@
                                         </li>
                                         <li class="nav-item"><a class="dropdown-item" href="./services2.html">Why
                                                 Mesprosoft</a>
-                                        </li>
+                                        </liv>
                                     </ul>
                                 </li>
 
@@ -39,7 +39,7 @@
                     </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Our Services</a>
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
                         <ul class="dropdown-menu">
                             <li class="nav-item"><a class="dropdown-item" href="{{ route('applicationMigrationConversion') }}">APPLICATION MIGRATION & CONVERSION</a></li>
                             <li class="nav-item"><a class="dropdown-item" href="./onepage.html">ENTERPRISE SOLUTION CONSULTING</a></li>
@@ -57,7 +57,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Our Products &
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products &
                             Solutions</a>
                         <div class="dropdown-menu dropdown-lg">
                             <div class="dropdown-lg-content">
@@ -126,7 +126,7 @@
                         </ul>
                     </li> -->
                     <li class="nav-item dropdown dropdown-mega">
-                        <a class="nav-link" href="{{ route('contactUs') }}">CONTACT US</a>
+                        <a class="nav-link" href="{{ route('contactUs') }}">Contact Us</a>
                     </li>
 
                     </ul>
@@ -268,3 +268,4 @@
     </div>
     <!-- /.offcanvas -->
 </header>
+

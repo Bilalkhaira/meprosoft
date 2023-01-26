@@ -2,12 +2,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Meprosoft Dashboard</title>
+    <title>"SAP Partner | S/4 Hana Implementation &amp; Migration | Mesprosoft"</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('css/admin/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('img/favicon.ico') }}" rel="icon">
     <link href="{{ asset('css/admin/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
@@ -29,5 +29,7 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('css/admin/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin/custom_style.css') }}" rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @yield('css')
 </head>

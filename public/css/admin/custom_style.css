@@ -2,3 +2,17 @@
 .login_img{
     max-height: 52px !important;
 }
+
+
+/* Header css */
+#notifi_cross{
+    cursor: pointer;
+    font-size: 15px;
+    float: right;
+}
+.notifi_body:hover {
+    cursor: pointer;
+}
+
+
+

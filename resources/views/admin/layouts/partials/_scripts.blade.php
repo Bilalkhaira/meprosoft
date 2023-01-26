@@ -9,4 +9,5 @@
 
 <!-- Template Main JS File -->
 <script src="{{ asset('js/admin/main.js') }}"></script>
+<script src="{{ asset('js/jquery.js') }}"></script>
 @yield('scripts')

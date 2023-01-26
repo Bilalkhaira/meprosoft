@@ -10,17 +10,7 @@ class ContactusController extends Controller
 {
     public function save(Request $request) 
     {
-        // dd($request->all());
-        // ContactUs::create([
-        //     'first_name' => $request->first_name,
-        //     'last_name' => $request->last_name,
-        //     'email' => $request->email,
-        //     'department' => $request->department,
-        //     'message' => $request->message,
-        // ]);
-
-
-        $user = User::find(1);
+        $user = User::where('email', 'admin@gmail.com')->first();
         $details = [
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,

@@ -73,9 +73,9 @@
           </div>
           <!--/column -->
           <div class="col-lg-5">
-            <h2 class="fs-15 text-uppercase text-muted mb-3">What We Do?</h2>
-            <h3 class="display-4 mb-5">The service we offer is specifically designed to meet your needs.</h3>
-            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+            <!-- <h2 class="fs-15 text-uppercase text-muted mb-3">What We Do?</h2> -->
+            <h3 class="display-4 mb-5">What We Do?</h3>
+            <p>Mesprosoft has designed tailored solutions for industries across verticals. Mesprosoft has leveraged SAP technology and its superior features to build solutions that align perfectly with vertical business requirements. So however distinctive your processes may be, you can now integrate and streamline your business processes with our SAP solutions, and ensure that your operations and business performance are strengthened enough to give you the thrust for sustained growth and become profitable, Mesprosoft offers SAP implementation services & solutions to your strategic and current needs. From SAP enterprise application strategy through to SAP technical implementation, we help clients solve complex business issues by combining broad process and industry knowledge with deep expertise in SAP. Mesprosoft had established COE for various SAP services to augment this.</p>
             <a href="#" class="btn btn-navy rounded-pill mt-3">More Details</a>
           </div>
           <!--/column -->
@@ -135,7 +135,7 @@
       <div class="container py-14 py-md-16">
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-16 align-items-center">
           <div class="col-lg-7">
-            <figure><img class="w-auto" src="{{ asset('img/illustrations/i8.png') }}" srcset="{{ asset('img/illustrations/i8@2x.png 2x') }}" alt="" /></figure>
+            <figure><img style="width: -webkit-fill-available !important;" class="w-auto" src="{{ asset('img/illustrations/i8.png') }}" srcset="{{ asset('img/illustrations/i8@2x.png 2x') }}" alt="" /></figure>
           </div>
           <!--/column -->
           <div class="col-lg-5">
@@ -165,7 +165,7 @@
         <!--/.row -->
         <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
           <div class="col-lg-7 order-lg-2">
-            <figure><img class="w-auto" src="{{ asset('img/illustrations/i7.png') }}" srcset="{{ asset('img/illustrations/i7@2x.png 2x') }}" alt="" /></figure>
+            <figure><img class="w-auto" style="width: -webkit-fill-available !important;" src="{{ asset('img/illustrations/i7.png') }}" srcset="{{ asset('img/illustrations/i7@2x.png 2x') }}" alt="" /></figure>
           </div>
           <!--/column -->
           <div class="col-lg-5">

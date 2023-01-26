@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\ContactusController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\NotificationController;
 
 /*
@@ -22,12 +23,10 @@ Route::get('/clear', function () {
     Artisan::call('cache:clear');
     Artisan::call('config:clear');
     Artisan::call('view:clear');
-    return 'clear done';
-});
-
-Route::get('/cache', function () {
     Artisan::call('config:cache');
-    return 'clear cache';
+    Artisan::call('view:cache');
+    Artisan::call('optimize:clear');
+    return 'clear done';
 });
 
 Route::get('/migrate', function () {
@@ -67,13 +66,18 @@ Route::prefix('admin')->group(function () {
         return view('auth.login');
     })->name('admin');
 
-    Route::get('/dashboard', [HomeController::class, 'index']);
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::post('/updateprofile', [ProfileController::class, 'updateprofile'])->name('updateprofile');
+    Route::get('deleteProfilePhoto', [ProfileController::class, 'deleteProfilePhoto'])->name('delete.profilePhoto');
+    Route::post('passwordReset', [ProfileController::class, 'passwordReset'])->name('reset.password');
 
 });
 
 
 // Notification Routes
-// Route::get('/allNotifiMarkAsRead', [NotificationController::class, 'allNotifiMarkAsRead'])->name('allNotifiMarkAsRead');
-// Route::post('/notifiMarkAsRead', [NotificationController::class, 'notifiMarkAsRead'])->name('notifiMarkAsRead');
-// Route::post('/deleteNotification', [NotificationController::class, 'deleteNotification'])->name('deleteNotification');
-// Route::get('/deleteAllNotification', [NotificationController::class, 'deleteAllNotification'])->name('deleteAllNotification');
+Route::get('/allNotifiMarkAsRead', [NotificationController::class, 'allNotifiMarkAsRead'])->name('allNotifiMarkAsRead');
+Route::post('/notifiMarkAsRead', [NotificationController::class, 'notifiMarkAsRead'])->name('notifiMarkAsRead');
+Route::post('/deleteNotification', [NotificationController::class, 'deleteNotification'])->name('deleteNotification');
+Route::get('/deleteAllNotification', [NotificationController::class, 'deleteAllNotification'])->name('deleteAllNotification');
+Route::get('/notificationDetail/{id}', [NotificationController::class, 'notificationDetail'])->name('notificationDetail');
