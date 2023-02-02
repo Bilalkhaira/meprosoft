@@ -17,4 +17,14 @@ class HomeController extends Controller
     {
         return view('admin.home');
     }
+
+    public function homeSetting()
+    {
+        return view('admin.pages.homeSetting');
+    }
+
+    public function updateSatisfiedSection(Request $request)
+    {
+        dd($request->all());
+    }
 }

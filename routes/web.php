@@ -72,6 +72,12 @@ Route::prefix('admin')->group(function () {
     Route::get('deleteProfilePhoto', [ProfileController::class, 'deleteProfilePhoto'])->name('delete.profilePhoto');
     Route::post('passwordReset', [ProfileController::class, 'passwordReset'])->name('reset.password');
 
+
+    Route::get('homeSetting', [HomeController::class, 'homeSetting'])->name('home.setting');
+    Route::post('updateSatisfiedSection', [HomeController::class, 'updateSatisfiedSection'])->name('update.satisfiedSection');
+
+   
+
 });
 
 

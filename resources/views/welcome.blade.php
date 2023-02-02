@@ -5,45 +5,119 @@
 <section class="wrapper bg-light">
     <div class="container">
         <div class="card bg-soft-primary rounded-4 mt-2 mb-13 mb-md-17">
-            <div class="card-body p-md-10 py-xl-11 px-xl-15">
-                <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-center">
-                    <div class="col-lg-6 order-lg-2 d-flex position-relative">
-                        <img class="img-fluid ms-auto mx-auto me-lg-8" src="{{ asset('img/photos/co3.png') }}"
-                            srcset="{{ asset('img/photos/co3@2x.png 2x') }}" alt="" data-cue="fadeIn">
-                        <div data-cue="slideInRight" data-delay="300">
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+
+                    <div class="item active">
+                        <img src="{{ asset('img/slider/4.png') }}" alt="Los Angeles" style="width:100%;">
+                        <div class="carousel-caption">
+                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="top: -120px !important;">
+                                <h1 class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;">Welcome To Mesprosoft.</h1>
+                                <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p>
+                                <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
+                                    <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-primary rounded-pill me-2">Read More</a></span>
+                                    <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-outline-primary rounded-pill" style="border: 1px solid #367cb7;">Contact Us</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-caption">
                             <div class="card shadow-lg position-absolute" style="bottom: 10%; right: -3%;">
                                 <div class="card-body py-4 px-5">
                                     <div class="d-flex flex-row align-items-center">
                                         <div>
-                                            <div
-                                                class="icon btn btn-circle btn-md btn-soft-primary pe-none mx-auto me-3">
-                                                <i class="uil uil-users-alt"></i>
-                                            </div>
+                                            <div class="icon btn btn-circle btn-md btn-soft-primary pe-none mx-auto me-3"> <i class="uil uil-users-alt"></i> </div>
                                         </div>
                                         <div>
-                                            <h3 class="counter mb-0 text-nowrap">100%</h3>
-                                            <p class="fs-14 lh-sm mb-0 text-nowrap">Satisfied Customers</p>
+                                            <h3 class="counter mb-0 text-nowrap" style="visibility: visible;">25000+</h3>
+                                            <p class="fs-14 lh-sm mb-0 text-nowrap">Happy Clients</p>
                                         </div>
                                     </div>
                                 </div>
+                                <!--/.card-body -->
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title"
-                        data-delay="600">
-                        <h1 class="display-2 mb-5">Welcome To Mesprosoft</h1>
-                        <p class="lead fs-lg lh-sm mb-7 pe-xl-10">Mesprosoft provides a broad portfolio of SAP &
-                            information technology solutions and business process to its clients worldwide.
-                            We offer a comprehensive suite of services covering the entire SAP lifecycle to help
-                            customers implement, optimize and
-                            enhance value from their SAP investments.</p>
-                        <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown"
-                            data-group="page-title-buttons" data-delay="900">
-                            <span><a href="#" class="btn btn-lg btn-primary rounded-pill me-2">Read More</a></span>
-                            <span><a href="#" class="btn btn-lg btn-outline-primary rounded-pill">Contact Us</a></span>
+
+                    <div class="item">
+                        <img src="{{ asset('img/slider/4.png') }}" alt="Chicago" style="width:100%;">
+                        <div class="carousel-caption">
+                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="top: -120px !important;">
+                                <h1 class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;">Welcome To Mesprosoft.</h1>
+                                <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p>
+                                <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
+                                    <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-primary rounded-pill me-2">Read More</a></span>
+                                    <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-outline-primary rounded-pill" style="border: 1px solid #367cb7;">Contact Us</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-caption">
+                            <div class="card shadow-lg position-absolute" style="bottom: 10%; right: -3%;">
+                                <div class="card-body py-4 px-5">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div>
+                                            <div class="icon btn btn-circle btn-md btn-soft-primary pe-none mx-auto me-3"> <i class="uil uil-users-alt"></i> </div>
+                                        </div>
+                                        <div>
+                                            <h3 class="counter mb-0 text-nowrap" style="visibility: visible;">25000+</h3>
+                                            <p class="fs-14 lh-sm mb-0 text-nowrap">Happy Clients</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/.card-body -->
+                            </div>
                         </div>
                     </div>
+
+                    <div class="item">
+                        <img src="{{ asset('img/slider/4.png') }}" alt="New York" style="width:100%;">
+                        <div class="carousel-caption">
+                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="top: -120px !important;">
+                                <h1 class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;">Welcome To Mesprosoft.</h1>
+                                <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p>
+                                <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
+                                    <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-primary rounded-pill me-2">Read More</a></span>
+                                    <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-outline-primary rounded-pill" style="border: 1px solid #367cb7;">Contact Us</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-caption">
+                            <div class="card shadow-lg position-absolute" style="bottom: 10%; right: -3%;">
+                                <div class="card-body py-4 px-5">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div>
+                                            <div class="icon btn btn-circle btn-md btn-soft-primary pe-none mx-auto me-3"> <i class="uil uil-users-alt"></i> </div>
+                                        </div>
+                                        <div>
+                                            <h3 class="counter mb-0 text-nowrap" style="visibility: visible;">25000+</h3>
+                                            <p class="fs-14 lh-sm mb-0 text-nowrap">Happy Clients</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/.card-body -->
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
         <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0 mb-13 mb-md-17">
@@ -97,10 +171,8 @@
         </div>
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-18 align-items-center">
             <div class="col-md-8 col-lg-6 position-relative">
-                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1"
-                    style="top: -2rem; left: -1.9rem;"></div>
-                <figure class="rounded"><img src="{{ asset('img/photos/about10.jpg') }}"
-                        srcset="{{ asset('img/photos/about10@2x.jpg 2x') }}" alt=""></figure>
+                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
+                <figure class="rounded"><img src="{{ asset('img/photos/about10.jpg') }}" srcset="{{ asset('img/photos/about10@2x.jpg 2x') }}" alt=""></figure>
             </div>
             <div class="col-lg-6">
                 <h2 class="display-4 mb-3">BUILDING EFFICIENCY DRIVING GROWTH</h2>
@@ -113,8 +185,7 @@
                     <div class="col-md-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/target.svg') }}"
-                                    class="svg-inject icon-svg icon-svg-sm me-4" alt="" />
+                                <img src="{{ asset('img/icons/lineal/target.svg') }}" class="svg-inject icon-svg icon-svg-sm me-4" alt="" />
                             </div>
                             <div>
                                 <h4 class="mb-1">Our Mission</h4>
@@ -125,8 +196,7 @@
                     <div class="col-md-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/award-2.svg') }}"
-                                    class="svg-inject icon-svg icon-svg-sm me-4" alt="" />
+                                <img src="{{ asset('img/icons/lineal/award-2.svg') }}" class="svg-inject icon-svg icon-svg-sm me-4" alt="" />
                             </div>
                             <div>
                                 <h4 class="mb-1">Our Values</h4>
@@ -139,10 +209,8 @@
         </div>
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-20 align-items-center">
             <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
-                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1"
-                    style="top: -2rem; right: -1.9rem;"></div>
-                <figure class="rounded"><img src="{{ asset('img/photos/about11.jpg') }}"
-                        srcset="{{ asset('img/photos/about11@2x.jpg 2x') }}" alt=""></figure>
+                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
+                <figure class="rounded"><img src="{{ asset('img/photos/about11.jpg') }}" srcset="{{ asset('img/photos/about11@2x.jpg 2x') }}" alt=""></figure>
             </div>
 
             <div class="col-lg-6">
@@ -151,8 +219,7 @@
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/megaphone.svg') }}"
-                                    class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
+                                <img src="{{ asset('img/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
                                 <h4 class="mb-1">Enterprise Solution Consulting</h4>
@@ -166,8 +233,7 @@
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/target.svg') }}"
-                                    class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
+                                <img src="{{ asset('img/icons/lineal/target.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
                                 <h4 class="mb-1">Application Migration & Conversion</h4>
@@ -181,8 +247,7 @@
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/settings-3.svg') }}"
-                                    class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
+                                <img src="{{ asset('img/icons/lineal/settings-3.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
                                 <h4 class="mb-1">SAP Support</h4>
@@ -196,8 +261,7 @@
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/bar-chart.svg') }}"
-                                    class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
+                                <img src="{{ asset('img/icons/lineal/bar-chart.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
                                 <h4 class="mb-1">GST Migration</h4>
@@ -216,8 +280,7 @@
 
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-20 align-items-center">
             <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
-                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1"
-                    style="top: -2rem; right: -1.9rem;"></div>
+                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
                 <figure class="rounded"><img src="{{ asset('img/mesprosoft_products.png') }}" alt=""></figure>
             </div>
 
@@ -227,8 +290,7 @@
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/megaphone.svg') }}"
-                                    class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
+                                <img src="{{ asset('img/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
                                 <h4 class="mb-1">Mespro Paperless Manufacturing</h4>
@@ -243,8 +305,7 @@
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/target.svg') }}"
-                                    class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
+                                <img src="{{ asset('img/icons/lineal/target.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
                                 <h4 class="mb-1">Mespro GPS-Preconfigured Analytics</h4>
@@ -259,8 +320,7 @@
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/settings-3.svg') }}"
-                                    class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
+                                <img src="{{ asset('img/icons/lineal/settings-3.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
                                 <h4 class="mb-1">Mespro X-steps</h4>
@@ -275,8 +335,7 @@
                     <div class="col-md-6 col-lg-12 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
-                                <img src="{{ asset('img/icons/lineal/bar-chart.svg') }}"
-                                    class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
+                                <img src="{{ asset('img/icons/lineal/bar-chart.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
                                 <h4 class="mb-1">Mespro Optimized MRP</h4>
@@ -297,8 +356,7 @@
         <div class="card bg-soft-primary rounded-4 mb-14 mb-md-18">
             <div class="card-body p-md-10 py-xxl-16 position-relative">
                 <div class="position-absolute d-none d-lg-block" style="bottom:0; left:10%; width: 28%; z-index:2">
-                    <figure><img src="{{ asset('img/photos/co2.png') }}"
-                            srcset="{{ asset('img/photos/co2@2x.png 2x') }}" alt=""></figure>
+                    <figure><img src="{{ asset('img/photos/co2.png') }}" srcset="{{ asset('img/photos/co2@2x.png 2x') }}" alt=""></figure>
                 </div>
                 <div class="row gx-md-0 gx-xl-12 text-center">
                     <div class="col-lg-7 offset-lg-5 col-xl-6">
@@ -323,127 +381,14 @@
 
         </div>
 
-        <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0 mb-11">
-            <div class="col-lg-4">
-                <h3 class="display-4 mb-3 pe-xl-10">We are proud of our creative team</h3>
-                <p class="lead fs-lg mb-0 pe-xxl-10">Just sit back and relax while we <span class="underline">take
-                        care</span> of your business needs.</p>
-            </div>
 
-            <div class="col-lg-8 mt-lg-2">
-                <div class="row align-items-center counter-wrapper gy-6 text-center">
-                    <div class="col-md-4">
-                        <img src="{{ asset('img/icons/lineal/check.svg') }}"
-                            class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
-                        <h3 class="counter">7518</h3>
-                        <p>Completed Projects</p>
-                    </div>
 
-                    <div class="col-md-4">
-                        <img src="{{ asset('img/icons/lineal/user.svg') }}"
-                            class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
-                        <h3 class="counter">3472</h3>
-                        <p>Happy Customers</p>
-                    </div>
-
-                    <div class="col-md-4">
-                        <img src="{{ asset('img/icons/lineal/briefcase-2.svg') }}"
-                            class="svg-inject icon-svg icon-svg-md text-primary mb-3" alt="" />
-                        <h3 class="counter">2184</h3>
-                        <p>Expert Employees</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="row grid-view gx-md-8 gx-xl-10 gy-8 gy-lg-0 mb-16 mb-md-19">
-            <div class="col-md-6 col-lg-3">
-                <div class="position-relative">
-                    <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0"
-                        style="bottom: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0"></div>
-                    <div class="card shadow-lg">
-                        <figure class="card-img-top"><img class="img-fluid" src="{{ asset('img/avatars/t1.jpg') }}"
-                                srcset="{{ asset('img/avatars/t1@2x.jpg 2x') }}" alt="" /></figure>
-                        <div class="card-body px-6 py-5">
-                            <h4 class="mb-1">Coriss Ambady</h4>
-                            <p class="mb-0">Financial Analyst</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="position-relative">
-                    <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0"
-                        style="bottom: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0"></div>
-                    <div class="card shadow-lg">
-                        <figure class="card-img-top"><img class="img-fluid" src="{{ asset('img/avatars/t2.jpg') }}"
-                                srcset="{{ asset('img/avatars/t2@2x.jpg 2x') }}" alt="" /></figure>
-                        <div class="card-body px-6 py-5">
-                            <h4 class="mb-1">Cory Zamora</h4>
-                            <p class="mb-0">Marketing Specialist</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="position-relative">
-                    <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0"
-                        style="bottom: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0"></div>
-                    <div class="card shadow-lg">
-                        <figure class="card-img-top"><img class="img-fluid" src="{{ asset('img/avatars/t3.jpg') }}"
-                                srcset="{{ asset('img/avatars/t3@2x.jpg 2x') }}" alt="" /></figure>
-                        <div class="card-body px-6 py-5">
-                            <h4 class="mb-1">Nikolas Brooten</h4>
-                            <p class="mb-0">Sales Manager</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="position-relative">
-                    <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0"
-                        style="bottom: -0.75rem; right: -0.75rem; width: 98%; height: 98%; z-index:0"></div>
-                    <div class="card shadow-lg">
-                        <figure class="card-img-top"><img class="img-fluid" src="{{ asset('img/avatars/t4.jpg') }}"
-                                srcset="{{ asset('img/avatars/t4@2x.jpg 2x') }}" alt="" /></figure>
-                        <div class="card-body px-6 py-5">
-                            <h4 class="mb-1">Jackie Sanders</h4>
-                            <p class="mb-0">Investment Planner</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
 
         <div class="row gy-10 gy-sm-13 gx-lg-3 align-items-center mb-14 mb-md-18">
             <div class="col-md-8 col-lg-6 position-relative">
-                <a href="./assets/media/movie.mp4"
-                    class="btn btn-circle btn-primary btn-play ripple mx-auto mb-5 position-absolute"
-                    style="top:50%; left: 50%; transform: translate(-50%,-50%); z-index:3;" data-glightbox><i
-                        class="icn-caret-right"></i></a>
-                <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0"
-                    style="bottom: -1.8rem; right: -1.5rem; width: 85%; height: 90%; "></div>
-                <figure class="rounded"><img src="{{ asset('img/photos/about12.jpg') }}"
-                        srcset="{{ asset('img/photos/about12@2x.jpg 2x') }}" alt=""></figure>
+                <a href="./assets/media/movie.mp4" class="btn btn-circle btn-primary btn-play ripple mx-auto mb-5 position-absolute" style="top:50%; left: 50%; transform: translate(-50%,-50%); z-index:3;" data-glightbox><i class="icn-caret-right"></i></a>
+                <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0" style="bottom: -1.8rem; right: -1.5rem; width: 85%; height: 90%; "></div>
+                <figure class="rounded"><img src="{{ asset('img/photos/about12.jpg') }}" srcset="{{ asset('img/photos/about12@2x.jpg 2x') }}" alt=""></figure>
             </div>
 
             <div class="col-lg-5 col-xl-4 offset-lg-1">
@@ -484,12 +429,10 @@
                         <div class="accordion accordion-wrapper" id="accordionExample">
                             <div class="card plain accordion-item">
                                 <div class="card-header" id="headingOne">
-                                    <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                        aria-expanded="true" aria-controls="collapseOne">How do I get my subscription
+                                    <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">How do I get my subscription
                                         receipt?</button>
                                 </div>
-                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                    data-bs-parent="#accordionExample">
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="card-body">
                                         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
                                             fermentum massa justo sit amet risus.</p>
@@ -499,12 +442,10 @@
                             </div>
                             <div class="card plain accordion-item">
                                 <div class="card-header" id="headingTwo">
-                                    <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                        aria-expanded="false" aria-controls="collapseTwo">Are there any discounts for
+                                    <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Are there any discounts for
                                         people in need?</button>
                                 </div>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample">
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="card-body">
                                         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
                                             fermentum massa justo sit amet risus.</p>
@@ -514,12 +455,10 @@
                             </div>
                             <div class="card plain accordion-item">
                                 <div class="card-header" id="headingThree">
-                                    <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                        aria-expanded="false" aria-controls="collapseThree">Do you offer a free trial
+                                    <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Do you offer a free trial
                                         edit?</button>
                                 </div>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="card-body">
                                         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
                                             fermentum massa justo sit amet risus.</p>
@@ -529,12 +468,10 @@
                             </div>
                             <div class="card plain accordion-item">
                                 <div class="card-header" id="headingFour">
-                                    <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                        aria-expanded="false" aria-controls="collapseFour">How do I reset my Account
+                                    <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">How do I reset my Account
                                         password?</button>
                                 </div>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                    data-bs-parent="#accordionExample">
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                     <div class="card-body">
                                         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
                                             fermentum massa justo sit amet risus.</p>

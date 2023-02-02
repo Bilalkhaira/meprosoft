@@ -3,7 +3,7 @@
         <div class="container flex-lg-row flex-nowrap align-items-center">
             <div class="navbar-brand w-100">
                 <a href="{{ route('home') }}">
-                    <img style="width: 230px !important" src="{{ asset('img/logo-dark.png') }}" srcset="{{ asset('img/logo-dark@2x.png 2x') }}"
+                    <img style="width: 230px !important; margin-top: -35px !important" src="{{ asset('img/logo-dark.png') }}" srcset="{{ asset('img/logo-dark@2x.png 2x') }}"
                         alt="" />
                 </a>
             </div>
@@ -111,7 +111,7 @@
                         <a class="nav-link" href="#">Knowledge/Insights</a>
 
                     </li> -->
-                    <li class="nav-item dropdown dropdown-mega">
+                    <li class="nav-item dropdown dropdown-mega" style="display:none">
                         <a class="nav-link" href="#">News & Events</a>
 
                     </li>
@@ -152,12 +152,12 @@
                 <!-- /.offcanvas-body -->
             </div>
             <!-- /.navbar-collapse -->
-            <div class="navbar-other ms-lg-4">
+            <div class="navbar-other ms-lg-4" >
                 <ul class="navbar-nav flex-row align-items-center ms-auto">
-                    <li class="nav-item"><a class="nav-link" data-bs-toggle="offcanvas"
+                    <li style="display:none" class="nav-item"><a class="nav-link" data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvas-search"><i class="uil uil-search"></i></a></li>
                     <li class="nav-item d-none d-md-block">
-                        <a href="#" class="btn btn-sm btn-primary rounded-pill" data-bs-toggle="modal"
+                        <a style="display:none" href="#" class="btn btn-sm btn-primary rounded-pill" data-bs-toggle="modal"
                             data-bs-target="#modal-signin">Sign In</a>
                     </li>
                     <li class="nav-item d-lg-none">
@@ -268,4 +268,3 @@
     </div>
     <!-- /.offcanvas -->
 </header>
-

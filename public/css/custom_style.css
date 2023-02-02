@@ -20,6 +20,10 @@
     max-width: 129% !important;
     height: auto!important; 
 } */
+
+
+
+/* header css */
 .nav-link{
     color: black !important;
 }
@@ -29,3 +33,13 @@
 img {
     width: -webkit-fill-available !important;
 }
+
+
+
+/* slider css */
+.carousel-caption{
+    color: black !important;
+}
+
+
+
