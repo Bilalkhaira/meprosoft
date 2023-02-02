@@ -19,8 +19,8 @@
 
                     <div class="item active">
                         <img src="{{ asset('img/slider/4.png') }}" alt="Los Angeles" style="width:100%;">
-                        <div class="carousel-caption">
-                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="top: -120px !important;">
+                        <div class="carousel-caption" style="top: 22%; left: 8%">
+                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
                                 <h1 class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;">Welcome To Mesprosoft.</h1>
                                 <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p>
                                 <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
@@ -49,8 +49,8 @@
 
                     <div class="item">
                         <img src="{{ asset('img/slider/4.png') }}" alt="Chicago" style="width:100%;">
-                        <div class="carousel-caption">
-                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="top: -120px !important;">
+                        <div class="carousel-caption" style="top: 22%; left: 8%">
+                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
                                 <h1 class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;">Welcome To Mesprosoft.</h1>
                                 <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p>
                                 <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
@@ -79,8 +79,8 @@
 
                     <div class="item">
                         <img src="{{ asset('img/slider/4.png') }}" alt="New York" style="width:100%;">
-                        <div class="carousel-caption">
-                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="top: -120px !important;">
+                        <div class="carousel-caption" style="top: 22%; left: 8%">
+                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
                                 <h1 class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;">Welcome To Mesprosoft.</h1>
                                 <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p>
                                 <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
@@ -110,12 +110,12 @@
                 </div>
 
                 <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="background-image: inherit;">
+                    <span class="glyphicon glyphicon-chevron-left" style="margin-left: -40px;"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next" style="background-image: inherit;">
+                    <span class="glyphicon glyphicon-chevron-right" style="margin-right: -40px;"></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>

@@ -66,6 +66,18 @@ Route::prefix('admin')->group(function () {
         return view('auth.login');
     })->name('admin');
 
+    Route::prefix('home')->group(function () {
+        Route::get('/', [HomeController::class, 'homeSetting'])->name('home.setting');
+        Route::get('/createNewSlide', [HomeController::class, 'createNewSlide'])->name('home.createNewSlide');
+        Route::get('/createNewProduct', [HomeController::class, 'createNewProduct'])->name('home.createNewProduct');
+        Route::get('/createNewService', [HomeController::class, 'createNewService'])->name('home.createNewService');
+        Route::get('/editMainSection', [HomeController::class, 'editMainSection'])->name('home.editMainSection');
+        Route::get('/editProductMainSection', [HomeController::class, 'editProductMainSection'])->name('home.editProductMainSection');
+        Route::get('/editStisfiedCustomersSetting', [HomeController::class, 'editStisfiedCustomersSetting'])->name('home.editStisfiedCustomersSetting');
+
+        Route::post('/updateSatisfiedSection', [HomeController::class, 'updateSatisfiedSection'])->name('update.satisfiedSection');
+    });
+
     Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::post('/updateprofile', [ProfileController::class, 'updateprofile'])->name('updateprofile');
@@ -73,8 +85,8 @@ Route::prefix('admin')->group(function () {
     Route::post('passwordReset', [ProfileController::class, 'passwordReset'])->name('reset.password');
 
 
-    Route::get('homeSetting', [HomeController::class, 'homeSetting'])->name('home.setting');
-    Route::post('updateSatisfiedSection', [HomeController::class, 'updateSatisfiedSection'])->name('update.satisfiedSection');
+    
+    
 
    
 

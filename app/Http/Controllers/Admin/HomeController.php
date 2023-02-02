@@ -27,4 +27,34 @@ class HomeController extends Controller
     {
         dd($request->all());
     }
+
+    public function createNewSlide()
+    {
+        return view('admin.pages.home.addNewSlide');
+    }
+
+    public function createNewProduct()
+    {
+        return view('admin.pages.home.createNewProduct');
+    }
+
+    public function createNewService()
+    {
+        return view('admin.pages.home.createNewService');
+    }
+
+    public function editMainSection()
+    {
+        return view('admin.pages.home.editMainSection');
+    }
+
+    public function editProductMainSection()
+    {
+        return view('admin.pages.home.editProductMainSection');
+    }
+
+    public function editStisfiedCustomersSetting()
+    {
+        return view('admin.pages.home.editStisfiedCustomersSetting');
+    }
 }
