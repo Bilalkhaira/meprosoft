@@ -186,7 +186,7 @@
                     Mesprosoft helps our customers to get the best value from their IT investments.</p>
 
                 <div class="row gx-xl-10 gy-6">
-                   
+
                     <div class="col-md-12">
                         <div class="d-flex flex-row">
                             <div>
@@ -217,8 +217,10 @@
                                 <img src="{{ asset('img/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
-                                <a href="#"><h4 id="heading" class="mb-1">Enterprise Solution Consulting</h4></a>
-                                
+                                <a href="#">
+                                    <h4 id="heading" class="mb-1">Enterprise Solution Consulting</h4>
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -229,8 +231,10 @@
                                 <img src="{{ asset('img/icons/lineal/target.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
-                                <a href="#"><h4 id="heading" class="mb-1">Application Migration & Conversion</h4></a>
-                                
+                                <a href="#">
+                                    <h4 id="heading" class="mb-1">Application Migration & Conversion</h4>
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -241,8 +245,10 @@
                                 <img src="{{ asset('img/icons/lineal/settings-3.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
-                                <a href="#"><h4 id="heading" class="mb-1">SAP Support</h4></a>
-                                
+                                <a href="#">
+                                    <h4 id="heading" class="mb-1">SAP Support</h4>
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -253,8 +259,10 @@
                                 <img src="{{ asset('img/icons/lineal/bar-chart.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
-                                <a href="#"><h4 id="heading" class="mb-1">GST Migration</h4></a>
-                               
+                                <a href="#">
+                                    <h4 id="heading" class="mb-1">GST Migration</h4>
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -280,8 +288,10 @@
                                 <img src="{{ asset('img/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
-                                <a href="#"><h4 id="heading" class="mb-1">Mespro Paperless Manufacturing</h4></a>
-                                
+                                <a href="#">
+                                    <h4 id="heading" class="mb-1">Mespro Paperless Manufacturing</h4>
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -292,8 +302,10 @@
                                 <img src="{{ asset('img/icons/lineal/target.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
-                                <a href="#"><h4 id="heading" class="mb-1">Mespro GPS-Preconfigured Analytics</h4></a>
-                                
+                                <a href="#">
+                                    <h4 id="heading" class="mb-1">Mespro GPS-Preconfigured Analytics</h4>
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -304,8 +316,10 @@
                                 <img src="{{ asset('img/icons/lineal/settings-3.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
-                                <a href="#"><h4 id="heading" class="mb-1">Mespro X-steps</h4></a>
-                                
+                                <a href="#">
+                                    <h4 id="heading" class="mb-1">Mespro X-steps</h4>
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -316,8 +330,10 @@
                                 <img src="{{ asset('img/icons/lineal/bar-chart.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                             </div>
                             <div>
-                                <a href="#"><h4 id="heading" class="mb-1">Mespro Optimized MRP</h4></a>
-                                
+                                <a href="#">
+                                    <h4 id="heading" class="mb-1">Mespro Optimized MRP</h4>
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -342,93 +358,60 @@
                 <div class="carousel-inner">
 
                     <div class="item active">
-                        <img src="{{ asset('img/slider/4.png') }}" alt="Los Angeles" style="width:100%;">
+                        <img src="{{ asset('img/slider/1.png') }}" alt="Los Angeles" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
-                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
-                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;">Welcome To Mesprosoft.</h1>
-                                <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p>
-                                <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
-                                    <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-primary rounded-pill me-2" style="background-color: #57a8c7; border: none">Read More</a></span>
-                                    <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-outline-primary rounded-pill" style="border: 1px solid #57a8c7;">Contact Us</a></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-caption">
-                            <div class="card shadow-lg position-absolute" style="bottom: 10%; right: -3%;">
-                                <div class="card-body py-4 px-5">
-                                    <div class="d-flex flex-row align-items-center">
-                                        <div>
-                                            <div class="icon btn btn-circle btn-md btn-soft-primary pe-none mx-auto me-3"> <i class="uil uil-users-alt"></i> </div>
-                                        </div>
-                                        <div>
-                                            <h3 id="heading" class="counter mb-0 text-nowrap" style="visibility: visible;">25000+</h3>
-                                            <p class="fs-14 lh-sm mb-0 text-nowrap">Happy Clients</p>
+                            <div class="col-lg-7 offset-lg-5 col-xl-6" style="text-shadow: none;">
+                                <span class="ratings five mb-3"></span>
+                                <blockquote class="border-0 fs-lg mb-0" style="padding: 0;">
+                                    <p>“Fusce dapibus tellus ac cursus commodo, tortor mauris condimentum nibh ut fermentum massa, justo sit amet vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed”</p>
+                                    <div class="blockquote-details justify-content-center text-center">
+                                        <div class="info p-0">
+                                            <h5 class="mb-1" id="heading">Coriss Ambady</h5>
+                                            <div class="meta mb-0">Financial Analyst</div>
                                         </div>
                                     </div>
-                                </div>
-                                <!--/.card-body -->
+                                </blockquote>
                             </div>
                         </div>
+
                     </div>
 
                     <div class="item">
-                        <img src="{{ asset('img/slider/4.png') }}" alt="Chicago" style="width:100%;">
+                        <img src="{{ asset('img/slider/1.png') }}" alt="Chicago" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
-                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
-                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;">Welcome To Mesprosoft.</h1>
-                                <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p>
-                                <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
-                                    <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-primary rounded-pill me-2" style="background-color: #57a8c7; border: none">Read More</a></span>
-                                    <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-outline-primary rounded-pill" style="border: 1px solid #57a8c7;">Contact Us</a></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-caption">
-                            <div class="card shadow-lg position-absolute" style="bottom: 10%; right: -3%;">
-                                <div class="card-body py-4 px-5">
-                                    <div class="d-flex flex-row align-items-center">
-                                        <div>
-                                            <div class="icon btn btn-circle btn-md btn-soft-primary pe-none mx-auto me-3"> <i class="uil uil-users-alt"></i> </div>
-                                        </div>
-                                        <div>
-                                            <h3 id="heading" class="counter mb-0 text-nowrap" style="visibility: visible;">25000+</h3>
-                                            <p class="fs-14 lh-sm mb-0 text-nowrap">Happy Clients</p>
+                            <div class="col-lg-7 offset-lg-5 col-xl-6" style="text-shadow: none;">
+                                <span class="ratings five mb-3"></span>
+                                <blockquote class="border-0 fs-lg mb-0" style="padding: 0;">
+                                    <p>“Fusce dapibus tellus ac cursus commodo, tortor mauris condimentum nibh ut fermentum massa, justo sit amet vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed”</p>
+                                    <div class="blockquote-details justify-content-center text-center">
+                                        <div class="info p-0">
+                                            <h5 class="mb-1" id="heading">Coriss Ambady</h5>
+                                            <div class="meta mb-0">Financial Analyst</div>
                                         </div>
                                     </div>
-                                </div>
-                                <!--/.card-body -->
+                                </blockquote>
                             </div>
                         </div>
+
                     </div>
 
                     <div class="item">
-                        <img src="{{ asset('img/slider/4.png') }}" alt="New York" style="width:100%;">
+                        <img src="{{ asset('img/slider/1.png') }}" alt="New York" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
-                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
-                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;">Welcome To Mesprosoft.</h1>
-                                <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p>
-                                <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
-                                    <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-primary rounded-pill me-2" style="background-color: #57a8c7; border: none">Read More</a></span>
-                                    <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-outline-primary rounded-pill" style="border: 1px solid #57a8c7;">Contact Us</a></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-caption">
-                            <div class="card shadow-lg position-absolute" style="bottom: 10%; right: -3%;">
-                                <div class="card-body py-4 px-5">
-                                    <div class="d-flex flex-row align-items-center">
-                                        <div>
-                                            <div class="icon btn btn-circle btn-md btn-soft-primary pe-none mx-auto me-3"> <i class="uil uil-users-alt"></i> </div>
-                                        </div>
-                                        <div>
-                                            <h3 id="heading" class="counter mb-0 text-nowrap" style="visibility: visible;">25000+</h3>
-                                            <p class="fs-14 lh-sm mb-0 text-nowrap">Happy Clients</p>
+                            <div class="col-lg-7 offset-lg-5 col-xl-6" style="text-shadow: none;">
+                                <span class="ratings five mb-3"></span>
+                                <blockquote class="border-0 fs-lg mb-0" style="padding: 0;">
+                                    <p>“Fusce dapibus tellus ac cursus commodo, tortor mauris condimentum nibh ut fermentum massa, justo sit amet vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed”</p>
+                                    <div class="blockquote-details justify-content-center text-center">
+                                        <div class="info p-0">
+                                            <h5 class="mb-1" id="heading">Coriss Ambady</h5>
+                                            <div class="meta mb-0">Financial Analyst</div>
                                         </div>
                                     </div>
-                                </div>
-                                <!--/.card-body -->
+                                </blockquote>
                             </div>
                         </div>
+
                     </div>
 
                 </div>

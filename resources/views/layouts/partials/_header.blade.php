@@ -71,7 +71,7 @@
                                             <li><a class="dropdown-item" href="./projects.html">Dispatch Automation</a></li>
                                             <li><a class="dropdown-item" href="./projects2.html">Dynamic Machine Scheduling </a>
                                             </li>
-                                            <li><a class="dropdown-item" href="./projects3.html">Electronic Batch Manufacturing ( Pharmaceuticals & Chemicals )</a>
+                                            <li><a class="dropdown-item" data-toggle="tooltip" title="Electronic Batch Manufacturing ( Pharmaceuticals & Chemicals )" href="./projects3.html">Electronic Batch Manufacturing</a>
                                             </li>
                                             <li><a class="dropdown-item" href="./projects4.html">Handheld Mobile Bar Code</a>
                                             </li>
@@ -89,7 +89,7 @@
                                             <li><a class="dropdown-item" href="./single-project2.html">Mespro Paperess Manufacturing </a></li>
                                             <li><a class="dropdown-item" href="./single-project3.html">Mespro X-Steps</a></li>
                                             <li><a class="dropdown-item" href="./single-project4.html">O2C Automation</a></li>
-                                            <li><a class="dropdown-item" href="./projects4.html">Mespro Life Science – CFR Part 11 Compliant</a></li>
+                                            <li><a class="dropdown-item" href="./projects4.html" data-toggle="tooltip" title="Mespro Life Science – CFR Part 11 Compliant">Mespro Life Science</a></li>
                                             <li><a class="dropdown-item" href="./projects4.html">Purchase Budget Check & Approval</a></li>
                                             <li><a class="dropdown-item" href="./projects4.html">Smart Foundry</a></li>
                                             <li><a class="dropdown-item" href="./projects4.html">REFX 16</a></li>
