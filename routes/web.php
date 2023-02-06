@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\Admin\FAQController;
 use App\Http\Controllers\ContactusController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ProfileController;
@@ -77,8 +78,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/editStisfiedCustomersSetting', [HomeController::class, 'editStisfiedCustomersSetting'])->name('home.editStisfiedCustomersSetting');
         Route::get('/editBuildingEfficiencySection', [HomeController::class, 'editBuildingEfficiencySection'])->name('home.editBuildingEfficiencySection');
         Route::get('/editPercentageSection', [HomeController::class, 'editPercentageSection'])->name('home.editPercentageSection');
-        Route::get('/editQuestonsSection', [HomeController::class, 'editQuestonsSection'])->name('home.editQuestonsSection');
-
+        // Route::get('/editQuestonsSection', [HomeController::class, 'editQuestonsSection'])->name('home.editQuestonsSection');
         Route::post('/updateSatisfiedSection', [HomeController::class, 'updateSatisfiedSection'])->name('update.satisfiedSection');
     });
 
@@ -92,6 +92,14 @@ Route::prefix('admin')->group(function () {
         Route::get('/createOurProgessCard', [MigrationAndConversionController::class, 'createOurProgessCard'])->name('service.createOurProgessCard');
         Route::get('/editJoinOurCommunity', [MigrationAndConversionController::class, 'editJoinOurCommunity'])->name('service.editJoinOurCommunity');
     });
+
+    Route::prefix('faq')->group(function () {
+        Route::get('/', [FAQController::class, 'index'])->name('faq.index');
+        Route::get('edit/{id}', [FAQController::class, 'edit'])->name('faq.edit');
+    });
+
+
+    
 
     Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');

@@ -3,12 +3,12 @@
 @section('content')
 
 <div class="pagetitle">
-    <h1>Question Section</h1>
+    <h1>Frequently Asked Questions</h1>
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item">Admin</li>
-            <li class="breadcrumb-item active">Edit Question Section</li>
+            <li class="breadcrumb-item active">Edit Frequently Asked Questions</li>
         </ol>
     </nav>
 </div>
@@ -57,13 +57,13 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-11">
-                                    <button style="float: right;" class="btn btn-success add_more">Add More</button>
+                                    <button style="float: right;" class="btn btn-success btn-sm add_more">Add More</button>
                                 </div>
                             </div>
 
 
                             <div style="float: right;">
-                                <button class="btn btn-primary">Save</button>
+                                <button class="btn btn-primary btn-sm">Save</button>
                             </div>
 
                         </form>

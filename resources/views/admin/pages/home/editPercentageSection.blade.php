@@ -57,13 +57,13 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-11">
-                                    <button style="float: right;" class="btn btn-success add_more">Add More</button>
+                                    <button style="float: right;" class="btn btn-success btn-sm add_more">Add More</button>
                                 </div>
                             </div>
 
 
                             <div style="float: right;">
-                                <button class="btn btn-primary">Save</button>
+                                <button class="btn btn-primary btn-sm">Save</button>
                             </div>
 
                         </form>

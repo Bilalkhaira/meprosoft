@@ -47,8 +47,9 @@
                         </div>
 
                         <div style="float: right;">
-                            <a href="{{ route('home.editBuildingEfficiencySection') }}" class="btn btn-primary">Edit</a>
-                            <!-- <a href="#" class="btn btn-danger">Delete</a> -->
+                            <a href="{{ route('home.editBuildingEfficiencySection') }}" class="btn btn-sm btn-primary">Edit</a>
+                            <!-- <a href="#" class="btn btn-sm btn-danger">Delete</a> -->
+                            <a href="#" class="btn btn-sm  btn-primary">Disable</a>
                         </div>
 
 
@@ -69,7 +70,7 @@
     <div class="row">
         <h2>What We Do Section Setting</h2>
         <div>
-            <a style="float: right;margin-bottom: 20px" href="{{ route('service.createWhatWeDoCard') }}" class="btn btn-primary">Add New Card</a>
+            <a style="float: right;margin-bottom: 20px" href="{{ route('service.createWhatWeDoCard') }}" class="btn btn-sm btn-primary">Add New Card</a>
         </div>
 
         <div class="col-xl-12">
@@ -98,8 +99,9 @@
                         </div>
 
                         <div style="float: right;">
-                            <a href="{{ route('service.editWhatWeDoCardMainSection') }}" class="btn btn-primary">Edit</a>
-                            <!-- <a href="#" class="btn btn-danger">Delete</a> -->
+                            <a href="{{ route('service.editWhatWeDoCardMainSection') }}" class="btn btn-sm btn-primary">Edit</a>
+                            <!-- <a href="#" class="btn btn-sm btn-danger">Delete</a> -->
+                            <a href="#" class="btn btn-sm  btn-primary">Disable</a>
                         </div>
 
                     </div>
@@ -131,9 +133,10 @@
                         </div>
 
                         <div style="float: right;">
-                            <a href="{{ route('service.editWhatWeDoCard') }}" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
+                            <a href="{{ route('service.editWhatWeDoCard') }}" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
+   
+   <a href="#" class="btn btn-sm  btn-primary">Disable</a>                     </div>
 
                     </div>
 
@@ -164,9 +167,10 @@
                         </div>
 
                         <div style="float: right;">
-                            <a href="{{ route('service.editWhatWeDoCard') }}" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
+                            <a href="{{ route('service.editWhatWeDoCard') }}" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
+   
+   <a href="#" class="btn btn-sm  btn-primary">Disable</a>                     </div>
 
                     </div>
 
@@ -183,7 +187,7 @@
     <div class="row">
         <h2>Our Progress & Video Setting Section</h2>
         <div>
-            <a style="float: right;margin-bottom: 20px" href="{{ route('service.createOurProgessCard') }}" class="btn btn-primary">Add New Card</a>
+            <a style="float: right;margin-bottom: 20px" href="{{ route('service.createOurProgessCard') }}" class="btn btn-sm btn-primary">Add New Card</a>
         </div>
 
         <div class="col-xl-12">
@@ -212,8 +216,9 @@
                         </div>
 
                         <div style="float: right;">
-                            <a href="{{ route('service.editOurProgressSection') }}" class="btn btn-primary">Edit</a>
-                            <!-- <a href="#" class="btn btn-danger">Delete</a> -->
+                            <a href="{{ route('service.editOurProgressSection') }}" class="btn btn-sm btn-primary">Edit</a>
+                            <!-- <a href="#" class="btn btn-sm btn-danger">Delete</a> -->
+                            <a href="#" class="btn btn-sm  btn-primary">Disable</a>
                         </div>
 
                     </div>
@@ -245,9 +250,10 @@
                         </div>
 
                         <div style="float: right;">
-                            <a href="{{ route('service.editOurProgressSectionCard') }}" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
+                            <a href="{{ route('service.editOurProgressSectionCard') }}" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
+   
+   <a href="#" class="btn btn-sm  btn-primary">Disable</a>                     </div>
 
                     </div>
 
@@ -278,9 +284,10 @@
                         </div>
 
                         <div style="float: right;">
-                            <a href="{{ route('service.editWhatWeDoCard') }}" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                        </div>
+                            <a href="{{ route('service.editWhatWeDoCard') }}" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
+   
+   <a href="#" class="btn btn-sm  btn-primary">Disable</a>                     </div>
 
                     </div>
 
@@ -338,8 +345,9 @@
                        
 
                         <div style="float: right;">
-                            <a href="{{ route('service.editJoinOurCommunity') }}" class="btn btn-primary">Edit</a>
-                            <!-- <a href="#" class="btn btn-danger">Delete</a> -->
+                            <a href="{{ route('service.editJoinOurCommunity') }}" class="btn btn-sm btn-primary">Edit</a>
+                            <!-- <a href="#" class="btn btn-sm btn-danger">Delete</a> -->
+                            <a href="#" class="btn btn-sm  btn-primary">Disable</a>
                         </div>
 
                     </div>

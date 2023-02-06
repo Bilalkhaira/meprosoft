@@ -45,7 +45,7 @@
                             </div>
 
                             <div style="float: right;">
-                                <button class="btn btn-primary">Save</button>
+                                <button class="btn btn-primary btn-sm">Save</button>
                             </div>
 
                         </form>

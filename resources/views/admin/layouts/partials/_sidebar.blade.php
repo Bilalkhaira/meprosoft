@@ -229,7 +229,7 @@
       <!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
+        <a class="nav-link collapsed" href="{{ route('faq.index') }}">
           <i class="bi bi-question-circle"></i>
           <span>F.A.Q</span>
         </a>
