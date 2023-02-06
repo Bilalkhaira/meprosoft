@@ -36,7 +36,7 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label class="col-md-4 col-lg-2 label">Happy Client Card Text</label>
+                                <label class="col-md-4 col-lg-2 label">Card Text</label>
                                 <div class="col-md-8 col-lg-4">
                                     <input type="text" name="card_text" class="form-control" required>
                                 </div>
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label class="col-md-4 col-lg-2 label">Happy Client Card Couting</label>
+                                <label class="col-md-4 col-lg-2 label">Card Couting</label>
                                 <div class="col-md-8 col-lg-4">
                                     <input type="text" name="card_counting" class="form-control" required>
                                 </div>

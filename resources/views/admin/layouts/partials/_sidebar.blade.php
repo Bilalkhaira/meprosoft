@@ -191,7 +191,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('service.index') }}">
               <i class="bi bi-circle"></i><span>Services</span>
             </a>
           </li>

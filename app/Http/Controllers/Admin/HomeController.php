@@ -57,4 +57,19 @@ class HomeController extends Controller
     {
         return view('admin.pages.home.editStisfiedCustomersSetting');
     }
+
+    public function editBuildingEfficiencySection()
+    {
+        return view('admin.pages.home.editBuildingEfficiencySection');
+    }
+
+    public function editPercentageSection()
+    {
+        return view('admin.pages.home.editPercentageSection');
+    }
+
+    public function editQuestonsSection()
+    {
+        return view('admin.pages.home.editQuestonsSection');
+    }
 }

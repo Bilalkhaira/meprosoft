@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactusController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\NotificationController;
+use App\Http\Controllers\Admin\Services\MigrationAndConversionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,8 +75,22 @@ Route::prefix('admin')->group(function () {
         Route::get('/editMainSection', [HomeController::class, 'editMainSection'])->name('home.editMainSection');
         Route::get('/editProductMainSection', [HomeController::class, 'editProductMainSection'])->name('home.editProductMainSection');
         Route::get('/editStisfiedCustomersSetting', [HomeController::class, 'editStisfiedCustomersSetting'])->name('home.editStisfiedCustomersSetting');
+        Route::get('/editBuildingEfficiencySection', [HomeController::class, 'editBuildingEfficiencySection'])->name('home.editBuildingEfficiencySection');
+        Route::get('/editPercentageSection', [HomeController::class, 'editPercentageSection'])->name('home.editPercentageSection');
+        Route::get('/editQuestonsSection', [HomeController::class, 'editQuestonsSection'])->name('home.editQuestonsSection');
 
         Route::post('/updateSatisfiedSection', [HomeController::class, 'updateSatisfiedSection'])->name('update.satisfiedSection');
+    });
+
+    Route::prefix('service')->group(function () {
+        Route::get('/', [MigrationAndConversionController::class, 'index'])->name('service.index');
+        Route::get('/createWhatWeDoCard', [MigrationAndConversionController::class, 'createWhatWeDoCard'])->name('service.createWhatWeDoCard');
+        Route::get('/editWhatWeDoCardMainSection', [MigrationAndConversionController::class, 'editWhatWeDoCardMainSection'])->name('service.editWhatWeDoCardMainSection');
+        Route::get('/editWhatWeDoCard', [MigrationAndConversionController::class, 'editWhatWeDoCard'])->name('service.editWhatWeDoCard');
+        Route::get('/editOurProgressSection', [MigrationAndConversionController::class, 'editOurProgressSection'])->name('service.editOurProgressSection');
+        Route::get('/editOurProgressSectionCard', [MigrationAndConversionController::class, 'editOurProgressSectionCard'])->name('service.editOurProgressSectionCard');
+        Route::get('/createOurProgessCard', [MigrationAndConversionController::class, 'createOurProgessCard'])->name('service.createOurProgessCard');
+        Route::get('/editJoinOurCommunity', [MigrationAndConversionController::class, 'editJoinOurCommunity'])->name('service.editJoinOurCommunity');
     });
 
     Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
@@ -83,13 +98,6 @@ Route::prefix('admin')->group(function () {
     Route::post('/updateprofile', [ProfileController::class, 'updateprofile'])->name('updateprofile');
     Route::get('deleteProfilePhoto', [ProfileController::class, 'deleteProfilePhoto'])->name('delete.profilePhoto');
     Route::post('passwordReset', [ProfileController::class, 'passwordReset'])->name('reset.password');
-
-
-    
-    
-
-   
-
 });
 
 
