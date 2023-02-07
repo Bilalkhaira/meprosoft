@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\Services\MigrationAndConversionController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/clear', function () {
     Artisan::call('route:clear');
     Artisan::call('route:cache');
@@ -58,6 +59,82 @@ Route::get('applicationMigrationConversion', function () {
 Route::post('saveMsg', [ContactusController::class, 'save'])->name('saveMsg');
 
 
+Route::prefix('productAndSolution')->group(function () {
+
+    Route::get('/dispatchAutomation', function () {
+        return view('pages.productAndSolution.dispatchAutomation');
+    })->name('productAndSolution.dispatchAutomation');
+
+    Route::get('/dynamicMachineScheduling', function () {
+        return view('pages.productAndSolution.dynamicMachineScheduling');
+    })->name('productAndSolution.dynamicMachineScheduling');
+
+    Route::get('/electronicBatchManufacturing', function () {
+        return view('pages.productAndSolution.electronicBatchManufacturing');
+    })->name('productAndSolution.electronicBatchManufacturing');
+
+    Route::get('/handheldMobileBarCode', function () {
+        return view('pages.productAndSolution.handheldMobileBarCode');
+    })->name('productAndSolution.handheldMobileBarCode');
+
+    Route::get('/loanManagementSolution', function () {
+        return view('pages.productAndSolution.loanManagementSolution');
+    })->name('productAndSolution.loanManagementSolution');
+
+    Route::get('/mesproGPSPreconfiguredAnalytics', function () {
+        return view('pages.productAndSolution.mesproGPSPreconfiguredAnalytics');
+    })->name('productAndSolution.mesproGPSPreconfiguredAnalytics');
+
+    Route::get('/mesproLifeScienceCFRPart11', function () {
+        return view('pages.productAndSolution.mesproLifeScienceCFRPart11');
+    })->name('productAndSolution.mesproLifeScienceCFRPart11');
+
+    Route::get('/mesproOptimizedMRP', function () {
+        return view('pages.productAndSolution.mesproOptimizedMRP');
+    })->name('productAndSolution.mesproOptimizedMRP');
+
+    Route::get('/mesproPaperessManufacturing', function () {
+        return view('pages.productAndSolution.mesproPaperessManufacturing');
+    })->name('productAndSolution.mesproPaperessManufacturing');
+
+    Route::get('/MesproX-Steps', function () {
+        return view('pages.productAndSolution.MesproX-Steps');
+    })->name('productAndSolution.MesproX-Steps');
+
+    Route::get('/O2CAutomation', function () {
+        return view('pages.productAndSolution.O2CAutomation');
+    })->name('productAndSolution.O2CAutomation');
+
+    Route::get('/purchaseBudgetCheckAndApproval', function () {
+        return view('pages.productAndSolution.purchaseBudgetCheckAndApproval');
+    })->name('productAndSolution.purchaseBudgetCheckAndApproval');
+
+    Route::get('/smartFoundry', function () {
+        return view('pages.productAndSolution.smartFoundry');
+    })->name('productAndSolution.smartFoundry');
+
+    Route::get('/TS16949CompliantKAPA', function () {
+        return view('pages.productAndSolution.TS16949CompliantKAPA');
+    })->name('productAndSolution.TS16949CompliantKAPA');
+    
+});
+
+Route::prefix('caseStudy')->group(function () {
+
+    Route::get('/digitalManufacturing', function () {
+        return view('pages.caseStudy.digitalManufacturing');
+    })->name('caseStudy.digitalManufacturing');
+
+    Route::get('/mesproPaperlessManufacturing', function () {
+        return view('pages.caseStudy.mesproPaperlessManufacturing');
+    })->name('caseStudy.mesproPaperlessManufacturing');
+
+    Route::get('/foodIndustry', function () {
+        return view('pages.caseStudy.foodIndustry');
+    })->name('caseStudy.foodIndustry');
+    
+});
+
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -68,29 +145,31 @@ Route::prefix('admin')->group(function () {
         return view('auth.login');
     })->name('admin');
 
-    Route::prefix('home')->group(function () {
-        Route::get('/', [HomeController::class, 'homeSetting'])->name('home.setting');
-        Route::get('/createNewSlide', [HomeController::class, 'createNewSlide'])->name('home.createNewSlide');
-        Route::get('/createNewProduct', [HomeController::class, 'createNewProduct'])->name('home.createNewProduct');
-        Route::get('/createNewService', [HomeController::class, 'createNewService'])->name('home.createNewService');
-        Route::get('/editMainSection', [HomeController::class, 'editMainSection'])->name('home.editMainSection');
-        Route::get('/editProductMainSection', [HomeController::class, 'editProductMainSection'])->name('home.editProductMainSection');
-        Route::get('/editStisfiedCustomersSetting', [HomeController::class, 'editStisfiedCustomersSetting'])->name('home.editStisfiedCustomersSetting');
-        Route::get('/editBuildingEfficiencySection', [HomeController::class, 'editBuildingEfficiencySection'])->name('home.editBuildingEfficiencySection');
-        Route::get('/editPercentageSection', [HomeController::class, 'editPercentageSection'])->name('home.editPercentageSection');
-        // Route::get('/editQuestonsSection', [HomeController::class, 'editQuestonsSection'])->name('home.editQuestonsSection');
-        Route::post('/updateSatisfiedSection', [HomeController::class, 'updateSatisfiedSection'])->name('update.satisfiedSection');
-    });
+    Route::prefix('pages')->group(function () {
+        Route::prefix('home')->group(function () {
+            Route::get('/', [HomeController::class, 'homeSetting'])->name('home.setting');
+            Route::get('/createNewSlide', [HomeController::class, 'createNewSlide'])->name('home.createNewSlide');
+            Route::get('/createNewProduct', [HomeController::class, 'createNewProduct'])->name('home.createNewProduct');
+            Route::get('/createNewService', [HomeController::class, 'createNewService'])->name('home.createNewService');
+            Route::get('/editMainSection', [HomeController::class, 'editMainSection'])->name('home.editMainSection');
+            Route::get('/editProductMainSection', [HomeController::class, 'editProductMainSection'])->name('home.editProductMainSection');
+            Route::get('/editStisfiedCustomersSetting', [HomeController::class, 'editStisfiedCustomersSetting'])->name('home.editStisfiedCustomersSetting');
+            Route::get('/editBuildingEfficiencySection', [HomeController::class, 'editBuildingEfficiencySection'])->name('home.editBuildingEfficiencySection');
+            Route::get('/editPercentageSection', [HomeController::class, 'editPercentageSection'])->name('home.editPercentageSection');
+            // Route::get('/editQuestonsSection', [HomeController::class, 'editQuestonsSection'])->name('home.editQuestonsSection');
+            Route::post('/updateSatisfiedSection', [HomeController::class, 'updateSatisfiedSection'])->name('update.satisfiedSection');
+        });
 
-    Route::prefix('service')->group(function () {
-        Route::get('/', [MigrationAndConversionController::class, 'index'])->name('service.index');
-        Route::get('/createWhatWeDoCard', [MigrationAndConversionController::class, 'createWhatWeDoCard'])->name('service.createWhatWeDoCard');
-        Route::get('/editWhatWeDoCardMainSection', [MigrationAndConversionController::class, 'editWhatWeDoCardMainSection'])->name('service.editWhatWeDoCardMainSection');
-        Route::get('/editWhatWeDoCard', [MigrationAndConversionController::class, 'editWhatWeDoCard'])->name('service.editWhatWeDoCard');
-        Route::get('/editOurProgressSection', [MigrationAndConversionController::class, 'editOurProgressSection'])->name('service.editOurProgressSection');
-        Route::get('/editOurProgressSectionCard', [MigrationAndConversionController::class, 'editOurProgressSectionCard'])->name('service.editOurProgressSectionCard');
-        Route::get('/createOurProgessCard', [MigrationAndConversionController::class, 'createOurProgessCard'])->name('service.createOurProgessCard');
-        Route::get('/editJoinOurCommunity', [MigrationAndConversionController::class, 'editJoinOurCommunity'])->name('service.editJoinOurCommunity');
+        Route::prefix('service')->group(function () {
+            Route::get('/', [MigrationAndConversionController::class, 'index'])->name('service.index');
+            Route::get('/createWhatWeDoCard', [MigrationAndConversionController::class, 'createWhatWeDoCard'])->name('service.createWhatWeDoCard');
+            Route::get('/editWhatWeDoCardMainSection', [MigrationAndConversionController::class, 'editWhatWeDoCardMainSection'])->name('service.editWhatWeDoCardMainSection');
+            Route::get('/editWhatWeDoCard', [MigrationAndConversionController::class, 'editWhatWeDoCard'])->name('service.editWhatWeDoCard');
+            Route::get('/editOurProgressSection', [MigrationAndConversionController::class, 'editOurProgressSection'])->name('service.editOurProgressSection');
+            Route::get('/editOurProgressSectionCard', [MigrationAndConversionController::class, 'editOurProgressSectionCard'])->name('service.editOurProgressSectionCard');
+            Route::get('/createOurProgessCard', [MigrationAndConversionController::class, 'createOurProgessCard'])->name('service.createOurProgessCard');
+            Route::get('/editJoinOurCommunity', [MigrationAndConversionController::class, 'editJoinOurCommunity'])->name('service.editJoinOurCommunity');
+        });
     });
 
     Route::prefix('faq')->group(function () {
@@ -99,7 +178,7 @@ Route::prefix('admin')->group(function () {
     });
 
 
-    
+
 
     Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');

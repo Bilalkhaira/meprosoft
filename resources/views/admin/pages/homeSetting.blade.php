@@ -781,7 +781,7 @@
                        
 
                         <div style="float: right;">
-                            <a href="{{ route('home.editQuestonsSection') }}" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="#" class="btn btn-sm btn-primary">Edit</a>
                             <a href="#" class="btn btn-sm btn-danger">Delete</a>
                             <a href="#" class="btn btn-sm btn-primary" >Disable</a>
                         </div>

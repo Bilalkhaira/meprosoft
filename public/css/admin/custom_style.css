@@ -65,3 +65,21 @@
   .setting_main h3{
     margin-bottom: 40px;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+  /* active sidebar css */
+  .active_nv{
+    color: #4154f1 !important;
+    background: #f6f9ff !important;
+    border-radius: 4px !important;
+  }

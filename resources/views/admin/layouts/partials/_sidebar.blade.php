@@ -3,12 +3,14 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
+   
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
-          <i class="bi bi-grid"></i>
+        <a class="nav-link collapsed" href="{{ route('dashboard') }}">
+        <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
-      </li><!-- End Dashboard Nav -->
+      </li>
+      <!-- End Dashboard Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
@@ -181,10 +183,10 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#pages_manue" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse" href="#">
           <i class="bi bi-gem"></i><span>Pages</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="pages_manue" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="pages" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="{{ route('home.setting') }}">
               <i class="bi bi-circle"></i><span>Home</span>

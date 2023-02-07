@@ -68,31 +68,32 @@
                                 <div class="dropdown-lg-content">
                                     <div>
                                         <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="./projects.html">Dispatch Automation</a></li>
-                                            <li><a class="dropdown-item" href="./projects2.html">Dynamic Machine Scheduling </a>
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.dispatchAutomation') }}">Dispatch Automation</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.dynamicMachineScheduling') }}">Dynamic Machine Scheduling </a>
                                             </li>
-                                            <li><a class="dropdown-item" data-toggle="tooltip" title="Electronic Batch Manufacturing ( Pharmaceuticals & Chemicals )" href="./projects3.html">Electronic Batch Manufacturing</a>
+                                            <li><a class="dropdown-item" data-toggle="tooltip" title="Electronic Batch Manufacturing ( Pharmaceuticals & Chemicals )" href="{{ route('productAndSolution.electronicBatchManufacturing') }}">Electronic Batch Manufacturing</a>
                                             </li>
-                                            <li><a class="dropdown-item" href="./projects4.html">Handheld Mobile Bar Code</a>
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.handheldMobileBarCode') }}">Handheld Mobile Bar Code</a>
                                             </li>
-                                            <li><a class="dropdown-item" href="./projects4.html">Loan Management Solution</a></li>
-                                            <li><a class="dropdown-item" href="./projects4.html">Mespro GPS Preconfigured Analytics</a></li>
-                                            <li><a class="dropdown-item" href="./projects4.html">Mespro Life Science CFR Part 11</a></li>
-                                            <li><a class="dropdown-item" href="./projects4.html">TS 16949 Compliant KAPA </a></li>
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.loanManagementSolution') }}">Loan Management Solution</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproGPSPreconfiguredAnalytics') }}">Mespro GPS Preconfigured Analytics</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproLifeScienceCFRPart11') }}">Mespro Life Science CFR Part 11</a></li>
+                                            
 
                                         </ul>
                                     </div>
                                     <!-- /.column -->
                                     <div>
                                         <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="./single-project.html">Mespro Optimized MRP</a></li>
-                                            <li><a class="dropdown-item" href="./single-project2.html">Mespro Paperess Manufacturing </a></li>
-                                            <li><a class="dropdown-item" href="./single-project3.html">Mespro X-Steps</a></li>
-                                            <li><a class="dropdown-item" href="./single-project4.html">O2C Automation</a></li>
-                                            <li><a class="dropdown-item" href="./projects4.html" data-toggle="tooltip" title="Mespro Life Science – CFR Part 11 Compliant">Mespro Life Science</a></li>
-                                            <li><a class="dropdown-item" href="./projects4.html">Purchase Budget Check & Approval</a></li>
-                                            <li><a class="dropdown-item" href="./projects4.html">Smart Foundry</a></li>
-                                            <li><a class="dropdown-item" href="./projects4.html">REFX 16</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproOptimizedMRP') }}">Mespro Optimized MRP</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproPaperessManufacturing') }}">Mespro Paperess Manufacturing </a></li>
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.MesproX-Steps') }}">Mespro X-Steps</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.O2CAutomation') }}">O2C Automation</a></li>
+                                            <!-- <li><a class="dropdown-item" href="./projects4.html" data-toggle="tooltip" title="Mespro Life Science – CFR Part 11 Compliant">Mespro Life Science</a></li> -->
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.purchaseBudgetCheckAndApproval') }}">Purchase Budget Check & Approval</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.smartFoundry') }}">Smart Foundry</a></li>
+                                            <!-- <li><a class="dropdown-item" href="./projects4.html">REFX 16</a></li> -->
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.TS16949CompliantKAPA') }}">TS 16949 Compliant KAPA </a></li>
 
                                         </ul>
                                     </div>
@@ -105,9 +106,9 @@
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Case Study</a>
                             <div class="dropdown-menu dropdown-lg">
                                 <ul class="list-unstyled">
-                                    <li class="nav-item"><a class="dropdown-item" href="./blog.html">Food Industry</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="./blog2.html">Digital Manufacturing</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="./blog3.html">Mespro Paperless Manufacturing</a></li>
+                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('caseStudy.foodIndustry') }}">Food Industry</a></li>
+                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('caseStudy.digitalManufacturing') }}">Digital Manufacturing</a></li>
+                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('caseStudy.mesproPaperlessManufacturing') }}">Mespro Paperless Manufacturing</a></li>
                                     <li class="nav-item"><a class="dropdown-item" href="./blog3.html">S/4 Hana Private cloud</a></li>
                                     <li class="nav-item"><a class="dropdown-item" href="./blog3.html">S/4 Hana Conversion</a></li>
 
