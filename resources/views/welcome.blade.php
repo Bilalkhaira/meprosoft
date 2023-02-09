@@ -443,7 +443,7 @@
 
         <div class="row gy-10 gy-sm-13 gx-lg-3 align-items-center mb-14 mb-md-18">
             <div class="col-md-8 col-lg-6 position-relative">
-                <a href="./assets/media/movie.mp4" class="btn btn-circle btn-primary btn-play ripple mx-auto mb-5 position-absolute" style="top:50%; left: 50%; transform: translate(-50%,-50%); z-index:3;" data-glightbox><i class="icn-caret-right"></i></a>
+                <a href="./assets/media/movie.mp4" class="btn btn-circle btn-primary btn-play ripple mb-5 position-absolute" style="top:50%; left: 50%; transform: translate(-50%,-50%); z-index:3;" data-glightbox><i class="icn-caret-right"></i></a>
                 <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0" style="bottom: -1.8rem; right: -1.5rem; width: 85%; height: 90%; "></div>
                 <figure class="rounded"><img src="{{ asset('img/photos/about12.jpg') }}" srcset="{{ asset('img/photos/about12@2x.jpg 2x') }}" alt=""></figure>
             </div>
