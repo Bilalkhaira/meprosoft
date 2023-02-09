@@ -23,8 +23,8 @@
                         <img src="{{ asset('img/slider/4.png') }}" alt="Los Angeles" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
                             <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
-                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;">Welcome To Mesprosoft.</h1>
-                                <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p>
+                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 40px;text-shadow:none;">Your go-to IT services for better efficiency, higher growth and seamless accessibility.</h1>
+                                <!-- <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p> -->
                                 <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
                                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-primary rounded-pill me-2" style="background-color: #57a8c7; border: none">Read More</a></span>
                                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-outline-primary rounded-pill" style="border: 1px solid #57a8c7;">Contact Us</a></span>
@@ -53,8 +53,8 @@
                         <img src="{{ asset('img/slider/4.png') }}" alt="Chicago" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
                             <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
-                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;">Welcome To Mesprosoft.</h1>
-                                <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p>
+                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 40px;text-shadow:none;">Mesprosoft for the win! Best IT services there is, for your business.</h1>
+                                <!-- <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p> -->
                                 <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
                                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-primary rounded-pill me-2" style="background-color: #57a8c7; border: none">Read More</a></span>
                                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-outline-primary rounded-pill" style="border: 1px solid #57a8c7;">Contact Us</a></span>
@@ -83,8 +83,8 @@
                         <img src="{{ asset('img/slider/4.png') }}" alt="New York" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
                             <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
-                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;">Welcome To Mesprosoft.</h1>
-                                <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p>
+                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 40px;text-shadow:none;">IT solutions to all your problems.</h1>
+                                <!-- <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p> -->
                                 <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
                                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-primary rounded-pill me-2" style="background-color: #57a8c7; border: none">Read More</a></span>
                                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-outline-primary rounded-pill" style="border: 1px solid #57a8c7;">Contact Us</a></span>
@@ -123,13 +123,26 @@
             </div>
         </div>
 
-        <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0 mb-13 mb-md-17">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0 mb-13 mb-md-17" style="margin-bottom: 0px !important;">
             <div class="col-lg-4">
                 <h2 id="heading" class="display-4 mb-3 pe-xxl-5">100% Satisfied Customers</h2>
                 <p class="lead fs-lg mb-0 pe-xxl-5">We <span class="underline">bring solutions</span> to make life
                     easier for our customers.</p>
             </div>
             <div class="col-lg-8 logo_main">
+                <marquee width="100%" direction="left" height="300px" style="padding-top: 80px;">
+                <img src="{{ asset('img/brands/c10.png') }}" alt="" />
+                <img src="{{ asset('img/brands/c2.png') }}" alt="" />
+                <img src="{{ asset('img/brands/c3.png') }}" alt="" />
+                <img src="{{ asset('img/brands/c4.png') }}" alt="" />
+                <img src="{{ asset('img/brands/c5.png') }}" alt="" />
+                <img src="{{ asset('img/brands/c6.png') }}" alt="" />
+                <img src="{{ asset('img/brands/c7.png') }}" alt="" />
+                <img src="{{ asset('img/brands/c8.png') }}" alt="" />
+                <img src="{{ asset('img/brands/c9.png') }}" alt="" />
+                </marquee>
+            </div>
+            <!-- <div class="col-lg-8 logo_main">
                 <div class="row row-cols-2 row-cols-md-3 gx-0 gx-md-8 gx-xl-12 gy-11 mt-n10 brand_img">
                     <div class="col">
                         <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c10.png') }}" alt="" />
@@ -170,13 +183,13 @@
                         </figure>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-18 align-items-center">
             <div class="col-md-8 col-lg-6 position-relative">
                 <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
-                <figure class="rounded"><img src="{{ asset('img/photos/about10.jpg') }}" srcset="{{ asset('img/photos/about10@2x.jpg 2x') }}" alt=""></figure>
+                <figure class="rounded"><img src="{{ asset('img/home/building_efficiency.jpg') }}" alt=""></figure>
             </div>
             <div class="col-lg-6">
                 <h2 id="heading" class="display-4 mb-3">BUILDING EFFICIENCY DRIVING GROWTH</h2>
@@ -205,7 +218,7 @@
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-20 align-items-center">
             <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
                 <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
-                <figure class="rounded"><img src="{{ asset('img/photos/about11.jpg') }}" srcset="{{ asset('img/photos/about11@2x.jpg 2x') }}" alt=""></figure>
+                <figure class="rounded"><img src="{{ asset('img/home/services.jpg') }}" alt=""></figure>
             </div>
 
             <div class="col-lg-6">
@@ -276,7 +289,7 @@
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-20 align-items-center">
             <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
                 <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
-                <figure class="rounded"><img src="{{ asset('img/mesprosoft_products.png') }}" alt=""></figure>
+                <figure class="rounded"><img src="{{ asset('img/home/product_solution.jpg') }}" alt=""></figure>
             </div>
 
             <div class="col-lg-6">

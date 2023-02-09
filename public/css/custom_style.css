@@ -2,6 +2,9 @@ body a:hover{
     text-decoration: none !important;
     color: #54a8c7 !important;
 }
+body p{
+    text-align: justify !important;
+}
 
 
 body {
@@ -65,16 +68,22 @@ img {
     color: #60697b !important;
 }
 
-.logo_main{
+/* .logo_main{
     border: 1px solid #f1ebeb;
     height: 170px;
     overflow: auto;
     padding-bottom: 25px;
     border-radius: 5px;
-}
+} */
 
 .g-xl-12, .gx-xl-12 {
     --bs-gutter-x: 0 !important;
+}
+.logo_main img{
+    width: 300px !important;
+}
+.mx-auto{
+    width: 100% !important;
 }
 
 
