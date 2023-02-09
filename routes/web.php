@@ -7,7 +7,7 @@ use App\Http\Controllers\ContactusController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\NotificationController;
-use App\Http\Controllers\Admin\Services\MigrationAndConversionController;
+use App\Http\Controllers\Admin\Services\ServicesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -161,14 +161,17 @@ Route::prefix('admin')->group(function () {
         });
 
         Route::prefix('service')->group(function () {
-            Route::get('/', [MigrationAndConversionController::class, 'index'])->name('service.index');
-            Route::get('/createWhatWeDoCard', [MigrationAndConversionController::class, 'createWhatWeDoCard'])->name('service.createWhatWeDoCard');
-            Route::get('/editWhatWeDoCardMainSection', [MigrationAndConversionController::class, 'editWhatWeDoCardMainSection'])->name('service.editWhatWeDoCardMainSection');
-            Route::get('/editWhatWeDoCard', [MigrationAndConversionController::class, 'editWhatWeDoCard'])->name('service.editWhatWeDoCard');
-            Route::get('/editOurProgressSection', [MigrationAndConversionController::class, 'editOurProgressSection'])->name('service.editOurProgressSection');
-            Route::get('/editOurProgressSectionCard', [MigrationAndConversionController::class, 'editOurProgressSectionCard'])->name('service.editOurProgressSectionCard');
-            Route::get('/createOurProgessCard', [MigrationAndConversionController::class, 'createOurProgessCard'])->name('service.createOurProgessCard');
-            Route::get('/editJoinOurCommunity', [MigrationAndConversionController::class, 'editJoinOurCommunity'])->name('service.editJoinOurCommunity');
+
+            Route::get('/', [ServicesController::class, 'index'])->name('service.index');
+            Route::get('/createExplanationSection', [ServicesController::class, 'createExplanationSection'])->name('service.createExplanationSection');
+            Route::get('/createFeatureSection', [ServicesController::class, 'createFeatureSection'])->name('service.createFeatureSection');
+            Route::get('/createFeatureSectionCard', [ServicesController::class, 'createFeatureSectionCard'])->name('service.createFeatureSectionCard');
+            Route::get('/createToSection', [ServicesController::class, 'createToSection'])->name('service.createToSection');
+
+            Route::get('/editExplanationSection/{id}', [ServicesController::class, 'editExplanationSection'])->name('service.editExplanationSection');
+            Route::get('/editFeatureSection/{id}', [ServicesController::class, 'editFeatureSection'])->name('service.editFeatureSection');
+            Route::get('/editFeatureSectionCard/{id}', [ServicesController::class, 'editFeatureSectionCard'])->name('service.editFeatureSectionCard');
+            Route::get('/editToSection/{id}', [ServicesController::class, 'editToSection'])->name('service.editToSection');
         });
     });
 

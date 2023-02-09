@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('img/photos/bg1.jpg') }}">
+<section class="wrapper image-wrapper bg-image bg-overlay text-white" data-image-src="{{ asset('img/services/1.jpg') }}">
       <div class="container pt-19 pt-md-21 pb-18 pb-md-20 text-center">
         <div class="row">
           <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
