@@ -48,16 +48,96 @@ Route::get('contactUs', function () {
     return view('pages.contactUs');
 })->name('contactUs');
 
-Route::get('about', function () {
-    return view('pages.about');
-})->name('about');
 
-Route::get('applicationMigrationConversion', function () {
-    return view('pages.services.applicationMigrationConversion');
-})->name('applicationMigrationConversion');
+
+
 
 Route::post('saveMsg', [ContactusController::class, 'save'])->name('saveMsg');
 
+Route::prefix('eventAndNews')->group(function () {
+
+    Route::get('/', function () {
+        return view('pages.eventAndNews.index');
+    })->name('eventAndNews.index');
+
+});
+
+Route::prefix('careers')->group(function () {
+
+    Route::get('/', function () {
+        return view('pages.careers.index');
+    })->name('careers.index');
+
+});
+
+Route::prefix('services')->group(function () {
+
+    Route::get('applicationMigrationConversion', function () {
+        return view('pages.services.applicationMigrationConversion');
+    })->name('services.applicationMigrationConversion');
+
+    Route::get('enterpriseSolutionConsulting', function () {
+        return view('pages.services.enterpriseSolutionConsulting');
+    })->name('services.enterpriseSolutionConsulting');
+
+    Route::get('GSTMigration', function () {
+        return view('pages.services.GSTMigration');
+    })->name('services.GSTMigration');
+
+    Route::get('IPOCompliance', function () {
+        return view('pages.services.IPOCompliance');
+    })->name('services.IPOCompliance');
+
+    Route::get('PLCMESWeighBridgeIntegration', function () {
+        return view('pages.services.PLCMESWeighBridgeIntegration');
+    })->name('services.PLCMESWeighBridgeIntegration');
+
+    Route::get('resourceArgumentation', function () {
+        return view('pages.services.resourceArgumentation');
+    })->name('services.resourceArgumentation');
+
+    Route::get('riseWithS4HANAImplementation', function () {
+        return view('pages.services.riseWithS4HANAImplementation');
+    })->name('services.riseWithS4HANAImplementation');
+
+    Route::get('SAPSupport', function () {
+        return view('pages.services.SAPSupport');
+    })->name('services.SAPSupport');
+
+    // Route::get('digitalManufacturingCloud', function () {
+    //     return view('pages.services.digitalManufacturingCloud');
+    // })->name('services.digitalManufacturingCloud');
+
+    // Route::get('applicationLifeCycleManagement', function () {
+    //     return view('pages.services.applicationLifeCycleManagement');
+    // })->name('services.applicationLifeCycleManagement');
+
+    // Route::get('SAPFioriDevelopment', function () {
+    //     return view('pages.services.SAPFioriDevelopment');
+    // })->name('services.SAPFioriDevelopment');
+
+});
+
+
+Route::prefix('home/CorporateOverview')->group(function () {
+
+    Route::get('about', function () {
+        return view('pages.home.corporateOverview.about');
+    })->name('home.about');
+
+    Route::get('managementTeam', function () {
+        return view('pages.home.corporateOverview.managementTeam');
+    })->name('home.managementTeam');
+
+    Route::get('coreValues', function () {
+        return view('pages.home.corporateOverview.coreValues');
+    })->name('home.coreValues');
+
+    Route::get('whyMesprosoft', function () {
+        return view('pages.home.corporateOverview.whyMesprosoft');
+    })->name('home.whyMesprosoft');
+    
+});
 
 Route::prefix('productAndSolution')->group(function () {
 
@@ -166,12 +246,15 @@ Route::prefix('admin')->group(function () {
             Route::get('/createExplanationSection', [ServicesController::class, 'createExplanationSection'])->name('service.createExplanationSection');
             Route::get('/createFeatureSection', [ServicesController::class, 'createFeatureSection'])->name('service.createFeatureSection');
             Route::get('/createFeatureSectionCard', [ServicesController::class, 'createFeatureSectionCard'])->name('service.createFeatureSectionCard');
+
             Route::get('/createToSection', [ServicesController::class, 'createToSection'])->name('service.createToSection');
+            Route::post('/storeToSection', [ServicesController::class, 'storeToSection'])->name('service.storeToSection');
+            Route::get('/editToSection/{id}', [ServicesController::class, 'editToSection'])->name('service.editToSection');
 
             Route::get('/editExplanationSection/{id}', [ServicesController::class, 'editExplanationSection'])->name('service.editExplanationSection');
             Route::get('/editFeatureSection/{id}', [ServicesController::class, 'editFeatureSection'])->name('service.editFeatureSection');
             Route::get('/editFeatureSectionCard/{id}', [ServicesController::class, 'editFeatureSectionCard'])->name('service.editFeatureSectionCard');
-            Route::get('/editToSection/{id}', [ServicesController::class, 'editToSection'])->name('service.editToSection');
+            
         });
     });
 

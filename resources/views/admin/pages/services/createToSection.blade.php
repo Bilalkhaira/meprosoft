@@ -22,7 +22,8 @@
                 <div class="card-body">
 
                     <div class="pt-3 setting_main">
-                        <form action="">
+                        <form action="{{ route('service.storeToSection') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label"> Heading</label>
                                 <div class="col-md-8 col-lg-10">
@@ -32,18 +33,18 @@
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label"> Text</label>
                                 <div class="col-md-8 col-lg-10">
-                                    <textarea name="" class="form-control" id="" cols="30" rows="4"></textarea>
+                                    <textarea name="explanation" class="form-control" id="" cols="30" rows="4"></textarea>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label">Background Image</label>
                                 <div class="col-md-8 col-lg-10">
-                                    <input name="heading" class="form-control" type="file">
+                                    <input name="img" class="form-control" type="file">
                                 </div>
                             </div>
 
                             <div style="float: right;">
-                                <button class="btn btn-primary btn-sm">Save</button>
+                                <button type="submit" class="btn btn-primary btn-sm">Save</button>
                             </div>
 
                         </form>

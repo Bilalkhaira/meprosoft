@@ -85,7 +85,7 @@
                         </div>
 
                         <div style="float: right;">
-                            <!-- <a href="{{ route('service.createToSection') }}" class="btn btn-sm btn-primary">Add</a> -->
+                            <a href="{{ route('service.createToSection') }}" class="btn btn-sm btn-primary">Add</a>
                             <a href="{{ route('service.editToSection',1) }}" class="btn btn-sm btn-primary">Edit</a>
                             <a href="#" class="btn btn-sm  btn-primary">Disable</a>
                         </div>

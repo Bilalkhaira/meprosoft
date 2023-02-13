@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('service_pages_data', function (Blueprint $table) {
+        Schema::create('pages_card_data', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('menu_id')->nullable();
-            $table->double('top_section')->nullable();
-            $table->double('explanation_section')->nullable();
-            $table->double('feature_section')->nullable();
+            $table->unsignedInteger('parent_id')->nullable();
+            $table->string('heading')->nullable();
+            $table->string('explanation')->nullable();
+            $table->string('img')->nullable();
             $table->timestamps();
         });
     }
