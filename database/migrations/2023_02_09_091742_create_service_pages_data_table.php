@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('service_pages_data', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('menu_id')->nullable();
-            $table->double('top_section')->nullable();
-            $table->double('explanation_section')->nullable();
-            $table->double('feature_section')->nullable();
+            $table->string('top_section')->nullable();
+            $table->string('explanation_section')->nullable();
+            $table->string('feature_section')->nullable();
             $table->timestamps();
         });
     }

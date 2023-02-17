@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Admin\Services;
 use App\Models\NavMenu;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Laravel\Ui\Presets\React;
+use App\Models\ServicePagesData;
+use App\Http\Controllers\Controller;
 
 class ServicesController extends Controller
 {
@@ -14,7 +15,9 @@ class ServicesController extends Controller
     {
         $services = NavMenu::with('children')->where('name', 'Services')->get();
 
-        return view('admin.pages.services.index', ['services_lists' => Arr::get($services, '0.children')]);
+        $pageData = ServicePagesData::where('menu_id', 1)->first();
+        // dd(json_decode($pageData->top_section));
+        return view('admin.pages.services.index', ['services_lists' => Arr::get($services, '0.children'), 'pageData' => $pageData]);
     }
 
     public function createExplanationSection()
@@ -54,27 +57,29 @@ class ServicesController extends Controller
 
     public function editToSection($id)
     {
-        return view('admin.pages.services.editToSection');
+        $topsectionData = json_decode((ServicePagesData::find($id))->top_section); 
+
+        return view('admin.pages.services.editToSection', ['topsectionData' => $topsectionData, 'update_id' => $id]);
     }
 
     public function storeToSection(Request $request)
     {
-        // $imgpath = public_path('img/services/');
+        $imgpath = public_path('img/services/');
 
-        // $destinationPath = $imgpath;
-        // $file = $request->img;
-        // $fileName = time() . '.' . $file->clientExtension();
-        // $file->move($destinationPath, $fileName);
+        $destinationPath = $imgpath;
+        $file = $request->img;
+        $fileName = time() . '.' . $file->clientExtension();
+        $file->move($destinationPath, $fileName);
 
         $input = [
             'heading' => $request->heading,
             'explanation' => $request->explanation,
-            'img' => 'asd',
+            'img' => $fileName,
         ];
 
         $a = json_encode($input);
 
-        NavMenu::create([
+        ServicePagesData::create([
             'menu_id' => 1,
             'top_section' => $a
         ]);
@@ -82,5 +87,33 @@ class ServicesController extends Controller
 
         toastr()->success('Created Successfully');
         return redirect()->route('service.index');
+    }
+
+    public function updateToSection(Request $request, $id)
+    {
+        dd($request->all());
+        // $imgpath = public_path('img/services/');
+
+        // $destinationPath = $imgpath;
+        // $file = $request->img;
+        // $fileName = time() . '.' . $file->clientExtension();
+        // $file->move($destinationPath, $fileName);
+
+        // $input = [
+        //     'heading' => $request->heading,
+        //     'explanation' => $request->explanation,
+        //     'img' => $fileName,
+        // ];
+
+        // $a = json_encode($input);
+
+        // ServicePagesData::create([
+        //     'menu_id' => 1,
+        //     'top_section' => $a
+        // ]);
+
+
+        // toastr()->success('Created Successfully');
+        // return redirect()->route('service.index');
     }
 }

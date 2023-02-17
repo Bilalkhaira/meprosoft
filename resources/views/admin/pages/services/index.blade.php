@@ -60,36 +60,39 @@
         <div class="col-xl-12">
 
             <div class="card">
-
                 <div class="card-body">
 
                     <div class="pt-3 setting_main">
+                        @if(!empty($pageData) AND !empty($topSection = json_decode($pageData->top_section)))
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Heading</label>
                             <div class="col-md-8 col-lg-10">
-                                This is heading
+                                {{$topSection->heading}}
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Text</label>
                             <div class="col-md-8 col-lg-10">
-                                Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.
+                                {{$topSection->explanation}}
                             </div>
                         </div>
                         <div class="row mb-3">
 
                             <label class="col-md-4 col-lg-2 label">Background Image</label>
                             <div class="col-md-8 col-lg-10">
-                                <img src="http://127.0.0.1:8000/img/slider/4.png" alt="">
+                                <img src="{{ asset('img/services/'.$topSection->img )}}" alt="">
                             </div>
+
                         </div>
 
                         <div style="float: right;">
-                            <a href="{{ route('service.createToSection') }}" class="btn btn-sm btn-primary">Add</a>
-                            <a href="{{ route('service.editToSection',1) }}" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="#" class="btn btn-sm  btn-primary">Disable</a>
+                            <a href="{{ route('service.editToSection',$pageData->id) }}" class="btn btn-sm btn-primary">Edit</a>
                         </div>
-
+                        @else
+                        <div style="float: right;">
+                            <a href="{{ route('service.createToSection') }}" class="btn btn-sm btn-primary">Add</a>
+                        </div>
+                        @endif
 
                     </div>
 

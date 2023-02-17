@@ -250,6 +250,7 @@ Route::prefix('admin')->group(function () {
             Route::get('/createToSection', [ServicesController::class, 'createToSection'])->name('service.createToSection');
             Route::post('/storeToSection', [ServicesController::class, 'storeToSection'])->name('service.storeToSection');
             Route::get('/editToSection/{id}', [ServicesController::class, 'editToSection'])->name('service.editToSection');
+            Route::put('/updateToSection/{id}', [ServicesController::class, 'updateToSection'])->name('service.updateToSection');
 
             Route::get('/editExplanationSection/{id}', [ServicesController::class, 'editExplanationSection'])->name('service.editExplanationSection');
             Route::get('/editFeatureSection/{id}', [ServicesController::class, 'editFeatureSection'])->name('service.editFeatureSection');

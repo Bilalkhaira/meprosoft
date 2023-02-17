@@ -21,7 +21,7 @@
 
                     <div class="item active">
                         <img src="{{ asset('img/slider/4.png') }}" alt="Los Angeles" style="width:100%;">
-                        <div class="carousel-caption" style="top: 22%; left: 8%">
+                        <div class="carousel-caption box animate fadeInRight four" style="top: 22%; left: 8%">
                             <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
                                 <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 40px;text-shadow:none;">Your go-to IT services for better efficiency, higher growth and seamless accessibility.</h1>
                                 <!-- <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p> -->
@@ -52,7 +52,7 @@
                     <div class="item">
                         <img src="{{ asset('img/slider/4.png') }}" alt="Chicago" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
-                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
+                            <div class="col-lg-6 text-center text-lg-start box animate fadeInRight four" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
                                 <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 40px;text-shadow:none;">Mesprosoft for the win! Best IT services there is, for your business.</h1>
                                 <!-- <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p> -->
                                 <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
@@ -82,7 +82,7 @@
                     <div class="item">
                         <img src="{{ asset('img/slider/4.png') }}" alt="New York" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
-                            <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
+                            <div class="col-lg-6 text-center text-lg-start box animate fadeInRight four" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
                                 <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 40px;text-shadow:none;">IT solutions to all your problems.</h1>
                                 <!-- <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p> -->
                                 <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
@@ -124,66 +124,25 @@
         </div>
 
         <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0 mb-13 mb-md-17" style="margin-bottom: 0px !important;">
-            <div class="col-lg-4">
-                <h2 id="heading" class="display-4 mb-3 pe-xxl-5">100% Satisfied Customers</h2>
-                <p class="lead fs-lg mb-0 pe-xxl-5">We <span class="underline">bring solutions</span> to make life
-                    easier for our customers.</p>
+            <div class="col-lg-12" style="text-align: center;">
+                <h2 id="heading" class="display-4 mb-3 pe-xxl-5 box animate fadeInLeft three" style="display:inline-block">100%</h2>
+                <h2 id="heading" class="display-4 mb-3 pe-xxl-5 box animate fadeInRight four" style="display: inline-block;">Satisfied Customers</h2>
+                <span style="display: block;" class="lead fs-lg mb-0 pe-xxl-5">We <span class="underline">bring solutions</span> to make life
+                    easier for our customers.</span>
             </div>
-            <div class="col-lg-8 logo_main">
+            <div class="col-lg-12 logo_main">
                 <marquee width="100%" direction="left" height="300px" style="padding-top: 80px;">
-                <img src="{{ asset('img/brands/c10.png') }}" alt="" />
-                <img src="{{ asset('img/brands/c2.png') }}" alt="" />
-                <img src="{{ asset('img/brands/c3.png') }}" alt="" />
-                <img src="{{ asset('img/brands/c4.png') }}" alt="" />
-                <img src="{{ asset('img/brands/c5.png') }}" alt="" />
-                <img src="{{ asset('img/brands/c6.png') }}" alt="" />
-                <img src="{{ asset('img/brands/c7.png') }}" alt="" />
-                <img src="{{ asset('img/brands/c8.png') }}" alt="" />
-                <img src="{{ asset('img/brands/c9.png') }}" alt="" />
+                    <img src="{{ asset('img/brands/c10.png') }}" alt="" />
+                    <img src="{{ asset('img/brands/c2.png') }}" alt="" />
+                    <img src="{{ asset('img/brands/c3.png') }}" alt="" />
+                    <img src="{{ asset('img/brands/c4.png') }}" alt="" />
+                    <img src="{{ asset('img/brands/c5.png') }}" alt="" />
+                    <img src="{{ asset('img/brands/c6.png') }}" alt="" />
+                    <img src="{{ asset('img/brands/c7.png') }}" alt="" />
+                    <img src="{{ asset('img/brands/c8.png') }}" alt="" />
+                    <img src="{{ asset('img/brands/c9.png') }}" alt="" />
                 </marquee>
             </div>
-            <!-- <div class="col-lg-8 logo_main">
-                <div class="row row-cols-2 row-cols-md-3 gx-0 gx-md-8 gx-xl-12 gy-11 mt-n10 brand_img">
-                    <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c10.png') }}" alt="" />
-                        </figure>
-                    </div>
-
-                    <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c2.png') }}" alt="" />
-                        </figure>
-                    </div>
-
-                    <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c3.png') }}" alt="" />
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c4.png') }}" alt="" />
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c5.png') }}" alt="" />
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c6.png') }}" alt="" />
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c7.png') }}" alt="" />
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c8.png') }}" alt="" />
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <figure class="px-4 px-lg-3 px-xxl-5"><img src="{{ asset('img/brands/c9.png') }}" alt="" />
-                        </figure>
-                    </div>
-                </div>
-            </div> -->
         </div>
 
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-18 align-items-center">
@@ -192,8 +151,8 @@
                 <figure class="rounded"><img src="{{ asset('img/home/building_efficiency.jpg') }}" alt=""></figure>
             </div>
             <div class="col-lg-6">
-                <h2 id="heading" class="display-4 mb-3">BUILDING EFFICIENCY DRIVING GROWTH</h2>
-                <p class="lead fs-lg">Mesprosoft Stands for Building Efficiency in all actions in an organization, we
+                <h2 id="heading" class="display-4 mb-3 box animate fadeInRight four">BUILDING EFFICIENCY DRIVING GROWTH</h2>
+                <p class="lead fs-lg box animate fadeIn five">Mesprosoft Stands for Building Efficiency in all actions in an organization, we
                     help to build Metrics, Streamline Systems and Processes. Our Products and Services Portfolio are a
                     combination in achieving this goal in any organization, regardless of its size and challenges.
                     Mesprosoft helps our customers to get the best value from their IT investments.</p>
@@ -222,8 +181,8 @@
             </div>
 
             <div class="col-lg-6">
-                <h2 id="heading" class="display-4 mb-3">Our Services</h2>
-                <div class="row gx-xl-10 gy-6">
+                <h2 id="heading" class="display-4 mb-3 box animate fadeInLeft three">Our Services</h2>
+                <div class="row gx-xl-10 gy-6 box animate fadeIn five">
                     <div class="col-md-6 col-lg-6 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
@@ -287,14 +246,15 @@
         </div>
 
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-20 align-items-center">
-            <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
-                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
+
+            <div class="col-md-8 col-lg-6 position-relative">
+                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
                 <figure class="rounded"><img src="{{ asset('img/home/product_solution.jpg') }}" alt=""></figure>
             </div>
 
             <div class="col-lg-6">
-                <h2 id="heading" class="display-4 mb-3">Our Products and Solutions</h2>
-                <div class="row gx-xl-10 gy-6">
+                <h2 id="heading" class="display-4 mb-3 box animate fadeInRight four">Our Products and Solutions</h2>
+                <div class="row gx-xl-10 gy-6 box animate fadeIn five">
                     <div class="col-md-6 col-lg-6 col-xl-6">
                         <div class="d-flex flex-row">
                             <div>
@@ -355,7 +315,10 @@
 
             </div>
 
+
         </div>
+
+
 
         <div class="card bg-soft-primary rounded-4 mt-2 mb-13 mb-md-17">
 
@@ -373,7 +336,7 @@
                     <div class="item active">
                         <img src="{{ asset('img/slider/1.png') }}" alt="Los Angeles" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
-                            <div class="col-lg-7 offset-lg-5 col-xl-6" style="text-shadow: none;">
+                            <div class="col-lg-7 offset-lg-5 col-xl-6 box animate fadeIn five" style="text-shadow: none;">
                                 <span class="ratings five mb-3"></span>
                                 <blockquote class="border-0 fs-lg mb-0" style="padding: 0;">
                                     <p>“Fusce dapibus tellus ac cursus commodo, tortor mauris condimentum nibh ut fermentum massa, justo sit amet vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed”</p>
@@ -392,7 +355,7 @@
                     <div class="item">
                         <img src="{{ asset('img/slider/1.png') }}" alt="Chicago" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
-                            <div class="col-lg-7 offset-lg-5 col-xl-6" style="text-shadow: none;">
+                            <div class="col-lg-7 offset-lg-5 col-xl-6 box animate fadeIn five" style="text-shadow: none;">
                                 <span class="ratings five mb-3"></span>
                                 <blockquote class="border-0 fs-lg mb-0" style="padding: 0;">
                                     <p>“Fusce dapibus tellus ac cursus commodo, tortor mauris condimentum nibh ut fermentum massa, justo sit amet vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed”</p>
@@ -411,7 +374,7 @@
                     <div class="item">
                         <img src="{{ asset('img/slider/1.png') }}" alt="New York" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
-                            <div class="col-lg-7 offset-lg-5 col-xl-6" style="text-shadow: none;">
+                            <div class="col-lg-7 offset-lg-5 col-xl-6 box animate fadeIn five" style="text-shadow: none;">
                                 <span class="ratings five mb-3"></span>
                                 <blockquote class="border-0 fs-lg mb-0" style="padding: 0;">
                                     <p>“Fusce dapibus tellus ac cursus commodo, tortor mauris condimentum nibh ut fermentum massa, justo sit amet vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed”</p>
