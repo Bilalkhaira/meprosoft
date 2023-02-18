@@ -6,11 +6,17 @@ body p{
     text-align: justify !important;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+  font-family: 'Poppins', sans-serif !important;
+}
+button, input, select, textarea{
+  font-family: 'Poppins', sans-serif !important;
+}
 
 body {
     margin: 0;
     /* font-family: var(--bs-body-font-family) !important; */
-    font-family: 'Poppins', sans-serif!important;
+    font-family: 'Poppins', sans-serif !important;
     font-size: var(--bs-body-font-size) !important;
     font-weight: var(--bs-body-font-weight) !important;
     line-height: var(--bs-body-line-height) !important;
@@ -94,15 +100,13 @@ img {
 
 
 
-
+/* Home page animation */
 .animate {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-
-
 
 .three {
   -webkit-animation-delay: 2s;
@@ -122,13 +126,6 @@ img {
   animation-delay: 2s;
 }
 
-
-
-
-
-
-
-/* Home page animation image */
 /*=== FADE IN LEFT ===*/
 @-webkit-keyframes fadeInLeft {
   from {
@@ -218,6 +215,43 @@ img {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
+
+
+/* home page circle animation */
+.cell {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+}
+.circle {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: whiteSmoke;
+  /* box-shadow: 4px -40px 60px 5px rgb(26, 117, 206) inset; */
+}
+ 
+.pulse {
+  animation: pulse 1s infinite ease-in-out alternate;
+}
+@keyframes pulse {
+  from { transform: scale(0.8); }
+  to { transform: scale(1.2); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

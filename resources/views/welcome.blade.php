@@ -20,7 +20,7 @@
                 <div class="carousel-inner">
 
                     <div class="item active">
-                        <img src="{{ asset('img/slider/4.png') }}" alt="Los Angeles" style="width:100%;">
+                        <img src="{{ asset('img/slider/Web Mepro-01.jpg') }}" alt="Los Angeles" style="width:100%;">
                         <div class="carousel-caption box animate fadeInRight four" style="top: 22%; left: 8%">
                             <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
                                 <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 40px;text-shadow:none;">Your go-to IT services for better efficiency, higher growth and seamless accessibility.</h1>
@@ -50,7 +50,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="{{ asset('img/slider/4.png') }}" alt="Chicago" style="width:100%;">
+                        <img src="{{ asset('img/slider/Web Mepro-02.jpg') }}" alt="Chicago" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
                             <div class="col-lg-6 text-center text-lg-start box animate fadeInRight four" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
                                 <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 40px;text-shadow:none;">Mesprosoft for the win! Best IT services there is, for your business.</h1>
@@ -80,7 +80,7 @@
                     </div>
 
                     <div class="item">
-                        <img src="{{ asset('img/slider/4.png') }}" alt="New York" style="width:100%;">
+                        <img src="{{ asset('img/slider/Web Mepro-03.jpg') }}" alt="New York" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
                             <div class="col-lg-6 text-center text-lg-start box animate fadeInRight four" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
                                 <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 40px;text-shadow:none;">IT solutions to all your problems.</h1>
@@ -147,7 +147,7 @@
 
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-18 align-items-center">
             <div class="col-md-8 col-lg-6 position-relative">
-                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
+                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20 cell circle pulse" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
                 <figure class="rounded"><img src="{{ asset('img/home/building_efficiency.jpg') }}" alt=""></figure>
             </div>
             <div class="col-lg-6">
@@ -176,7 +176,7 @@
 
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-20 align-items-center">
             <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
-                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
+                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20 cell circle pulse" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
                 <figure class="rounded"><img src="{{ asset('img/home/services.jpg') }}" alt=""></figure>
             </div>
 
@@ -248,7 +248,7 @@
         <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-20 align-items-center">
 
             <div class="col-md-8 col-lg-6 position-relative">
-                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
+                <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20 cell circle pulse" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
                 <figure class="rounded"><img src="{{ asset('img/home/product_solution.jpg') }}" alt=""></figure>
             </div>
 
