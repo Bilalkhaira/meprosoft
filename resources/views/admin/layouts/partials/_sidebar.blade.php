@@ -192,8 +192,11 @@
               <i class="bi bi-circle"></i><span>Home</span>
             </a>
           </li>
-          <li>
-            <a href="{{ route('service.index') }}">
+          <li class="sidebar_btn">
+            <!-- <form action="">
+              <button class="btn"><i class="bi bi-circle"></i>Services</button>
+            </form> -->
+            <a href="{{ route('service.index', 8) }}">
               <i class="bi bi-circle"></i><span>Services</span>
             </a>
           </li>

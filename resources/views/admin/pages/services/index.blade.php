@@ -25,20 +25,23 @@
                 <div class="card-body">
 
                     <div class="pt-3 setting_main">
-                        <form action="">
+                        <form action="{{ route('service.getServicePage') }}" method="POST">
+                            @csrf
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-4 label">Select Page And Submit For Edit Page</label>
                                 <div class="col-md-8 col-lg-8">
-                                    <select class="form-control" name="navbar_id" id="">
+                                    <select class="form-control" name="navbar_id" id="navbar">
+                                        @if(!empty($services_lists))
                                         @foreach($services_lists as $services_list)
-                                        <option value="{{ $services_list->id }}">{{ $services_list->name }}</option>
+                                        <option value="{{ $services_list->id }}" @if(isset($navbar_id) && $navbar_id == $services_list->id) ? selected  @endif>{{ $services_list->name }}</option>
                                         @endforeach
+                                        @endif
                                     </select>
                                 </div>
                             </div>
 
                             <div style="float: right;">
-                                <a href="{{ route('home.editBuildingEfficiencySection') }}" class="btn btn-sm btn-primary">Submit</a>
+                                <button class="btn btn-sm btn-primary">Submit</button>
                             </div>
                         </form>
 
@@ -55,7 +58,10 @@
 
 <section class="section">
     <div class="row">
-        <h2>Top Section Settings</h2>
+
+        <div class="pagetitle">
+            <h1>Top Section Settings</h1>
+        </div>
 
         <div class="col-xl-12">
 
@@ -87,10 +93,15 @@
 
                         <div style="float: right;">
                             <a href="{{ route('service.editToSection',$pageData->id) }}" class="btn btn-sm btn-primary">Edit</a>
+
                         </div>
                         @else
                         <div style="float: right;">
-                            <a href="{{ route('service.createToSection') }}" class="btn btn-sm btn-primary">Add</a>
+                            <form action="{{ route('service.createToSection') }}" method="POST">
+                                @csrf
+                                <input type="hidden" id="nvbr_id" value="{{ $navbar_id ?? ''}}" name="nvbar_id">
+                                <button type="submit" class="btn btn-sm btn-primary">Add</button>
+                            </form>
                         </div>
                         @endif
 
@@ -109,8 +120,9 @@
 
 <section class="section">
     <div class="row">
-        <h2>Explanation Section</h2>
-
+        <div class="pagetitle">
+            <h1>Explanation Section</h1>
+        </div>
 
         <div class="col-xl-12">
 
@@ -118,24 +130,44 @@
                 <div class="card-body">
 
                     <div class="pt-3 setting_main">
+
+                        @if(!empty($pageData))
+                        @if(!empty($pageData) AND !empty($explanationSection = json_decode($pageData->explanation_section)))
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Heading</label>
                             <div class="col-md-8 col-lg-10">
-                                What We Do?
+                                {{$explanationSection->heading}}
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Text</label>
                             <div class="col-md-8 col-lg-10">
-                                Mesprosoft has designed tailored solutions for industries across verticals. Mesprosoft has leveraged SAP technology and its superior features to build solutions that align perfectly with vertical business requirements. So however distinctive your processes may be, you can now integrate and streamline your business processes with our SAP solutions, and ensure that your operations and business performance are strengthened enough to give you the thrust for sustained growth and become profitable,
+                                {{$explanationSection->exp}}
                             </div>
                         </div>
+                        @if($explanationSection->img != "")
+                        <div class="row mb-3">
 
-                        <div style="float: right;">
-                            <!-- <a href="{{ route('service.createExplanationSection') }}" class="btn btn-sm btn-primary">Create</a> -->
-                            <a href="{{ route('service.editExplanationSection',1) }}" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="#" class="btn btn-sm  btn-primary">Disable</a>
+                            <label class="col-md-4 col-lg-2 label">Background Image</label>
+                            <div class="col-md-8 col-lg-10">
+                                <img src="{{ asset('img/services/'.$explanationSection->img )}}" alt="">
+                            </div>
+
                         </div>
+                        @endif
+                        <div style="float: right;">
+                            <a href="{{ route('service.editExplanationSection', $pageData->id ?? '') }}" class="btn btn-sm btn-primary">Edit</a>
+                        </div>
+                        @else
+                        <div style="float: right;">
+                            <a href="{{ route('service.createExplanationSection', $pageData->id ?? '') }}" class="btn btn-sm btn-primary">Create</a>
+                        </div>
+                        @endif
+                        @else
+                        <div style="float: right;">
+                            <button class="btn btn-sm btn-primary" disabled>First Create The Top Section</button>
+                        </div>
+                        @endif
 
                     </div>
 
@@ -150,110 +182,69 @@
 
 <section class="section">
     <div class="row">
-        <h2>Featurs Setting Section</h2>
-        <div>
-            <a style="float: right;margin-bottom: 20px" href="{{ route('service.createFeatureSectionCard') }}" class="btn btn-sm btn-primary">Add New Card</a>
+        <div class="pagetitle">
+            <h1>Card Section</h1>
         </div>
-
+        @if(!empty($pageData))
+        <div>
+            <a style="float: right;margin-bottom: 20px" href="{{ route('service.createCard', $pageData->id ?? '') }}" class="btn btn-sm btn-primary">Add New Card</a>
+        </div>
+        @else
+        <div>
+            <button style="float: right;margin-bottom: 20px" class="btn btn-sm btn-primary" disabled>First Create The Top Section</button>
+        </div>
+        @endif
         <div class="col-xl-12">
 
             <div class="card">
+
                 <div class="card-body">
+                    <div class="row">
+                        @if(!empty($pageData['cards']))
+                        @foreach($pageData['cards'] as $key => $val)
+                        <div class="col-md-4">
 
-                    <div class="pt-3 setting_main">
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Heading</label>
-                            <div class="col-md-8 col-lg-10">
-                                OUR PROCESS
+                            <div class="pt-3 setting_main">
+                                <div class="pagetitle">
+                                    <h1>Card {{ $key + 1 }}</h1>
+                                </div>
+                                <div style="padding-right:40px;float:right">
+                                    <form action="{{ route('service.deleteCard', $val->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <a href="{{ route('service.editCard',$val->id) }}" class="btn btn-sm btn-primary"> <i class="fa fa-edit"></i></a>
+
+                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')"> <i class="fa fa-trash"></i></button>
+                                    </form>
+
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-8 col-lg-10">
+                                        {{ $val->heading ?? '' }}
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-8 col-lg-4">
+                                        <ul>
+                                            @foreach(json_decode($val->explanation) as $li)
+                                            <li>{{ $li }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Text</label>
-                            <div class="col-md-8 col-lg-10">
-                                Find out everything you need to know about creating a business process model
-                            </div>
-                        </div>
-
-
-                        <div style="float: right;">
-                            <!-- <a href="{{ route('service.createFeatureSection') }}" class="btn btn-sm btn-primary">Create</a> -->
-                            <a href="{{ route('service.editFeatureSection',1) }}" class="btn btn-sm btn-primary">Edit</a>
 
                         </div>
+                        @endforeach
 
+                        @endif
                     </div>
 
-                </div>
-                <hr>
-                <div class="card-body">
-
-                    <div class="pt-3 setting_main">
-                        <h3>Card 1</h3>
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Card Heading</label>
-                            <div class="col-md-8 col-lg-10">
-                                Mespro Paperless Manufacturing
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Card Icon Image</label>
-                            <div class="col-md-8 col-lg-4">
-                                <img src="http://127.0.0.1:8000/img/slider/4.png" alt="">
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Card Text</label>
-                            <div class="col-md-8 col-lg-10">
-                                Mesprosoft Manufacturing Add-ons are solutions aimed at improving the Manufacturing processes and SAP utilization who are an existing customer of SAP. Each of our solutions can be implemented as standalone or combine to leverage the efficiency…
-                            </div>
-                        </div>
-
-                        <div style="float: right;">
-                            <a href="{{ route('service.editFeatureSectionCard',1) }}" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
-
-                            <a href="#" class="btn btn-sm  btn-primary">Disable</a>
-                        </div>
-
-                    </div>
 
                 </div>
-                <hr>
-                <div class="card-body">
 
-                    <div class="pt-3 setting_main">
-                        <h3>Card 2</h3>
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Card Heading</label>
-                            <div class="col-md-8 col-lg-10">
-                                Mespro Paperless Manufacturing
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Card Icon Image</label>
-                            <div class="col-md-8 col-lg-4">
-                                <img src="http://127.0.0.1:8000/img/slider/4.png" alt="">
-                            </div>
-                        </div>
 
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Card Text</label>
-                            <div class="col-md-8 col-lg-10">
-                                Mesprosoft Manufacturing Add-ons are solutions aimed at improving the Manufacturing processes and SAP utilization who are an existing customer of SAP. Each of our solutions can be implemented as standalone or combine to leverage the efficiency…
-                            </div>
-                        </div>
-
-                        <div style="float: right;">
-                            <a href="{{ route('service.editFeatureSectionCard',1) }}" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
-
-                            <a href="#" class="btn btn-sm  btn-primary">Disable</a>
-                        </div>
-
-                    </div>
-
-                </div>
 
             </div>
 
@@ -261,10 +252,5 @@
     </div>
 
 </section>
-
-
-
-
-
 
 @endsection

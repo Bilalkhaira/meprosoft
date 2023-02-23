@@ -242,19 +242,24 @@ Route::prefix('admin')->group(function () {
 
         Route::prefix('service')->group(function () {
 
-            Route::get('/', [ServicesController::class, 'index'])->name('service.index');
-            Route::get('/createExplanationSection', [ServicesController::class, 'createExplanationSection'])->name('service.createExplanationSection');
-            Route::get('/createFeatureSection', [ServicesController::class, 'createFeatureSection'])->name('service.createFeatureSection');
-            Route::get('/createFeatureSectionCard', [ServicesController::class, 'createFeatureSectionCard'])->name('service.createFeatureSectionCard');
+            Route::get('/{id}', [ServicesController::class, 'index'])->name('service.index');
+            Route::post('/', [ServicesController::class, 'getServicePage'])->name('service.getServicePage');
 
-            Route::get('/createToSection', [ServicesController::class, 'createToSection'])->name('service.createToSection');
+            Route::post('/createToSection', [ServicesController::class, 'createToSection'])->name('service.createToSection');
             Route::post('/storeToSection', [ServicesController::class, 'storeToSection'])->name('service.storeToSection');
             Route::get('/editToSection/{id}', [ServicesController::class, 'editToSection'])->name('service.editToSection');
             Route::put('/updateToSection/{id}', [ServicesController::class, 'updateToSection'])->name('service.updateToSection');
 
+            Route::get('/createExplanationSection/{id?}', [ServicesController::class, 'createExplanationSection'])->name('service.createExplanationSection');
             Route::get('/editExplanationSection/{id}', [ServicesController::class, 'editExplanationSection'])->name('service.editExplanationSection');
-            Route::get('/editFeatureSection/{id}', [ServicesController::class, 'editFeatureSection'])->name('service.editFeatureSection');
-            Route::get('/editFeatureSectionCard/{id}', [ServicesController::class, 'editFeatureSectionCard'])->name('service.editFeatureSectionCard');
+            Route::post('/storeExplanationSection', [ServicesController::class, 'storeExplanationSection'])->name('service.storeExplanationSection');
+            Route::put('/updateExplanationSection/{id}', [ServicesController::class, 'updateExplanationSection'])->name('service.updateExplanationSection');
+
+            Route::get('/editCard/{id}', [ServicesController::class, 'editCard'])->name('service.editCard');
+            Route::get('/createCard/{id}', [ServicesController::class, 'createCard'])->name('service.createCard');
+            Route::post('/storeCard', [ServicesController::class, 'storeCard'])->name('service.storeCard');
+            Route::delete('/deleteCard/{id}', [ServicesController::class, 'deleteCard'])->name('service.deleteCard');
+            Route::put('/updateCard/{id}', [ServicesController::class, 'updateCard'])->name('service.updateCard');
             
         });
     });

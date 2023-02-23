@@ -83,3 +83,25 @@
     background: #f6f9ff !important;
     border-radius: 4px !important;
   }
+
+
+  
+  .sidebar_btn i{
+    font-size: 6px;
+    margin-right: 8px;
+    line-height: 0;
+    border-radius: 50%;
+  }
+
+  .sidebar_btn button{
+    padding-left: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #012970;
+  }
+  .sidebar_btn button:hover{
+    color: #4154f1;
+  }
+  .sidebar_btn button:active{
+    border: none;
+  }
