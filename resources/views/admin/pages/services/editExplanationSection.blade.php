@@ -28,13 +28,13 @@
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label"> Heading</label>
                                 <div class="col-md-8 col-lg-10">
-                                    <input name="heading" class="form-control" type="text" value="{{ $explanationSection->heading ?? '' }}">
+                                    <input name="heading" class="form-control" type="text" value="{{ $explanationSection->explanationSection_heading ?? '' }}">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label"> Text</label>
                                 <div class="col-md-8 col-lg-10">
-                                    <textarea name="exp" class="form-control" id="" cols="30" rows="4">{{ $explanationSection->exp ?? '' }}</textarea>
+                                    <textarea name="exp" class="form-control" id="" cols="30" rows="4">{{ $explanationSection->explanationSection_explanation ?? '' }}</textarea>
                                 </div>
                             </div>
                             <div class="row mb-3">

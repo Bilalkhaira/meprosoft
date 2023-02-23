@@ -6,7 +6,7 @@
 
     <div class="container">
 
-        <div class="card bg-soft-primary rounded-4 mt-2 mb-13 mb-md-17">
+        <div class="card bg-soft-primary rounded-4 mt-2 mb-13">
 
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
@@ -23,7 +23,7 @@
                         <img src="{{ asset('img/slider/Web Mepro-01.jpg') }}" alt="Los Angeles" style="width:100%;">
                         <div class="carousel-caption box animate fadeInRight four" style="top: 22%; left: 8%">
                             <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
-                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 40px;text-shadow:none;">Your go-to IT services for better efficiency, higher growth and seamless accessibility.</h1>
+                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 35px;margin-top:100px;text-shadow:none;">Your go-to IT services for better efficiency, higher growth and <br>seamless accessibility.</h1>
                                 <!-- <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p> -->
                                 <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
                                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-primary rounded-pill me-2" style="background-color: #57a8c7; border: none">Read More</a></span>
@@ -33,7 +33,7 @@
                         </div>
                         <div class="carousel-caption">
                             <div class="card shadow-lg position-absolute" style="bottom: 10%; right: -3%;">
-                                <div class="card-body py-4 px-5">
+                                <!-- <div class="card-body py-4 px-5">
                                     <div class="d-flex flex-row align-items-center">
                                         <div>
                                             <div class="icon btn btn-circle btn-md btn-soft-primary pe-none mx-auto me-3"> <i class="uil uil-users-alt"></i> </div>
@@ -43,7 +43,7 @@
                                             <p class="fs-14 lh-sm mb-0 text-nowrap">Happy Clients</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!--/.card-body -->
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                         <img src="{{ asset('img/slider/Web Mepro-02.jpg') }}" alt="Chicago" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
                             <div class="col-lg-6 text-center text-lg-start box animate fadeInRight four" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
-                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 40px;text-shadow:none;">Mesprosoft for the win! Best IT services there is, for your business.</h1>
+                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 35px;margin-top:100px;text-shadow:none;">Mesprosoft for the win! <br>Best IT services there is, <br>for your business.</h1>
                                 <!-- <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p> -->
                                 <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
                                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-primary rounded-pill me-2" style="background-color: #57a8c7; border: none">Read More</a></span>
@@ -63,7 +63,7 @@
                         </div>
                         <div class="carousel-caption">
                             <div class="card shadow-lg position-absolute" style="bottom: 10%; right: -3%;">
-                                <div class="card-body py-4 px-5">
+                                <!-- <div class="card-body py-4 px-5">
                                     <div class="d-flex flex-row align-items-center">
                                         <div>
                                             <div class="icon btn btn-circle btn-md btn-soft-primary pe-none mx-auto me-3"> <i class="uil uil-users-alt"></i> </div>
@@ -73,7 +73,7 @@
                                             <p class="fs-14 lh-sm mb-0 text-nowrap">Happy Clients</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!--/.card-body -->
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                         <img src="{{ asset('img/slider/Web Mepro-03.jpg') }}" alt="New York" style="width:100%;">
                         <div class="carousel-caption" style="top: 22%; left: 8%">
                             <div class="col-lg-6 text-center text-lg-start box animate fadeInRight four" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
-                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 40px;text-shadow:none;">IT solutions to all your problems.</h1>
+                                <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 35px;margin-top:100px;text-shadow:none;">IT solutions to all your problems.</h1>
                                 <!-- <p class="lead fs-lg lh-sm mb-7 pe-xl-10" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Mesprosoft provides a broad portfolio of SAP & information technology solutions and business process to its clients worldwide.</p> -->
                                 <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
                                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a href="#" class="btn btn-lg btn-primary rounded-pill me-2" style="background-color: #57a8c7; border: none">Read More</a></span>
@@ -93,7 +93,7 @@
                         </div>
                         <div class="carousel-caption">
                             <div class="card shadow-lg position-absolute" style="bottom: 10%; right: -3%;">
-                                <div class="card-body py-4 px-5">
+                                <!-- <div class="card-body py-4 px-5">
                                     <div class="d-flex flex-row align-items-center">
                                         <div>
                                             <div class="icon btn btn-circle btn-md btn-soft-primary pe-none mx-auto me-3"> <i class="uil uil-users-alt"></i> </div>
@@ -103,7 +103,7 @@
                                             <p class="fs-14 lh-sm mb-0 text-nowrap">Happy Clients</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!--/.card-body -->
                             </div>
                         </div>
@@ -123,9 +123,9 @@
             </div>
         </div>
 
-        <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0 mb-13 mb-md-17" style="margin-bottom: 0px !important;">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0 mb-13" style="margin-bottom: 0px !important;">
             <div class="col-lg-12" style="text-align: center;">
-                <h2 id="heading" class="display-4 mb-3 pe-xxl-5 box animate fadeInLeft three" style="display:inline-block">100%</h2>
+                <h2 id="heading" class="display-4 mb-3 box animate fadeInLeft three" style="display:inline-block">100%</h2>
                 <h2 id="heading" class="display-4 mb-3 pe-xxl-5 box animate fadeInRight four" style="display: inline-block;">Satisfied Customers</h2>
                 <span style="display: block;" class="lead fs-lg mb-0 pe-xxl-5">We <span class="underline">bring solutions</span> to make life
                     easier for our customers.</span>

@@ -60,7 +60,7 @@ class ServicesController extends Controller
 
     public function editExplanationSection($id)
     {
-        $explanationSection = json_decode((ServicePagesData::find($id))->explanation_section);
+        $explanationSection = ServicePagesData::find($id);
 
         return view('admin.pages.services.editExplanationSection', ['explanationSection' => $explanationSection, 'update_id' => $id]);
     }
@@ -78,7 +78,7 @@ class ServicesController extends Controller
 
     public function editToSection($id)
     {
-        $topsectionData = json_decode((ServicePagesData::find($id))->top_section);
+        $topsectionData = ServicePagesData::find($id);
 
         return view('admin.pages.services.editToSection', ['topsectionData' => $topsectionData, 'update_id' => $id]);
     }
@@ -92,17 +92,11 @@ class ServicesController extends Controller
         $fileName = time() . '.' . $file->clientExtension();
         $file->move($destinationPath, $fileName);
 
-        $input = [
-            'heading' => $request->heading,
-            'explanation' => $request->explanation,
-            'img' => $fileName,
-        ];
-
-        $a = json_encode($input);
-
         $query = ServicePagesData::create([
             'menu_id' => $request->parent_id,
-            'top_section' => $a
+            'topSection_heading' => $request->heading,
+            'topSection_explanation' => $request->explanation,
+            'topSection_img' => $fileName
         ]);
 
         toastr()->success('Created Successfully');
@@ -118,7 +112,7 @@ class ServicesController extends Controller
 
         if (empty($request->img)) {
 
-            $updateimage = (json_decode($updated_row->top_section))->img;
+            $updateimage = $updated_row->topSection_img;
         } else {
 
             $imagePath =  $imgpath . (json_decode($updated_row->top_section))->img;
@@ -135,16 +129,11 @@ class ServicesController extends Controller
             $updateimage = $fileName;
         }
 
-        $input = [
-            'heading' => $request->heading,
-            'explanation' => $request->explanation,
-            'img' => $updateimage,
-        ];
-
-        $data = json_encode($input);
 
         $updated_row->update([
-            'top_section' => $data
+            'topSection_heading' => $request->heading,
+            'topSection_explanation' => $request->explanation,
+            'topSection_img' => $updateimage
         ]);
 
 
@@ -168,16 +157,10 @@ class ServicesController extends Controller
 
         $updated_row = ServicePagesData::find($request->updated_id);
 
-        $input = [
-            'heading' => $request->heading,
-            'exp' => $request->exp,
-            'img' => $fileName
-        ];
-
-        $data = json_encode($input);
-
         $updated_row->update([
-            'explanation_section' => $data
+            'explanationSection_heading' => $request->heading,
+            'explanationSection_explanation' => $request->exp,
+            'explanationSection_img' => $fileName
         ]);
 
 
@@ -194,10 +177,10 @@ class ServicesController extends Controller
 
         if (empty($request->img)) {
 
-            $updateimage = (json_decode($updated_row->explanation_section))->img;
+            $updateimage = $updated_row->explanationSection_img;
         } else {
 
-            $imagePath =  $imgpath . (json_decode($updated_row->explanation_section))->img;
+            $imagePath =  $imgpath . $updated_row->explanationSection_img;
 
             if (File::exists($imagePath)) {
 
@@ -211,16 +194,10 @@ class ServicesController extends Controller
             $updateimage = $fileName;
         }
 
-        $input = [
-            'heading' => $request->heading,
-            'exp' => $request->exp,
-            'img' => $updateimage
-        ];
-
-        $data = json_encode($input);
-
         $updated_row->update([
-            'explanation_section' => $data
+            'explanationSection_heading' => $request->heading,
+            'explanationSection_explanation' => $request->exp,
+            'explanationSection_img' => $updateimage
         ]);
 
 

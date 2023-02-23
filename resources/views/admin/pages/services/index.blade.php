@@ -33,7 +33,7 @@
                                     <select class="form-control" name="navbar_id" id="navbar">
                                         @if(!empty($services_lists))
                                         @foreach($services_lists as $services_list)
-                                        <option value="{{ $services_list->id }}" @if(isset($navbar_id) && $navbar_id == $services_list->id) ? selected  @endif>{{ $services_list->name }}</option>
+                                        <option value="{{ $services_list->id }}" @if(isset($navbar_id) && $navbar_id==$services_list->id) ? selected @endif>{{ $services_list->name }}</option>
                                         @endforeach
                                         @endif
                                     </select>
@@ -69,24 +69,24 @@
                 <div class="card-body">
 
                     <div class="pt-3 setting_main">
-                        @if(!empty($pageData) AND !empty($topSection = json_decode($pageData->top_section)))
+                        @if(!empty($pageData))
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Heading</label>
                             <div class="col-md-8 col-lg-10">
-                                {{$topSection->heading}}
+                                {{$pageData->topSection_heading}}
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Text</label>
                             <div class="col-md-8 col-lg-10">
-                                {{$topSection->explanation}}
+                                {{$pageData->topSection_explanation}}
                             </div>
                         </div>
                         <div class="row mb-3">
 
                             <label class="col-md-4 col-lg-2 label">Background Image</label>
                             <div class="col-md-8 col-lg-10">
-                                <img src="{{ asset('img/services/'.$topSection->img )}}" alt="">
+                                <img src="{{ asset('img/services/'.$pageData->topSection_img )}}" alt="">
                             </div>
 
                         </div>
@@ -132,25 +132,25 @@
                     <div class="pt-3 setting_main">
 
                         @if(!empty($pageData))
-                        @if(!empty($pageData) AND !empty($explanationSection = json_decode($pageData->explanation_section)))
+                        @if(!empty($pageData->explanationSection_heading))
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Heading</label>
                             <div class="col-md-8 col-lg-10">
-                                {{$explanationSection->heading}}
+                                {{$pageData->explanationSection_heading}}
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Text</label>
                             <div class="col-md-8 col-lg-10">
-                                {{$explanationSection->exp}}
+                                {{$pageData->explanationSection_explanation}}
                             </div>
                         </div>
-                        @if($explanationSection->img != "")
+                        @if($pageData->explanationSection_img != "")
                         <div class="row mb-3">
 
                             <label class="col-md-4 col-lg-2 label">Background Image</label>
                             <div class="col-md-8 col-lg-10">
-                                <img src="{{ asset('img/services/'.$explanationSection->img )}}" alt="">
+                                <img src="{{ asset('img/services/'.$pageData->explanationSection_img )}}" alt="">
                             </div>
 
                         </div>
@@ -187,7 +187,25 @@
         </div>
         @if(!empty($pageData))
         <div>
-            <a style="float: right;margin-bottom: 20px" href="{{ route('service.createCard', $pageData->id ?? '') }}" class="btn btn-sm btn-primary">Add New Card</a>
+            <!-- <a style="float: right;margin-bottom: 20px" href="{{ route('service.createCard', $pageData->id ?? '') }}" class="btn btn-sm btn-primary">Add New Card</a> -->
+            <button style="float: right;margin-bottom: 20px" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal"> Add New Card</button>
+              <div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Basic Modal</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
         @else
         <div>
@@ -205,9 +223,7 @@
                         <div class="col-md-4">
 
                             <div class="pt-3 setting_main">
-                                <div class="pagetitle">
-                                    <h1>Card {{ $key + 1 }}</h1>
-                                </div>
+
                                 <div style="padding-right:40px;float:right">
                                     <form action="{{ route('service.deleteCard', $val->id) }}" method="POST">
                                         @csrf
@@ -220,7 +236,7 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-md-8 col-lg-10">
-                                        {{ $val->heading ?? '' }}
+                                        <b>{{ $val->heading ?? '' }}</b>
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -251,6 +267,9 @@
         </div>
     </div>
 
+
+
+    
 </section>
 
 @endsection

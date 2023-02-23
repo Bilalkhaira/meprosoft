@@ -18,7 +18,8 @@ return new class extends Migration
             $table->unsignedInteger('parent_id')->nullable();
             $table->string('heading')->nullable();
             $table->string('explanation')->nullable();
-            $table->string('img')->nullable();
+            $table->string('created_by')->nullable();
+            $table->string('updated_by')->nullable();
             $table->timestamps();
         });
     }

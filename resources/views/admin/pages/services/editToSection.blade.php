@@ -28,13 +28,13 @@
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label"> Heading</label>
                                 <div class="col-md-8 col-lg-10">
-                                    <input name="heading" class="form-control" type="text" value="{{ $topsectionData->heading }}" required>
+                                    <input name="heading" class="form-control" type="text" value="{{ $topsectionData->topSection_heading }}" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label"> Text</label>
                                 <div class="col-md-8 col-lg-10">
-                                    <textarea name="explanation" class="form-control" id="" cols="30" rows="4" required>{{ $topsectionData->explanation }}</textarea>
+                                    <textarea name="explanation" class="form-control" id="" cols="30" rows="4" required>{{ $topsectionData->topSection_explanation }}</textarea>
                                 </div>
                             </div>
                             <div class="row mb-3">

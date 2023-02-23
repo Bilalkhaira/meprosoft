@@ -16,9 +16,19 @@ return new class extends Migration
         Schema::create('service_pages_data', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('menu_id')->nullable();
-            $table->string('top_section')->nullable();
-            $table->string('explanation_section')->nullable();
-            $table->string('feature_section')->nullable();
+            $table->string('topSection_heading')->nullable();
+            $table->mediumtext('topSection_explanation')->nullable();
+            $table->string('topSection_img')->nullable();
+            $table->string('topSection_disable')->default('false');
+
+            $table->string('explanationSection_heading')->nullable();
+            $table->mediumtext('explanationSection_explanation')->nullable();
+            $table->string('explanationSection_img')->nullable();
+            $table->string('explanationSection_disable')->default('false');
+
+            $table->string('created_by')->nullable();
+            $table->string('updated_by')->nullable();
+
             $table->timestamps();
         });
     }
