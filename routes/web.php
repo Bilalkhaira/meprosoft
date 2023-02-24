@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Admin\Services\ServicesController;
+use App\Http\Controllers\ProductAndSolution\ProductAndSolutionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -240,6 +241,23 @@ Route::prefix('admin')->group(function () {
             Route::post('/updateSatisfiedSection', [HomeController::class, 'updateSatisfiedSection'])->name('update.satisfiedSection');
         });
 
+        Route::prefix('productAndSolution')->group(function () {
+
+            Route::get('/{id}', [ProductAndSolutionController::class, 'index'])->name('productAndSolution.index');
+            Route::post('/', [ProductAndSolutionController::class, 'getServicePage'])->name('productAndSolution.getServicePage');
+
+            Route::post('/createToSection', [ProductAndSolutionController::class, 'createToSection'])->name('productAndSolution.createToSection');
+            Route::post('/storeToSection', [ProductAndSolutionController::class, 'storeToSection'])->name('productAndSolution.storeToSection');
+            Route::get('/editToSection/{id}', [ProductAndSolutionController::class, 'editToSection'])->name('productAndSolution.editToSection');
+            Route::put('/updateToSection/{id}', [ProductAndSolutionController::class, 'updateToSection'])->name('productAndSolution.updateToSection');
+
+            Route::get('/createExplanationSection/{id?}', [ProductAndSolutionController::class, 'createExplanationSection'])->name('productAndSolution.createExplanationSection');
+            Route::post('/storeExplanationSection', [ProductAndSolutionController::class, 'storeExplanationSection'])->name('productAndSolution.storeExplanationSection');
+            Route::get('/editExplanationSection/{id}', [ProductAndSolutionController::class, 'editExplanationSection'])->name('productAndSolution.editExplanationSection');
+            Route::put('/updateExplanationSection/{id}', [ProductAndSolutionController::class, 'updateExplanationSection'])->name('productAndSolution.updateExplanationSection');
+            
+        });
+
         Route::prefix('service')->group(function () {
 
             Route::get('/{id}', [ServicesController::class, 'index'])->name('service.index');
@@ -255,11 +273,11 @@ Route::prefix('admin')->group(function () {
             Route::post('/storeExplanationSection', [ServicesController::class, 'storeExplanationSection'])->name('service.storeExplanationSection');
             Route::put('/updateExplanationSection/{id}', [ServicesController::class, 'updateExplanationSection'])->name('service.updateExplanationSection');
 
-            Route::get('/editCard/{id}', [ServicesController::class, 'editCard'])->name('service.editCard');
-            Route::get('/createCard/{id}', [ServicesController::class, 'createCard'])->name('service.createCard');
+            Route::post('/editCard', [ServicesController::class, 'editCard'])->name('service.editCard');
+            // Route::get('/createCard/{id}', [ServicesController::class, 'createCard'])->name('service.createCard');
             Route::post('/storeCard', [ServicesController::class, 'storeCard'])->name('service.storeCard');
             Route::delete('/deleteCard/{id}', [ServicesController::class, 'deleteCard'])->name('service.deleteCard');
-            Route::put('/updateCard/{id}', [ServicesController::class, 'updateCard'])->name('service.updateCard');
+            Route::post('/updateCard', [ServicesController::class, 'updateCard'])->name('service.updateCard');
             
         });
     });

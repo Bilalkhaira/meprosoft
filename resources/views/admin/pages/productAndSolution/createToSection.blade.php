@@ -8,7 +8,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item">Admin</li>
             <li class="breadcrumb-item active">Services</li>
-            <li class="breadcrumb-item active">Create Explanation Section</li>
+            <li class="breadcrumb-item active">Add Top Section</li>
         </ol>
     </nav>
 </div>
@@ -22,31 +22,30 @@
                 <div class="card-body">
 
                     <div class="pt-3 setting_main">
-                        <form action="{{ route('service.storeExplanationSection') }}" method="POST"  enctype="multipart/form-data">
+                        <form action="{{ route('productAndSolution.storeToSection') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label"> Heading</label>
                                 <div class="col-md-8 col-lg-10">
                                     <input name="heading" class="form-control" type="text" required>
-                                    <input type="hidden" value="{{ $updated_id ?? '' }}" name="updated_id">
+                                    <input name="parent_id" class="form-control" type="hidden" value="{{ $parent_id ?? '' }}">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label"> Text</label>
                                 <div class="col-md-8 col-lg-10">
-                                    <!-- <textarea name="exp" class="form-control" id="" cols="30" rows="4" required></textarea> -->
-                                    <textarea class="summernote" name="exp" ols="30" rows="4"></textarea>
+                                    <textarea name="explanation" class="form-control" id="" cols="30" rows="4" required></textarea>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label">Background Image</label>
                                 <div class="col-md-8 col-lg-10">
-                                    <input name="img" class="form-control" type="file">
+                                    <input name="img" class="form-control" type="file" required>
                                 </div>
                             </div>
 
                             <div style="float: right;">
-                                <button class="btn btn-primary btn-sm">Save</button>
+                                <button type="submit" class="btn btn-primary btn-sm">Save</button>
                             </div>
 
                         </form>
@@ -64,11 +63,4 @@
 
 
 
-@endsection
-@section('scripts')
-<script type="text/javascript">
-        $(document).ready(function() {
-          $('.summernote').summernote();
-        });
-    </script>
 @endsection

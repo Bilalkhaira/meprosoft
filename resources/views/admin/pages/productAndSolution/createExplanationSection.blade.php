@@ -22,7 +22,7 @@
                 <div class="card-body">
 
                     <div class="pt-3 setting_main">
-                        <form action="{{ route('service.storeExplanationSection') }}" method="POST"  enctype="multipart/form-data">
+                        <form action="{{ route('productAndSolution.storeExplanationSection') }}" method="POST"  enctype="multipart/form-data">
                             @csrf
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label"> Heading</label>

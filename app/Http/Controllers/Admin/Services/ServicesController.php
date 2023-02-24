@@ -48,10 +48,10 @@ class ServicesController extends Controller
         return view('admin.pages.services.createFeatureSection');
     }
 
-    public function createCard($id)
-    {
-        return view('admin.pages.services.createCard', ['parent_id' => $id]);
-    }
+    // public function createCard($id)
+    // {
+    //     return view('admin.pages.services.createCard', ['parent_id' => $id]);
+    // }
 
     public function createToSection(Request $request)
     {
@@ -70,10 +70,15 @@ class ServicesController extends Controller
         return view('admin.pages.services.editFeatureSection');
     }
 
-    public function editCard($id)
+    public function editCard(Request $request)
     {
-        $cardData = PagesCardData::find($id);
-        return view('admin.pages.services.editCard', ['cardData' => $cardData]);
+        $cardData = PagesCardData::find($request->card_id);
+        $cardData = [
+            'id' => $cardData->id,
+            'heading' => $cardData->heading,
+            'explanation' => json_decode($cardData->explanation),
+        ];
+        return response()->json($cardData);
     }
 
     public function editToSection($id)
@@ -115,7 +120,7 @@ class ServicesController extends Controller
             $updateimage = $updated_row->topSection_img;
         } else {
 
-            $imagePath =  $imgpath . (json_decode($updated_row->top_section))->img;
+            $imagePath =  $imgpath . $updated_row->topSection_img;
 
             if (File::exists($imagePath)) {
 
@@ -232,9 +237,10 @@ class ServicesController extends Controller
         return redirect()->route('service.index', $parrent->menu_id);
     }
 
-    public function updateCard(Request $request, $id)
+    public function updateCard(Request $request)
     {
-        $updated_row = PagesCardData::find($id);
+       
+        $updated_row = PagesCardData::find($request->updated_cardId);
 
         $parrent = ServicePagesData::find($updated_row->parent_id);
 

@@ -31,7 +31,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('productAndSolution.index', 20) }}">
               <i class="bi bi-circle"></i><span>Products & Solutions</span>
             </a>
           </li>

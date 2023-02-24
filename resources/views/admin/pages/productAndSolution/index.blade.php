@@ -25,7 +25,7 @@
                 <div class="card-body">
 
                     <div class="pt-3 setting_main">
-                        <form action="{{ route('service.getServicePage') }}" method="POST">
+                        <form action="{{ route('productAndSolution.getServicePage') }}" method="POST">
                             @csrf
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-4 label">Select Page And Submit For Edit Page</label>
@@ -86,18 +86,18 @@
 
                             <label class="col-md-4 col-lg-2 label">Background Image</label>
                             <div class="col-md-8 col-lg-10">
-                                <img src="{{ asset('img/services/'.$pageData->topSection_img )}}" alt="">
+                                <img src="{{ asset('img/productAndSolution/'.$pageData->topSection_img )}}" alt="">
                             </div>
 
                         </div>
 
                         <div style="float: right;">
-                            <a href="{{ route('service.editToSection',$pageData->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="{{ route('productAndSolution.editToSection',$pageData->id) }}" class="btn btn-sm btn-primary">Edit</a>
 
                         </div>
                         @else
                         <div style="float: right;">
-                            <form action="{{ route('service.createToSection') }}" method="POST">
+                            <form action="{{ route('productAndSolution.createToSection') }}" method="POST">
                                 @csrf
                                 <input type="hidden" id="nvbr_id" value="{{ $navbar_id ?? ''}}" name="nvbar_id">
                                 <button type="submit" class="btn btn-sm btn-primary">Add</button>
@@ -150,17 +150,17 @@
 
                             <label class="col-md-4 col-lg-2 label">Background Image</label>
                             <div class="col-md-8 col-lg-10">
-                                <img src="{{ asset('img/services/'.$pageData->explanationSection_img )}}" alt="">
+                                <img src="{{ asset('img/productAndSolution/'.$pageData->explanationSection_img )}}" alt="">
                             </div>
 
                         </div>
                         @endif
                         <div style="float: right;">
-                            <a href="{{ route('service.editExplanationSection', $pageData->id ?? '') }}" class="btn btn-sm btn-primary">Edit</a>
+                            <a href="{{ route('productAndSolution.editExplanationSection', $pageData->id ?? '') }}" class="btn btn-sm btn-primary">Edit</a>
                         </div>
                         @else
                         <div style="float: right;">
-                            <a href="{{ route('service.createExplanationSection', $pageData->id ?? '') }}" class="btn btn-sm btn-primary">Create</a>
+                            <a href="{{ route('productAndSolution.createExplanationSection', $pageData->id ?? '') }}" class="btn btn-sm btn-primary">Create</a>
                         </div>
                         @endif
                         @else
