@@ -92,5 +92,13 @@ class NavMenuSeeder extends Seeder
         ];
 
         NavMenu::insert($case_study_nv);
+
+        $data = [
+            ['name' => 'News & Event'],
+            ['name' => 'Career'],
+            ['name' => 'Contact Us'],
+        ];
+
+        NavMenu::insert($data);
     }
 }

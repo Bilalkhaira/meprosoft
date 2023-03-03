@@ -3,11 +3,11 @@
 @section('content')
 
 <div class="pagetitle">
-    <h1>Services</h1>
+    <h1>Product & Solutions</h1>
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item">Admin</li>
-            <li class="breadcrumb-item active">Services</li>
+            <li class="breadcrumb-item active">Product & Solutions</li>
             <li class="breadcrumb-item active">Edit Top Section</li>
         </ol>
     </nav>

@@ -8,7 +8,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item">Admin</li>
             <li class="breadcrumb-item active">Services</li>
-            <li class="breadcrumb-item active">Add Top Section</li>
+            <li class="breadcrumb-item active">Create Top Section</li>
         </ol>
     </nav>
 </div>

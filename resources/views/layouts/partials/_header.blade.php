@@ -109,8 +109,8 @@
                                     <li class="nav-item"><a class="dropdown-item" href="{{ route('caseStudy.foodIndustry') }}">Food Industry</a></li>
                                     <li class="nav-item"><a class="dropdown-item" href="{{ route('caseStudy.digitalManufacturing') }}">Digital Manufacturing</a></li>
                                     <li class="nav-item"><a class="dropdown-item" href="{{ route('caseStudy.mesproPaperlessManufacturing') }}">Mespro Paperless Manufacturing</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="#">S/4 Hana Private cloud</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="#">S/4 Hana Conversion</a></li>
+                                    <!-- <li class="nav-item"><a class="dropdown-item" href="#">S/4 Hana Private cloud</a></li> -->
+                                    <!-- <li class="nav-item"><a class="dropdown-item" href="#">S/4 Hana Conversion</a></li> -->
 
                                 </ul>
                             </div>

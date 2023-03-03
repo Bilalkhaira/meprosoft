@@ -7,8 +7,8 @@ use Exception;
 use App\Models\NavMenu;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
-use App\Models\PagesCardData;
-use App\Models\ServicePagesData;
+use App\Models\MenuPagesCardData;
+use App\Models\MenuPagesData;
 use App\Http\Controllers\Controller;
 use Laravel\Ui\Presets\React;
 
@@ -18,7 +18,7 @@ class ServicesController extends Controller
     {
         $services = NavMenu::with('children')->where('name', 'Services')->get();
 
-        $pageData = ServicePagesData::with('cards')->where('menu_id', $id)->first();
+        $pageData = MenuPagesData::with('cards')->where('menu_id', $id)->first();
 
         if (empty($pageData)) {
             $menu_id = 8;
@@ -33,7 +33,7 @@ class ServicesController extends Controller
     {
         $services = NavMenu::with('children')->where('name', 'Services')->get();
 
-        $pageData = ServicePagesData::with('cards')->where('menu_id', $request->navbar_id)->first();
+        $pageData = MenuPagesData::with('cards')->where('menu_id', $request->navbar_id)->first();
 
         return view('admin.pages.services.index', ['services_lists' => Arr::get($services, '0.children'), 'pageData' => $pageData, 'navbar_id' => $request->navbar_id]);
     }
@@ -48,10 +48,7 @@ class ServicesController extends Controller
         return view('admin.pages.services.createFeatureSection');
     }
 
-    // public function createCard($id)
-    // {
-    //     return view('admin.pages.services.createCard', ['parent_id' => $id]);
-    // }
+    
 
     public function createToSection(Request $request)
     {
@@ -60,7 +57,7 @@ class ServicesController extends Controller
 
     public function editExplanationSection($id)
     {
-        $explanationSection = ServicePagesData::find($id);
+        $explanationSection = MenuPagesData::find($id);
 
         return view('admin.pages.services.editExplanationSection', ['explanationSection' => $explanationSection, 'update_id' => $id]);
     }
@@ -72,7 +69,7 @@ class ServicesController extends Controller
 
     public function editCard(Request $request)
     {
-        $cardData = PagesCardData::find($request->card_id);
+        $cardData = MenuPagesCardData::find($request->card_id);
         $cardData = [
             'id' => $cardData->id,
             'heading' => $cardData->heading,
@@ -83,7 +80,7 @@ class ServicesController extends Controller
 
     public function editToSection($id)
     {
-        $topsectionData = ServicePagesData::find($id);
+        $topsectionData = MenuPagesData::find($id);
 
         return view('admin.pages.services.editToSection', ['topsectionData' => $topsectionData, 'update_id' => $id]);
     }
@@ -97,7 +94,7 @@ class ServicesController extends Controller
         $fileName = time() . '.' . $file->clientExtension();
         $file->move($destinationPath, $fileName);
 
-        $query = ServicePagesData::create([
+        $query = MenuPagesData::create([
             'menu_id' => $request->parent_id,
             'topSection_heading' => $request->heading,
             'topSection_explanation' => $request->explanation,
@@ -111,7 +108,7 @@ class ServicesController extends Controller
     public function updateToSection(Request $request, $id)
     {
 
-        $updated_row = ServicePagesData::find($id);
+        $updated_row = MenuPagesData::find($id);
 
         $imgpath = public_path('img/services/');
 
@@ -160,7 +157,7 @@ class ServicesController extends Controller
             $fileName = '';
         }
 
-        $updated_row = ServicePagesData::find($request->updated_id);
+        $updated_row = MenuPagesData::find($request->updated_id);
 
         $updated_row->update([
             'explanationSection_heading' => $request->heading,
@@ -176,7 +173,7 @@ class ServicesController extends Controller
     public function updateExplanationSection(Request $request, $id)
     {
 
-        $updated_row = ServicePagesData::find($id);
+        $updated_row = MenuPagesData::find($id);
 
         $imgpath = public_path('img/services/');
 
@@ -213,9 +210,9 @@ class ServicesController extends Controller
 
     public function storeCard(Request $request)
     {
-        $navbar_id = ServicePagesData::find($request->parent_id);
+        $navbar_id = MenuPagesData::find($request->parent_id);
 
-        PagesCardData::create([
+        MenuPagesCardData::create([
             'parent_id' => $request->parent_id,
             'heading' => $request->heading,
             'explanation' => json_encode($request->lists)
@@ -227,9 +224,9 @@ class ServicesController extends Controller
 
     public function deleteCard($id)
     {
-        $delete_row = PagesCardData::find($id);
+        $delete_row = MenuPagesCardData::find($id);
 
-        $parrent = ServicePagesData::find($delete_row->parent_id);
+        $parrent = MenuPagesData::find($delete_row->parent_id);
 
         $delete_row->delete();
 
@@ -240,9 +237,9 @@ class ServicesController extends Controller
     public function updateCard(Request $request)
     {
        
-        $updated_row = PagesCardData::find($request->updated_cardId);
+        $updated_row = MenuPagesCardData::find($request->updated_cardId);
 
-        $parrent = ServicePagesData::find($updated_row->parent_id);
+        $parrent = MenuPagesData::find($updated_row->parent_id);
 
         $updated_row->update([
             'explanation' => json_encode($request->lists)
@@ -250,5 +247,27 @@ class ServicesController extends Controller
 
         toastr()->success('Card Update Successfully');
         return redirect()->route('service.index', $parrent->menu_id);
+    }
+
+    public function deleteExplanationImage($id)
+    {
+
+        $updated_row = MenuPagesData::find($id);
+
+        $imgpath = public_path('img/services/');
+
+        $imagePath =  $imgpath . $updated_row->explanationSection_img;
+
+        if (File::exists($imagePath)) {
+
+            File::delete($imagePath);
+        }
+
+        $updated_row->update([
+            'explanationSection_img' => ''
+        ]);
+
+        toastr()->success('Image Delete Successfully');
+        return redirect()->route('service.index', $updated_row->menu_id);
     }
 }

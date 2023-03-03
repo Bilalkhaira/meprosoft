@@ -3,13 +3,12 @@
 @section('content')
 
 <div class="pagetitle">
-    <h1>Services Setting</h1>
+    <h1>Product & Solutions</h1>
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item">Admin</li>
-            <li class="breadcrumb-item active">Serviecs</li>
-            <!-- <li class="breadcrumb-item active">Application Migration And Conversion Page Settings</li> -->
+            <li class="breadcrumb-item active">Product & Solutions</li>
         </ol>
     </nav>
 </div>
@@ -150,6 +149,11 @@
 
                             <label class="col-md-4 col-lg-2 label">Background Image</label>
                             <div class="col-md-8 col-lg-10">
+                                <form action="{{ route('productAndSolution.deleteExplanationImage', $pageData->id ) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')"> <i class="fa fa-trash"></i></button>
+                                </form>
                                 <img src="{{ asset('img/productAndSolution/'.$pageData->explanationSection_img )}}" alt="">
                             </div>
 
@@ -187,16 +191,15 @@
         </div>
         @if(!empty($pageData))
         <div>
-            <!-- <a style="float: right;margin-bottom: 20px" href="" class="btn btn-sm btn-primary">Add New Card</a> -->
             <button style="float: right;margin-bottom: 20px" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal"> Add New Card</button>
             <div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true" style="display: none;">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">Create Card</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form action="{{ route('service.storeCard') }}" method="POST">
+                        <form action="{{ route('productAndSolution.storeCard') }}" method="POST">
                             @csrf
                             <div class="modal-body">
                                 <div class="pt-3 setting_main">
@@ -250,16 +253,15 @@
                     <div class="row">
                         @if(!empty($pageData['cards']))
                         @foreach($pageData['cards'] as $key => $val)
-                        <div class="col-md-4">
+                        <div class="col-md-4 card_border">
 
                             <div class="pt-3 setting_main">
 
-                                <div style="padding-right:40px;float:right">
-                                    <form action="{{ route('service.deleteCard', $val->id) }}" method="POST">
+                                <div class="card_btn">
+                                    <form action="{{ route('productAndSolution.deleteCard', $val->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <!-- <a href="{{ route('service.editCard',$val->id) }}" class="btn btn-sm btn-primary"> <i class="fa fa-edit"></i></a> -->
-                                        <button type="button" class="btn btn-sm btn-primary" id="cardEdit_btn"> <i class="fa fa-edit"></i></button>
+                                        <button type="button" class="btn btn-sm btn-primary" id="cardEdit_btn" data-bs-toggle="modal" data-bs-target="#editCard"> <i class="fa fa-edit"></i></button>
                                         <input type="hidden" value="{{ $val->id }}" id="card_id">
                                         <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')"> <i class="fa fa-trash"></i></button>
                                     </form>
@@ -271,7 +273,7 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <div class="col-md-8 col-lg-4">
+                                    <div class="col-md-12 col-lg-12">
                                         <ul>
                                             @foreach(json_decode($val->explanation) as $li)
                                             <li>{{ $li }}</li>
@@ -298,13 +300,13 @@
         </div>
     </div>
     <div class="modal fade" id="editCard" tabindex="-1" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Create Card</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="{{ route('service.updateCard') }}" method="POST">
+                <form action="{{ route('productAndSolution.updateCard') }}" method="POST">
                     @csrf
                     <div class="modal-body">
                         <div class="pt-3 setting_main">
@@ -371,9 +373,6 @@
         var card_id = $(this).closest('form').find('#card_id').val();
         var data;
 
-        
-
-       
         $.ajaxSetup({
             headers: {
                 "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
@@ -383,13 +382,13 @@
             data: {
                 'card_id': card_id
             },
-            url: "{{ route('service.editCard') }}",
+            url: "{{ route('productAndSolution.editCard') }}",
             type: "POST",
             dataType: "json",
             success: function(responce) {
                 $('.editCard_li').html('');
                 $.each(responce.explanation, function(index, el) {
-                    data = '<div class="row mb-3"><label class="col-md-4 col-lg-2 label"></label><div class="col-md-8 col-lg-9"><input name="lists[]" class="form-control" value="'+el+'" type="text" required></div>';
+                    data = '<div class="row mb-3"><label class="col-md-4 col-lg-2 label"></label><div class="col-md-8 col-lg-9"><input name="lists[]" class="form-control" value="' + el + '" type="text" required></div>';
                     data += '<div class="col-md-1"><a class="remove_more1"> <i style="color:red" class="fa fa-trash"></i></a></div>';
                     $('.editCard_li').append(data);
                 });
@@ -397,8 +396,6 @@
                 $(document).find('#editCard_heading').val(responce.heading);
                 $(document).find('#updated_cardId').val(card_id);
 
-                // jQuery.noConflict();
-                // $('#editCard').model('show');
                 window.$("#editCard").modal("show");
             }
         });

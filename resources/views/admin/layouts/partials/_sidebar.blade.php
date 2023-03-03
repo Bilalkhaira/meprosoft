@@ -18,14 +18,12 @@
         </a>
         <ul id="pages" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="#">
-              <i class="bi bi-circle"></i><span>Home</span>
+            <a href="{{ route('home/corporateOverview.index', 3) }}">
+              <i class="bi bi-circle"></i><span>Home Menu</span>
             </a>
           </li>
           <li class="sidebar_btn">
-            <!-- <form action="">
-              <button class="btn"><i class="bi bi-circle"></i>Services</button>
-            </form> -->
+         
             <a href="{{ route('service.index', 8) }}">
               <i class="bi bi-circle"></i><span>Services</span>
             </a>
@@ -36,17 +34,22 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('caseStudy.index', 35) }}">
               <i class="bi bi-circle"></i><span>Case Study</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('newsEvent.index', 40) }}">
+              <i class="bi bi-circle"></i><span>News & Event</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ route('career.index', 41) }}">
               <i class="bi bi-circle"></i><span>Careers</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('contactUs.index', 42) }}">
               <i class="bi bi-circle"></i><span>Contact Us</span>
             </a>
           </li>
