@@ -22,43 +22,38 @@
                 <div class="card-body">
 
                     <div class="pt-3 setting_main">
-                        <form action="{{ route('faq.update', $sectionData->id ?? '') }}" method="POST">
+                        <form action="{{ route('faq.storeFaq') }}" method="POST">
                             @csrf
-                            @method('PUT')
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label">Heading</label>
                                 <div class="col-md-8 col-lg-10">
-                                    <input name="heading" class="form-control" type="text" value="{{ $sectionData->heading ?? ''}}" required>
+                                    <input name="heading" class="form-control" type="text" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label">Text</label>
                                 <div class="col-md-8 col-lg-10">
-                                    <textarea name="exp" class="form-control" cols="30" rows="3" required>{{ $sectionData->exp ?? ''}}</textarea>
+                                    <textarea name="exp" class="form-control" cols="30" rows="3" required></textarea>
                                 </div>
                             </div>
-
+                           
                             <div class="append-elements">
-                                @foreach($quesAns as $val)
                                 <div class="row mb-3">
                                     <label class="col-md-4 col-lg-2 label">Question</label>
                                     <div class="col-md-8 col-lg-4">
-                                        <textarea name="question[]" id="" class="form-control" cols="30" rows="3" required>{{ $val->questions ?? ''}}</textarea>
+                                        <textarea name="question[]" id="" class="form-control" cols="30" rows="3" required></textarea>
                                     </div>
 
                                     <label class="col-md-4 col-lg-1 label">Answer</label>
                                     <div class="col-md-8 col-lg-4">
-                                        <textarea name="ans[]" id="" class="form-control" cols="30" rows="3" required>{{ $val->ans ?? ''}}</textarea>
+                                    <textarea name="ans[]" id="" class="form-control" cols="30" rows="3" required></textarea>
                                     </div>
-                                    <div class="col-md-1"><button class="btn btn-success remove_more">remove</button></div>
+                                   
                                 </div>
-                                
-                                @endforeach
                             </div>
-
                             <div class="row mb-3">
                                 <div class="col-md-11">
-                                    <button style="float: right;" class="btn btn-success btn-sm add_more">Add Question</button>
+                                    <button style="float: right;" class="btn btn-success btn-sm add_more">Add More</button>
                                 </div>
                             </div>
 
@@ -88,8 +83,8 @@
     $(document).on('click', '.add_more', function(e) {
         e.preventDefault();
         var data;
-        data = '<div class="row mb-3"><label class="col-md-4 col-lg-2 label">Question</label><div class="col-md-8 col-lg-4"><textarea name="question[]" id="" class="form-control" cols="30" rows="3"></textarea></div><label class="col-md-4 col-lg-1 label">Answer</label>';
-        data += '<div class="col-md-8 col-lg-4"><textarea name="ans[]" id="" class="form-control" cols="30" rows="3"></textarea></div><div class="col-md-1"><button class="btn btn-success remove_more">remove</button></div>';
+        data = '<div class="row mb-3"><label class="col-md-4 col-lg-2 label">Question</label><div class="col-md-8 col-lg-4"><textarea name="question[]" id="" class="form-control" cols="30" rows="3" required></textarea></div><label class="col-md-4 col-lg-1 label">Answer</label>';
+        data += '<div class="col-md-8 col-lg-4"><textarea name="ans[]" id="" class="form-control" cols="30" rows="3" required></textarea></div><div class="col-md-1"><button class="btn btn-success remove_more">remove</button></div>';
         $('.append-elements').append(data);
     });
     $(document).on('click', '.remove_more', function() {

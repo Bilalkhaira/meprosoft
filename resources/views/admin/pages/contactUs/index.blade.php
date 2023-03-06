@@ -116,17 +116,17 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-md-8 col-lg-10">
-                                        <b>Country: </b><br>{{ $val->heading ?? '' }}
+                                    <span class="slider_label">Country: </span><br>{{ $val->heading ?? '' }}
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-md-8 col-lg-10">
-                                        <p><b>Adress: </b><br>{{ (json_decode($val->explanation))->address ?? '' }}</p>
+                                        <p><span class="slider_label">Adress: </span><br>{{ (json_decode($val->explanation))->address ?? '' }}</p>
                                     </div>
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-md-12 col-lg-12">
-                                        <b>Phone: </b><br>
+                                    <span class="slider_label">Phone: </span><br>
                                         @foreach((json_decode($val->explanation))->phone as $key => $li)
                                         {{ $li }}<br>
                                         @endforeach
@@ -135,7 +135,7 @@
 
                                 <div class="row mb-3">
                                     <div class="col-md-12 col-lg-12">
-                                        <b>Email: </b><br>
+                                        <span class="slider_label">Email: </span><br>
                                         @foreach((json_decode($val->explanation))->email as $key => $li)
                                         {{ $li }}<br>
                                         @endforeach

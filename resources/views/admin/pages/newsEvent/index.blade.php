@@ -166,9 +166,9 @@
                                         <ul>
                                             @foreach(json_decode($val->explanation) as $key => $li)
                                             @if($key == 'exp')
-                                            <li><b>Explanation: </b>{{ $li }}sss</li>
+                                            <li><span class="slider_label">Explanation: </span>{{ $li }}sss</li>
                                             @else
-                                            <li><b>Link: </b>{{ $li }}</li>
+                                            <li><span class="slider_label">Link: </span>{{ $li }}</li>
                                             @endif
                                             @endforeach
                                         </ul>

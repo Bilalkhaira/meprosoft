@@ -105,7 +105,7 @@
                             <div class="col-md-8 col-lg-9">
                                 <div class="row">
                                     @foreach($satisfied_customer_images as $image)
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 card_border">
                                         <div class="satis_customer_imgs">
                                             <form action="{{ route('home.deleteSatisfiedCustomerImage', $image->id) }}" method="POST">
                                                 @csrf
@@ -387,11 +387,19 @@
                         <div class="col-md-4 card_border">
                             <div class="pt-3 setting_main">
                                 <div class="col-md-12 col-lg-12">
-                                    <p><span class="slider_label">Heading : </span></br> {{ $val->main_heading }}</p>
+                                    <p><span class="slider_label">Rating : </span> {{ $val->rating_or_percentage }}</p>
                                 </div>
 
                                 <div class="col-md-12 col-lg-12">
-                                    <p><span class="slider_label">Button Link : </span></br> {{ $val->links }} </p>
+                                    <p><span class="slider_label">Auther Name : </span> {{ $val->main_heading }} </p>
+                                </div>
+
+                                <div class="col-md-12 col-lg-12">
+                                    <p><span class="slider_label">Auther Profession : </span> {{ $val->others_heading }} </p>
+                                </div>
+
+                                <div class="col-md-12 col-lg-12">
+                                    <p><span class="slider_label">Explanation : </span></br> {{ $val->text }} </p>
                                 </div>
 
                                 <div class="col-md-12 col-lg-12">
@@ -529,7 +537,7 @@
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Percentage</label>
                             <div class="col-md-8 col-lg-10">
-                                <input type="number" name="percentage[]" class="form-control" required>
+                                <input type="number" name="percentage[]" max="100" class="form-control" required>
                             </div>
                         </div>
 
@@ -543,7 +551,7 @@
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Percentage</label>
                             <div class="col-md-8 col-lg-10">
-                                <input type="number" name="percentage1[]" class="form-control" required>
+                                <input type="number" name="percentage1[]" max="100" class="form-control" required>
                             </div>
                         </div>
 
@@ -557,7 +565,7 @@
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Percentage</label>
                             <div class="col-md-8 col-lg-10">
-                                <input type="number" name="percentage2[]" class="form-control" required>
+                                <input type="number" name="percentage2[]" max="100" class="form-control" required>
                             </div>
                         </div>
 
@@ -604,7 +612,7 @@
                                 <textarea name="text" class="form-control" id="" cols="30" rows="4">{{ $percentage_section->text ?? '' }}</textarea>
                             </div>
                         </div>
-                        @if(!empty(json_decode($percentage_section->rating_or_percentage)))
+                        @if(!empty(json_decode($percentage_section->rating_or_percentage ?? '')))
                         @foreach(json_decode($percentage_section->rating_or_percentage) as $key => $val)
                         @if($key === 'percentage')
                         <div class="row mb-3">
@@ -618,7 +626,7 @@
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Percentage</label>
                             <div class="col-md-8 col-lg-10">
-                                <input type="number" name="percentage[]" value="{{ $val[1] }}" class="form-control" required>
+                                <input type="number" name="percentage[]" value="{{ $val[1] }}" class="form-control" max="100" required>
                             </div>
                         </div>
                         @endif
@@ -633,7 +641,7 @@
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Percentage</label>
                             <div class="col-md-8 col-lg-10">
-                                <input type="number" name="percentage1[]" value="{{ $val[1] }}" class="form-control" required>
+                                <input type="number" name="percentage1[]" value="{{ $val[1] }}" max="100" class="form-control" required>
                             </div>
                         </div>
                         @endif
@@ -648,7 +656,7 @@
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Percentage</label>
                             <div class="col-md-8 col-lg-10">
-                                <input type="number" name="percentage2[]" value="{{ $val[1] }}" class="form-control" required>
+                                <input type="number" name="percentage2[]" value="{{ $val[1] }}" max="100" class="form-control" required>
                             </div>
                         </div>
                         @endif
@@ -694,15 +702,30 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Heading</label>
+                            <label class="col-md-4 col-lg-2 label">Rating</label>
                             <div class="col-md-8 col-lg-10">
-                                <input type="text" name="heading" class="form-control" required>
+                                <input type="number" max="5" name="rating" class="form-control" required>
                             </div>
                         </div>
+
                         <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">ReadMore Button Link</label>
+                            <label class="col-md-4 col-lg-2 label">Explanation</label>
                             <div class="col-md-8 col-lg-10">
-                                <input name="link" class="form-control" type="text" required>
+                                <textarea name="exp" id="" cols="30" class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-md-4 col-lg-2 label">Auther Name</label>
+                            <div class="col-md-8 col-lg-10">
+                                <input name="auther_name" class="form-control" type="text" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-md-4 col-lg-2 label">Auther Profession</label>
+                            <div class="col-md-8 col-lg-10">
+                                <input name="auther_profression" class="form-control" type="text" required>
                             </div>
                         </div>
 
@@ -737,16 +760,31 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Heading</label>
+                            <label class="col-md-4 col-lg-2 label">Rating</label>
                             <div class="col-md-8 col-lg-10">
-                                <input type="text" name="heading" id="editSlide2_hdng" class="form-control" required>
+                                <input type="number" max="5" id="slider2_rating" name="rating" class="form-control" required>
                             </div>
                         </div>
+
                         <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">ReadMore Button Link</label>
+                            <label class="col-md-4 col-lg-2 label">Explanation</label>
                             <div class="col-md-8 col-lg-10">
-                                <input name="link" class="form-control" id="editSlide2_link" type="text" required>
-                                <input name="updated_id" id="editSlide2_id" type="hidden">
+                                <textarea name="exp" id="slider2_exp" cols="30" class="form-control" rows="3" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-md-4 col-lg-2 label">Auther Name</label>
+                            <div class="col-md-8 col-lg-10">
+                                <input name="auther_name" id="slider2_auther_name" class="form-control" type="text" required>
+                                <input name="updated_id" id="slider2_update_id" type="hidden">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-md-4 col-lg-2 label">Auther Profession</label>
+                            <div class="col-md-8 col-lg-10">
+                                <input name="auther_profression" id="slider2_auther_profession" class="form-control" type="text" required>
                             </div>
                         </div>
 
@@ -1349,9 +1387,12 @@
             dataType: "json",
             success: function(responce) {
 
-                $(document).find('#editSlide2_hdng').val(responce.main_heading);
-                $(document).find('#editSlide2_link').val(responce.links);
-                $(document).find('#editSlide2_id').val(slide_id);
+                $(document).find('#slider2_rating').val(responce.rating_or_percentage);
+                $(document).find('#slider2_exp').val(responce.text);
+                $(document).find('#slider2_auther_name').val(responce.main_heading);
+                $(document).find('#slider2_auther_profession').val(responce.others_heading);
+
+                $(document).find('#slider2_update_id').val(slide_id);
 
                 window.$("#editSlider2SlideModel").modal("show");
             }

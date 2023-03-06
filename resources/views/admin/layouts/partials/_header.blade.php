@@ -1,20 +1,18 @@
-  <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
 
       <div class="d-flex align-items-center justify-content-between">
           <a href="{{ route('dashboard') }}" class="logo d-flex align-items-center">
               <img style="max-height: 50px;" src="{{ asset('img/logo-dark.png') }}" alt="Image">
-              <!-- <span class="d-none d-lg-block">NiceAdmin</span> -->
           </a>
           <i class="bi bi-list toggle-sidebar-btn"></i>
-      </div><!-- End Logo -->
+      </div>
 
       <div class="search-bar">
           <form class="search-form d-flex align-items-center" method="POST" action="#">
               <input type="text" name="query" placeholder="Search" title="Enter search keyword">
               <button type="submit" title="Search"><i class="bi bi-search"></i></button>
           </form>
-      </div><!-- End Search Bar -->
+      </div>
 
       <nav class="header-nav ms-auto">
           <ul class="d-flex align-items-center">
@@ -29,8 +27,7 @@
 
                   <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
                       <i class="bi bi-bell"></i>
-                      <span
-                          class="badge bg-primary badge-number">{{ auth()->user()->unreadNotifications->count() }}</span>
+                      <span class="badge bg-primary badge-number">{{ auth()->user()->unreadNotifications->count() }}</span>
                   </a><!-- End Notification Icon -->
 
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
@@ -88,23 +85,18 @@
                       </li>
                       @endforeach
 
-                      <!-- <li>
-                          <hr class="dropdown-divider">
-                      </li>
-                      <li class="dropdown-footer">
-                          <a href="#">Show all notifications</a>
-                      </li> -->
+
 
                   </ul><!-- End Notification Dropdown Items -->
 
               </li><!-- End Notification Nav -->
 
-              <li class="nav-item dropdown">
+              <!-- <li class="nav-item dropdown">
 
                   <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
                       <i class="bi bi-chat-left-text"></i>
                       <span class="badge bg-success badge-number">3</span>
-                  </a><!-- End Messages Icon -->
+                  </a>
 
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
                       <li class="dropdown-header">
@@ -161,9 +153,9 @@
                           <a href="#">Show all messages</a>
                       </li>
 
-                  </ul><!-- End Messages Dropdown Items -->
+                  </ul>
 
-              </li><!-- End Messages Nav -->
+              </li> -->
 
               <li class="nav-item dropdown pe-3">
 
@@ -191,22 +183,7 @@
                           <hr class="dropdown-divider">
                       </li>
 
-                      <!-- <li>
-                          <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                              <i class="bi bi-gear"></i>
-                              <span>Account Settings</span>
-                          </a>
-                      </li> -->
-                      <li>
-                          <hr class="dropdown-divider">
-                      </li>
 
-                      <li>
-                          <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                              <i class="bi bi-question-circle"></i>
-                              <span>Need Help?</span>
-                          </a>
-                      </li>
                       <li>
                           <hr class="dropdown-divider">
                       </li>
@@ -234,46 +211,46 @@
 
   @section('scripts')
   <script>
-$('body').on('click', '.notifi_body', function() {
-    var notifi_read_id = $(this).closest('li').find('.notifi_read_id').val();
-    $.ajaxSetup({
-        headers: {
-            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-        },
-    });
-    $.ajax({
-        data: {
-            notifi_read_id: notifi_read_id
-        },
-        url: "{{ route('notifiMarkAsRead') }}",
-        type: "POST",
-        dataType: "json",
-        success: function(data) {
-            window.location.href = `/notificationDetail/` + notifi_read_id + ``;
-        }
-    });
-})
+      $('body').on('click', '.notifi_body', function() {
+          var notifi_read_id = $(this).closest('li').find('.notifi_read_id').val();
+          $.ajaxSetup({
+              headers: {
+                  "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+              },
+          });
+          $.ajax({
+              data: {
+                  notifi_read_id: notifi_read_id
+              },
+              url: "{{ route('notifiMarkAsRead') }}",
+              type: "POST",
+              dataType: "json",
+              success: function(data) {
+                  window.location.href = `/notificationDetail/` + notifi_read_id + ``;
+              }
+          });
+      })
 
-$('body').on('click', '#notifi_cross', function() {
-    var notifi_read_id = $(this).closest('li').find('.notifi_read_id').val();
-    $.ajaxSetup({
-        headers: {
-            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-        },
-    });
-    $.ajax({
-        data: {
-            notifi_read_id: notifi_read_id
-        },
-        url: "{{ route('deleteNotification') }}",
-        type: "POST",
-        dataType: "json",
-        success: function(data) {
-            location.reload();
-        }
-    });
-})
+      $('body').on('click', '#notifi_cross', function() {
+          var notifi_read_id = $(this).closest('li').find('.notifi_read_id').val();
+          $.ajaxSetup({
+              headers: {
+                  "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+              },
+          });
+          $.ajax({
+              data: {
+                  notifi_read_id: notifi_read_id
+              },
+              url: "{{ route('deleteNotification') }}",
+              type: "POST",
+              dataType: "json",
+              success: function(data) {
+                  location.reload();
+              }
+          });
+      })
 
-console.log('ooo');
+      console.log('ooo');
   </script>
   @endsection

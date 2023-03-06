@@ -91,8 +91,9 @@
 }
 
 .card_border {
-  border-right: 1px solid;
-  border-bottom: 1px solid;
+  border: 1px solid lightgray;
+  /* border-bottom: 1px solid lightgray; */
+  padding-bottom: 15px;
 }
 
 .card-body .row {

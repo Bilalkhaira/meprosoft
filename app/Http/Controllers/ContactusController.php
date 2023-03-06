@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\NavMenu;
 use App\Models\ContactUs;
 use Illuminate\Http\Request;
+use App\Models\MenuPagesData;
 
 class ContactusController extends Controller
 {
@@ -25,5 +27,14 @@ class ContactusController extends Controller
 
         return back();
         
+    }
+
+    public function index()
+    {
+        $menu_id = NavMenu::where('name', 'News & Event')->first('id');
+
+        $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
+
+        return view('pages.eventAndNews.index', ['data' => $data]);
     }
 }

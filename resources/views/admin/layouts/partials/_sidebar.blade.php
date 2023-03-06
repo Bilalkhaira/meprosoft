@@ -3,27 +3,27 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
-   
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{ route('dashboard') }}">
-        <i class="bi bi-grid"></i>
+          <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
       </li>
-    
+
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse" href="#">
           <i class="bi bi-gem"></i><span>Nav Menu</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="pages" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="pages" class="nav-content collapse navMenu" data-bs-parent="#sidebar-nav">
           <li>
             <a href="{{ route('home/corporateOverview.index', 3) }}">
               <i class="bi bi-circle"></i><span>Home Menu</span>
             </a>
           </li>
           <li class="sidebar_btn">
-         
+
             <a href="{{ route('service.index', 8) }}">
               <i class="bi bi-circle"></i><span>Services</span>
             </a>
@@ -78,11 +78,19 @@
         </a>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Logout</span>
+
+        <a class="nav-link collapsed" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+          <i class="bi bi-box-arrow-right"></i>
+          {{ __('Logout') }}
         </a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+          @csrf
+        </form>
       </li>
+
+
     </ul>
 
   </aside>

@@ -11,14 +11,16 @@
 <script src="{{ asset('js/admin/main.js') }}"></script>
 
 <script>
-    // because the 'href' property of the DOM element is the absolute path
+    // for side bar active code
     var path = window.location.href;
-    var filterPath = path.substring(0, path.lastIndexOf('/'));
-    var activeTab = filterPath.substring(filterPath.lastIndexOf('/') + 1)
+    // var filterPath = path.substring(0, path.lastIndexOf('/'));
+    // var activeTab = filterPath.substring(filterPath.lastIndexOf('/') + 1)
     $(".sidebar-nav li a").each(function() {
-       
         if (this.href === path) {
-            $('#'+activeTab).addClass('show');
+            // $('#'+activeTab).addClass('show');
+            if(path.search('menu') != -1){
+                $('.navMenu').addClass('show');
+            }
             $(".sidebar-nav li a").removeClass('active_nv');
             $(this).closest('a').addClass("active_nv");
         }

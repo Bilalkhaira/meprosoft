@@ -2,13 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\CaseStudyControler;
 use App\Http\Controllers\HomeMenuController;
 use App\Http\Controllers\Admin\FAQController;
+use App\Http\Controllers\Admin\HomeControler;
 use App\Http\Controllers\ContactusController;
-use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\NewsAndEventController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\NotificationController;
@@ -49,10 +50,7 @@ Route::get('/migrate', function () {
     return 'migrated successfully';
 });
 
-
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [HomeController::class, 'home'])->name('home');
 
 Auth::routes();
 
@@ -111,33 +109,33 @@ Route::prefix('admin')->group(function () {
     })->name('admin');
 
     Route::prefix('home')->group(function () {
-        Route::get('/', [HomeController::class, 'homeSetting'])->name('home.setting');
+        Route::get('/', [HomeControler::class, 'homeSetting'])->name('home.setting');
 
-        Route::post('/storeNewSlide', [HomeController::class, 'storeNewSlide'])->name('home.storeNewSlide');
-        Route::post('/editSlide', [HomeController::class, 'editSlide'])->name('home.editSlide');
-        Route::post('/updateSlide', [HomeController::class, 'updateSlide'])->name('home.updateSlide');
-        Route::delete('/deleteSlide/{id}', [HomeController::class, 'deleteSlide'])->name('home.deleteSlide');
+        Route::post('/storeNewSlide', [HomeControler::class, 'storeNewSlide'])->name('home.storeNewSlide');
+        Route::post('/editSlide', [HomeControler::class, 'editSlide'])->name('home.editSlide');
+        Route::post('/updateSlide', [HomeControler::class, 'updateSlide'])->name('home.updateSlide');
+        Route::delete('/deleteSlide/{id}', [HomeControler::class, 'deleteSlide'])->name('home.deleteSlide');
 
-        Route::post('/storeSatisfiedCustomer', [HomeController::class, 'storeSatisfiedCustomer'])->name('home.storeSatisfiedCustomer');
-        Route::post('/updateSatisfiedCustomer', [HomeController::class, 'updateSatisfiedCustomer'])->name('home.updateSatisfiedCustomer');
-        Route::delete('/deleteSatisfiedCustomerImage/{id}', [HomeController::class, 'deleteSatisfiedCustomerImage'])->name('home.deleteSatisfiedCustomerImage');
+        Route::post('/storeSatisfiedCustomer', [HomeControler::class, 'storeSatisfiedCustomer'])->name('home.storeSatisfiedCustomer');
+        Route::post('/updateSatisfiedCustomer', [HomeControler::class, 'updateSatisfiedCustomer'])->name('home.updateSatisfiedCustomer');
+        Route::delete('/deleteSatisfiedCustomerImage/{id}', [HomeControler::class, 'deleteSatisfiedCustomerImage'])->name('home.deleteSatisfiedCustomerImage');
 
-        Route::post('/storebuildingEfficiency', [HomeController::class, 'storebuildingEfficiency'])->name('home.storebuildingEfficiency');
-        Route::post('/updatebuildingEfficiency', [HomeController::class, 'updatebuildingEfficiency'])->name('home.updatebuildingEfficiency');
+        Route::post('/storebuildingEfficiency', [HomeControler::class, 'storebuildingEfficiency'])->name('home.storebuildingEfficiency');
+        Route::post('/updatebuildingEfficiency', [HomeControler::class, 'updatebuildingEfficiency'])->name('home.updatebuildingEfficiency');
 
-        Route::post('/storeOurServices', [HomeController::class, 'storeOurServices'])->name('home.storeOurServices');
-        Route::post('/updateOurServices', [HomeController::class, 'updateOurServices'])->name('home.updateOurServices');
+        Route::post('/storeOurServices', [HomeControler::class, 'storeOurServices'])->name('home.storeOurServices');
+        Route::post('/updateOurServices', [HomeControler::class, 'updateOurServices'])->name('home.updateOurServices');
 
-        Route::post('/storeOurProductAndSolution', [HomeController::class, 'storeOurProductAndSolution'])->name('home.storeOurProductAndSolution');
-        Route::post('/updateOurProductAndSolution', [HomeController::class, 'updateOurProductAndSolution'])->name('home.updateOurProductAndSolution');
+        Route::post('/storeOurProductAndSolution', [HomeControler::class, 'storeOurProductAndSolution'])->name('home.storeOurProductAndSolution');
+        Route::post('/updateOurProductAndSolution', [HomeControler::class, 'updateOurProductAndSolution'])->name('home.updateOurProductAndSolution');
 
-        Route::post('/storeSlider2NewSlide', [HomeController::class, 'storeSlider2NewSlide'])->name('home.storeSlider2NewSlide');
-        Route::post('/editSlider2Slide', [HomeController::class, 'editSlider2Slide'])->name('home.editSlider2Slide');
-        Route::post('/updateSlider2Slide', [HomeController::class, 'updateSlider2Slide'])->name('home.updateSlider2Slide');
-        Route::delete('/deleteSlider2Slide/{id}', [HomeController::class, 'deleteSlider2Slide'])->name('home.deleteSlider2Slide');
+        Route::post('/storeSlider2NewSlide', [HomeControler::class, 'storeSlider2NewSlide'])->name('home.storeSlider2NewSlide');
+        Route::post('/editSlider2Slide', [HomeControler::class, 'editSlider2Slide'])->name('home.editSlider2Slide');
+        Route::post('/updateSlider2Slide', [HomeControler::class, 'updateSlider2Slide'])->name('home.updateSlider2Slide');
+        Route::delete('/deleteSlider2Slide/{id}', [HomeControler::class, 'deleteSlider2Slide'])->name('home.deleteSlider2Slide');
 
-        Route::post('/storePercentageSection', [HomeController::class, 'storePercentageSection'])->name('home.storePercentageSection');
-        Route::post('/updatePercentageSection', [HomeController::class, 'updatePercentageSection'])->name('home.updatePercentageSection');
+        Route::post('/storePercentageSection', [HomeControler::class, 'storePercentageSection'])->name('home.storePercentageSection');
+        Route::post('/updatePercentageSection', [HomeControler::class, 'updatePercentageSection'])->name('home.updatePercentageSection');
     });
 
     Route::prefix('menu')->group(function () {
@@ -283,13 +281,17 @@ Route::prefix('admin')->group(function () {
 
     Route::prefix('faq')->group(function () {
         Route::get('/', [FAQController::class, 'index'])->name('faq.index');
+        Route::get('create', [FAQController::class, 'create'])->name('faq.create');
         Route::get('edit/{id}', [FAQController::class, 'edit'])->name('faq.edit');
+        Route::post('/storeFaq', [FAQController::class, 'storeFaq'])->name('faq.storeFaq');
+        Route::put('/updateFaq/{id}', [FAQController::class, 'update'])->name('faq.update');
+        Route::delete('/deleteFaqQues/{id}', [FAQController::class, 'deleteFaqQues'])->name('faq.deleteFaqQues');
     });
 
 
 
 
-    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [HomeControler::class, 'index'])->name('dashboard');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::post('/updateprofile', [ProfileController::class, 'updateprofile'])->name('updateprofile');
     Route::get('deleteProfilePhoto', [ProfileController::class, 'deleteProfilePhoto'])->name('delete.profilePhoto');

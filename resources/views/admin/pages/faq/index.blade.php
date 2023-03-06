@@ -17,60 +17,76 @@
 
 <section class="section">
     <div class="row">
-        <!-- <h2>Questions Section Setting</h2> -->
 
         <div class="col-xl-12">
 
             <div class="card">
                 <div class="card-body">
 
+
                     <div class="pt-3 setting_main">
+                        @if(!empty($sectionData))
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-3 label">Heading</label>
                             <div class="col-md-8 col-lg-9">
-                                Question Heading
+                                {{ $sectionData->heading ?? ''}}
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-3 label">Text</label>
                             <div class="col-md-8 col-lg-9">
-                                Question Setting Text
+                                {{ $sectionData->exp ?? ''}}
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Image</label>
-                            <div class="col-md-8 col-lg-9">
-                                <img src="http://127.0.0.1:8000/img/slider/4.png" alt="">
-                            </div>
-                        </div>
-
+                        <hr>
+                        @if(!empty($quesAns))
+                        @foreach($quesAns as $val)
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-3 label">Question</label>
                             <div class="col-md-8 col-lg-9">
-                                Qustion?
+                                {{ $val->questions ?? ''}} ..?
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-3 label">Answer</label>
                             <div class="col-md-8 col-lg-9">
-                                100%
+                                {{ $val->ans ?? ''}}
                             </div>
                         </div>
-                       
-
-                        <div style="float: right;">
-                            <a href="{{ route('faq.edit',1) }}" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                            <a href="#" class="btn btn-sm btn-primary" >Disable</a>
+                        <div class="row mb-3">
+                            <label class="col-md-4 col-lg-3 label"></label>
+                            <div class="col-md-8 col-lg-9">
+                                <form action="{{ route('faq.deleteFaqQues', $val->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" style="float: right;" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')"> <i class="fa fa-trash"></i></button>
+                                </form>
+                            </div>
                         </div>
 
+                        <hr>
+                        @endforeach
+                        @endif
+
                     </div>
+                    <div style="float: right;">
+                        <a href="{{ route('faq.edit',$sectionData->id ?? '') }}" class="btn btn-sm btn-primary">Edit</a>
+                    </div>
+                    @else
+                    <div style="float: right;">
+                        <a href="{{ route('faq.create') }}" class="btn btn-sm btn-primary">Create</a>
+                    </div>
+                    @endif
+
+
 
                 </div>
 
             </div>
 
         </div>
+
+    </div>
     </div>
 
 </section>

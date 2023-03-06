@@ -92,6 +92,9 @@ img {
 .mx-auto{
     width: 100% !important;
 }
+.slider_btn:hover{
+  color: white !important;
+}
 
 
 
