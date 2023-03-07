@@ -40,7 +40,7 @@
                                 </div>
 
                                 <div class="col-md-12 col-lg-12">
-                                <span class="slider_label">Image : </span> </br>
+                                    <span class="slider_label">Image : </span> </br>
                                     <img src="{{ asset('img/homePage/'.$val->images )}}" alt="">
                                 </div>
 
@@ -231,61 +231,62 @@
                                 {{ $our_services->main_heading ?? ''}}
                             </div>
                         </div>
-
-                        <div class="row mb-3">
+                        {{--
+                        <!-- <div class="row mb-3">
                             <label class="col-md-4 col-lg-3 label">Small Heading One</label>
                             <div class="col-md-8 col-lg-9">
                                 {{ $our_services->others_heading ?? ''}}
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Small Heading Two</label>
-                            <div class="col-md-8 col-lg-9">
-                                {{ $our_services->text ?? ''}}
-                            </div>
-                        </div>
-
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Small Heading Three</label>
-                            <div class="col-md-8 col-lg-9">
-                                `{{ $our_services->text2 ?? ''}}`
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Small Heading Four</label>
-                            <div class="col-md-8 col-lg-9">
-                                {{ $our_services->links ?? ''}}
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Image</label>
-                            <div class="col-md-8 col-lg-9">
-                                <img src="{{ asset('img/homePage/'.$our_services->images )}}" alt="">
-                            </div>
-                        </div>
-
-                        <div style="float: right;">
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editOurServicesModel"> Edit</button>
-                        </div>
-                        @else
-                        <div style="float: right;">
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#ourServicesModel"> Create</button>
-                        </div>
-                        @endif
-
                     </div>
+                </div>
 
-
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-3 label">Small Heading Two</label>
+                    <div class="col-md-8 col-lg-9">
+                        {{ $our_services->text ?? ''}}
+                    </div>
                 </div>
 
 
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-3 label">Small Heading Three</label>
+                    <div class="col-md-8 col-lg-9">
+                        `{{ $our_services->text2 ?? ''}}`
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-3 label">Small Heading Four</label>
+                    <div class="col-md-8 col-lg-9">
+                        {{ $our_services->links ?? ''}}
+                    </div>
+                </div> -->
+                --}}
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-3 label">Image</label>
+                    <div class="col-md-8 col-lg-9">
+                        <img src="{{ asset('img/homePage/'.$our_services->images )}}" alt="">
+                    </div>
+                </div>
+
+                <div style="float: right;">
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editOurServicesModel"> Edit</button>
+                </div>
+                @else
+                <div style="float: right;">
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#ourServicesModel"> Create</button>
+                </div>
+                @endif
+
             </div>
 
+
         </div>
+
+
+    </div>
+
+    </div>
     </div>
 
 </section>
@@ -308,61 +309,61 @@
                                 {{ $our_product_and_solution->main_heading ?? ''}}
                             </div>
                         </div>
-
-                        <div class="row mb-3">
+                        {{--
+                        <!-- <div class="row mb-3">
                             <label class="col-md-4 col-lg-3 label">Small Heading One</label>
                             <div class="col-md-8 col-lg-9">
                                 {{ $our_product_and_solution->others_heading ?? ''}}
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Small Heading Two</label>
-                            <div class="col-md-8 col-lg-9">
-                                {{ $our_product_and_solution->text ?? ''}}
-                            </div>
-                        </div>
-
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Small Heading Three</label>
-                            <div class="col-md-8 col-lg-9">
-                                `{{ $our_product_and_solution->text2 ?? ''}}`
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Small Heading Four</label>
-                            <div class="col-md-8 col-lg-9">
-                                {{ $our_product_and_solution->links ?? ''}}
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Image</label>
-                            <div class="col-md-8 col-lg-9">
-                                <img src="{{ asset('img/homePage/'.$our_product_and_solution->images )}}" alt="">
-                            </div>
-                        </div>
-
-                        <div style="float: right;">
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editOurProductAndSolutionModel"> Edit</button>
-                        </div>
-                        @else
-                        <div style="float: right;">
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#ourProductAndSolutionModel"> Create</button>
-                        </div>
-                        @endif
-
                     </div>
+                </div>
 
-
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-3 label">Small Heading Two</label>
+                    <div class="col-md-8 col-lg-9">
+                        {{ $our_product_and_solution->text ?? ''}}
+                    </div>
                 </div>
 
 
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-3 label">Small Heading Three</label>
+                    <div class="col-md-8 col-lg-9">
+                        `{{ $our_product_and_solution->text2 ?? ''}}`
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-3 label">Small Heading Four</label>
+                    <div class="col-md-8 col-lg-9">
+                        {{ $our_product_and_solution->links ?? ''}}
+                    </div>
+                </div> -->
+                --}}
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-3 label">Image</label>
+                    <div class="col-md-8 col-lg-9">
+                        <img src="{{ asset('img/homePage/'.$our_product_and_solution->images )}}" alt="">
+                    </div>
+                </div>
+
+                <div style="float: right;">
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editOurProductAndSolutionModel"> Edit</button>
+                </div>
+                @else
+                <div style="float: right;">
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#ourProductAndSolutionModel"> Create</button>
+                </div>
+                @endif
+
             </div>
 
+
         </div>
+
+
+    </div>
+
+    </div>
     </div>
 
 </section>
@@ -401,35 +402,36 @@
                                 <div class="col-md-12 col-lg-12">
                                     <p><span class="slider_label">Explanation : </span></br> {{ $val->text }} </p>
                                 </div>
-
-                                <div class="col-md-12 col-lg-12">
+                                {{--
+                                <!-- <div class="col-md-12 col-lg-12">
                                 <span class="slider_label">Image : </span> </br>
                                     <img src="{{ asset('img/homePage/'.$val->images )}}" alt="">
-                                </div>
+                            </div> -->
+                            --}}
 
-                                <div class="card_btn">
-                                    <form action="{{ route('home.deleteSlider2Slide', $val->id) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="button" class="btn btn-sm btn-primary" id="slider2SlideEdit_btn" data-bs-toggle="modal" data-bs-target="#editSlider2SlideModel"> <i class="fa fa-edit"></i></button>
-                                        <input type="hidden" value="{{ $val->id }}" id="slideEdit_id">
-                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')"> <i class="fa fa-trash"></i></button>
-                                    </form>
-
-                                </div>
+                            <div class="card_btn">
+                                <form action="{{ route('home.deleteSlider2Slide', $val->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="button" class="btn btn-sm btn-primary" id="slider2SlideEdit_btn" data-bs-toggle="modal" data-bs-target="#editSlider2SlideModel"> <i class="fa fa-edit"></i></button>
+                                    <input type="hidden" value="{{ $val->id }}" id="slideEdit_id">
+                                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')"> <i class="fa fa-trash"></i></button>
+                                </form>
 
                             </div>
-                        </div>
-                        @endforeach
-                        @endif
 
+                        </div>
                     </div>
+                    @endforeach
+                    @endif
 
                 </div>
 
             </div>
 
         </div>
+
+    </div>
     </div>
 
 </section>
@@ -458,44 +460,46 @@
                                 {{ $percentage_section->text ?? '' }}
                             </div>
                         </div>
-                        @foreach(json_decode($percentage_section->rating_or_percentage) as $val)
+                        {{--
+                        <!-- @foreach(json_decode($percentage_section->rating_or_percentage) as $val)
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-3 label">Heading</label>
                             <div class="col-md-8 col-lg-4">
                                 {{ $val[0] ?? ''}}
-                            </div>
-                            <label class="col-md-4 col-lg-2 label">Percentage</label>
-                            <div class="col-md-8 col-lg-3">
-                                {{ $val[1] ?? ''}}
-                            </div>
-                        </div>
-                        @endforeach
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Video</label>
-                            <div class="col-md-8 col-lg-9">
-                                <video width="200" height="200" controls>
-                                    <source src="{{ asset('img/homePage/'.$percentage_section->images )}}" type="video/mp4">
-                                </video>
-                            </div>
-                        </div>
-
-                        <div style="float: right;">
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editPercentageSectionModel"> Edit</button>
-                        </div>
-                        @else
-                        <div style="float: right;">
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#percentageSectionModel"> Create</button>
-                        </div>
-                        @endif
-
                     </div>
-
+                    <label class="col-md-4 col-lg-2 label">Percentage</label>
+                    <div class="col-md-8 col-lg-3">
+                        {{ $val[1] ?? ''}}
+                    </div>
                 </div>
+                @endforeach -->
+                --}}
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-3 label">Video</label>
+                    <div class="col-md-8 col-lg-9">
+                        <video width="200" height="200" controls>
+                            <source src="{{ asset('img/homePage/'.$percentage_section->images )}}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div style="float: right;">
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editPercentageSectionModel"> Edit</button>
+                </div>
+                @else
+                <div style="float: right;">
+                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#percentageSectionModel"> Create</button>
+                </div>
+                @endif
 
             </div>
 
         </div>
+
+    </div>
+
+    </div>
     </div>
 
 </section>
@@ -526,8 +530,8 @@
                                 <textarea name="text" class="form-control" id="" cols="30" rows="4"></textarea>
                             </div>
                         </div>
-
-                        <div class="row mb-3">
+                        {{--
+                        <!-- <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Percentage Heading</label>
                             <div class="col-md-8 col-lg-10">
                                 <input type="text" name="percentage[]" class="form-control" required>
@@ -567,8 +571,8 @@
                             <div class="col-md-8 col-lg-10">
                                 <input type="number" name="percentage2[]" max="100" class="form-control" required>
                             </div>
-                        </div>
-
+                        </div> -->
+                            --}}
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Upload Video</label>
                             <div class="col-md-8 col-lg-10">
@@ -612,73 +616,75 @@
                                 <textarea name="text" class="form-control" id="" cols="30" rows="4">{{ $percentage_section->text ?? '' }}</textarea>
                             </div>
                         </div>
-                        @if(!empty(json_decode($percentage_section->rating_or_percentage ?? '')))
+                        {{--
+                        <!-- @if(!empty(json_decode($percentage_section->rating_or_percentage ?? '')))
                         @foreach(json_decode($percentage_section->rating_or_percentage) as $key => $val)
                         @if($key === 'percentage')
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Percentage Heading</label>
                             <div class="col-md-8 col-lg-10">
                                 <input type="text" name="percentage[]" value="{{ $val[0] }}" class="form-control" required>
-                            </div>
-                        </div>
-
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Percentage</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input type="number" name="percentage[]" value="{{ $val[1] }}" class="form-control" max="100" required>
-                            </div>
-                        </div>
-                        @endif
-                        @if($key === 'percentage1')
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Percentage Heading</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input type="text" name="percentage1[]" value="{{ $val[0] }}" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Percentage</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input type="number" name="percentage1[]" value="{{ $val[1] }}" max="100" class="form-control" required>
-                            </div>
-                        </div>
-                        @endif
-                        @if($key === 'percentage2')
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Percentage Heading</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input type="text" name="percentage2[]" value="{{ $val[0] }}" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Percentage</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input type="number" name="percentage2[]" value="{{ $val[1] }}" max="100" class="form-control" required>
-                            </div>
-                        </div>
-                        @endif
-
-
-                        @endforeach
-                        @endif
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Upload Video</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input name="img" class="form-control" type="file">
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
+
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-2 label">Percentage</label>
+                    <div class="col-md-8 col-lg-10">
+                        <input type="number" name="percentage[]" value="{{ $val[1] }}" class="form-control" max="100" required>
+                    </div>
                 </div>
-            </form>
+                @endif
+                @if($key === 'percentage1')
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-2 label">Percentage Heading</label>
+                    <div class="col-md-8 col-lg-10">
+                        <input type="text" name="percentage1[]" value="{{ $val[0] }}" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-2 label">Percentage</label>
+                    <div class="col-md-8 col-lg-10">
+                        <input type="number" name="percentage1[]" value="{{ $val[1] }}" max="100" class="form-control" required>
+                    </div>
+                </div>
+                @endif
+                @if($key === 'percentage2')
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-2 label">Percentage Heading</label>
+                    <div class="col-md-8 col-lg-10">
+                        <input type="text" name="percentage2[]" value="{{ $val[0] }}" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-2 label">Percentage</label>
+                    <div class="col-md-8 col-lg-10">
+                        <input type="number" name="percentage2[]" value="{{ $val[1] }}" max="100" class="form-control" required>
+                    </div>
+                </div>
+                @endif
+
+
+                @endforeach
+                @endif -->
+                --}}
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-2 label">Upload Video</label>
+                    <div class="col-md-8 col-lg-10">
+                        <input name="img" class="form-control" type="file">
+                    </div>
+                </div>
         </div>
     </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+    </form>
+</div>
+</div>
 </div>
 
 
@@ -693,13 +699,14 @@
                 @csrf
                 <div class="modal-body">
                     <div class="pt-3 setting_main">
-
-                        <div class="row mb-3">
+                    {{--
+                        <!-- <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Background Image</label>
                             <div class="col-md-8 col-lg-10">
                                 <input name="img" class="form-control" type="file" required>
                             </div>
-                        </div>
+                        </div> -->
+                        --}}
 
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Rating</label>
@@ -751,13 +758,14 @@
                 @csrf
                 <div class="modal-body">
                     <div class="pt-3 setting_main">
-
-                        <div class="row mb-3">
+                    {{--
+                        <!-- <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Background Image</label>
                             <div class="col-md-8 col-lg-10">
                                 <input name="img" class="form-control" type="file">
                             </div>
-                        </div>
+                        </div> -->
+                        --}}
 
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Rating</label>
@@ -826,8 +834,8 @@
                             </div>
                         </div>
 
-
-                        <div class="row mb-3">
+                        {{--
+                        <!-- <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Small Heading One</label>
                             <div class="col-md-8 col-lg-10">
                                 <input type="text" name="small_heading_one" class="form-control" value="{{ $our_product_and_solution->others_heading ?? ''}}" required>
@@ -853,7 +861,8 @@
                             <div class="col-md-8 col-lg-10">
                                 <input type="text" name="small_heading_four" value="{{ $our_product_and_solution->links ?? ''}}" class="form-control" required>
                             </div>
-                        </div>
+                        </div> -->
+                        --}}
 
 
 
@@ -894,8 +903,8 @@
                             </div>
                         </div>
 
-
-                        <div class="row mb-3">
+                        {{--
+                        <!-- <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Small Heading One</label>
                             <div class="col-md-8 col-lg-10">
                                 <input type="text" name="small_heading_one" class="form-control" required>
@@ -921,7 +930,8 @@
                             <div class="col-md-8 col-lg-10">
                                 <input type="text" name="small_heading_four" class="form-control" required>
                             </div>
-                        </div>
+                        </div> -->
+                        --}}
 
 
 
@@ -963,8 +973,8 @@
                             </div>
                         </div>
 
-
-                        <div class="row mb-3">
+                        {{--
+                        <!-- <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Small Heading One</label>
                             <div class="col-md-8 col-lg-10">
                                 <input type="text" name="small_heading_one" class="form-control" value="{{ $our_services->others_heading ?? ''}}" required>
@@ -990,7 +1000,8 @@
                             <div class="col-md-8 col-lg-10">
                                 <input type="text" name="small_heading_four" value="{{ $our_services->links ?? ''}}" class="form-control" required>
                             </div>
-                        </div>
+                        </div> -->
+                        --}}
 
 
 
@@ -1031,8 +1042,8 @@
                             </div>
                         </div>
 
-
-                        <div class="row mb-3">
+                        {{--
+                        <!-- <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Small Heading One</label>
                             <div class="col-md-8 col-lg-10">
                                 <input type="text" name="small_heading_one" class="form-control" required>
@@ -1058,7 +1069,8 @@
                             <div class="col-md-8 col-lg-10">
                                 <input type="text" name="small_heading_four" class="form-control" required>
                             </div>
-                        </div>
+                        </div> -->
+                        --}}
 
 
 

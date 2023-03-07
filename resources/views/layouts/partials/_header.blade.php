@@ -53,9 +53,9 @@
                                     <li class="nav-item"><a class="dropdown-item" href="{{ route('services.riseWithS4HANAImplementation') }}">Rise with S4 HANA Implementation</a>
                                     </li>
                                     <li class="nav-item"><a class="dropdown-item" href="{{ route('services.SAPSupport') }}">SAP Support</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="#">Digital Manufacturing Cloud</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="#">ALM(Application Life Cycle Management)</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="#">SAP Fiori Development</a></li>
+                                    <!-- <li class="nav-item"><a class="dropdown-item" href="#">Digital Manufacturing Cloud</a></li> -->
+                                    <!-- <li class="nav-item"><a class="dropdown-item" href="#">ALM(Application Life Cycle Management)</a></li> -->
+                                    <!-- <li class="nav-item"><a class="dropdown-item" href="#">SAP Fiori Development</a></li> -->
 
                                 </ul>
                             </div>

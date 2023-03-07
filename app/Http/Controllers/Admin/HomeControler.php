@@ -257,10 +257,10 @@ class HomeControler extends Controller
             'for_section_identification' => 'our_services',
             'images' => $fileName,
             'main_heading' => $request->heading,
-            'others_heading' => $request->small_heading_one,
-            'text' => $request->small_heading_two,
-            'text2' => $request->small_heading_three,
-            'links' => $request->small_heading_four,
+            // 'others_heading' => $request->small_heading_one,
+            // 'text' => $request->small_heading_two,
+            // 'text2' => $request->small_heading_three,
+            // 'links' => $request->small_heading_four,
         ]);
 
         toastr()->success('Created Successfully');
@@ -297,10 +297,10 @@ class HomeControler extends Controller
         $updated_row->update([
             'images' => $updateimage,
             'main_heading' => $request->heading,
-            'others_heading' => $request->small_heading_one,
-            'text' => $request->small_heading_two,
-            'text2' => $request->small_heading_three,
-            'links' => $request->small_heading_four,
+            // 'others_heading' => $request->small_heading_one,
+            // 'text' => $request->small_heading_two,
+            // 'text2' => $request->small_heading_three,
+            // 'links' => $request->small_heading_four,
         ]);
 
 
@@ -322,10 +322,10 @@ class HomeControler extends Controller
             'for_section_identification' => 'our_product_and_solution',
             'images' => $fileName,
             'main_heading' => $request->heading,
-            'others_heading' => $request->small_heading_one,
-            'text' => $request->small_heading_two,
-            'text2' => $request->small_heading_three,
-            'links' => $request->small_heading_four,
+            // 'others_heading' => $request->small_heading_one,
+            // 'text' => $request->small_heading_two,
+            // 'text2' => $request->small_heading_three,
+            // 'links' => $request->small_heading_four,
         ]);
 
         toastr()->success('Created Successfully');
@@ -362,10 +362,10 @@ class HomeControler extends Controller
         $updated_row->update([
             'images' => $updateimage,
             'main_heading' => $request->heading,
-            'others_heading' => $request->small_heading_one,
-            'text' => $request->small_heading_two,
-            'text2' => $request->small_heading_three,
-            'links' => $request->small_heading_four,
+            // 'others_heading' => $request->small_heading_one,
+            // 'text' => $request->small_heading_two,
+            // 'text2' => $request->small_heading_three,
+            // 'links' => $request->small_heading_four,
         ]);
 
 
@@ -376,17 +376,16 @@ class HomeControler extends Controller
 
     public function storeSlider2NewSlide(Request $request)
     {
-        // dd($request->all());
-        $imgpath = public_path('img/homePage/');
+        // $imgpath = public_path('img/homePage/');
 
-        $destinationPath = $imgpath;
-        $file = $request->img;
-        $fileName = time() . '.' . $file->clientExtension();
-        $file->move($destinationPath, $fileName);
+        // $destinationPath = $imgpath;
+        // $file = $request->img;
+        // $fileName = time() . '.' . $file->clientExtension();
+        // $file->move($destinationPath, $fileName);
 
         HomePage::create([
             'for_section_identification' => 'slider2',
-            'images' => $fileName,
+            // 'images' => $fileName,
             'text' => $request->exp,
             'rating_or_percentage' => $request->rating,
             'main_heading' => $request->auther_name,
@@ -409,30 +408,30 @@ class HomeControler extends Controller
     {
         $updated_row = HomePage::find($request->updated_id);
 
-        $imgpath = public_path('img/homePage/');
+        // $imgpath = public_path('img/homePage/');
 
-        if (empty($request->img)) {
+        // if (empty($request->img)) {
 
-            $updateimage = $updated_row->images;
-        } else {
+        //     $updateimage = $updated_row->images;
+        // } else {
 
-            $imagePath =  $imgpath . $updated_row->images;
+        //     $imagePath =  $imgpath . $updated_row->images;
 
-            if (File::exists($imagePath)) {
+        //     if (File::exists($imagePath)) {
 
-                File::delete($imagePath);
-            }
+        //         File::delete($imagePath);
+        //     }
 
-            $destinationPath = $imgpath;
-            $file = $request->img;
-            $fileName = time() . '.' . $file->clientExtension();
-            $file->move($destinationPath, $fileName);
-            $updateimage = $fileName;
-        }
+        //     $destinationPath = $imgpath;
+        //     $file = $request->img;
+        //     $fileName = time() . '.' . $file->clientExtension();
+        //     $file->move($destinationPath, $fileName);
+        //     $updateimage = $fileName;
+        // }
 
 
         $updated_row->update([
-            'images' => $updateimage,
+            // 'images' => $updateimage,
             'text' => $request->exp,
             'rating_or_percentage' => $request->rating,
             'main_heading' => $request->auther_name,
@@ -456,11 +455,11 @@ class HomeControler extends Controller
 
     public function storePercentageSection(Request $request)
     {
-        $input = [
-            'percentage' => $request->percentage,
-            'percentage1' => $request->percentage1,
-            'percentage2' => $request->percentage2,
-        ];
+        // $input = [
+        //     'percentage' => $request->percentage,
+        //     'percentage1' => $request->percentage1,
+        //     'percentage2' => $request->percentage2,
+        // ];
         $imgpath = public_path('img/homePage/');
 
         $destinationPath = $imgpath;
@@ -473,7 +472,7 @@ class HomeControler extends Controller
             'images' => $fileName,
             'main_heading' => $request->heading,
             'text' => $request->text,
-            'rating_or_percentage' => json_encode($input),
+            // 'rating_or_percentage' => json_encode($input),
         ]);
 
         toastr()->success('Created Successfully');
@@ -482,11 +481,11 @@ class HomeControler extends Controller
 
     public function updatePercentageSection(Request $request)
     {
-        $input = [
-            'percentage' => $request->percentage,
-            'percentage1' => $request->percentage1,
-            'percentage2' => $request->percentage2,
-        ];
+        // $input = [
+        //     'percentage' => $request->percentage,
+        //     'percentage1' => $request->percentage1,
+        //     'percentage2' => $request->percentage2,
+        // ];
 
         $updated_row = HomePage::find($request->updated_id);
 
@@ -516,7 +515,7 @@ class HomeControler extends Controller
             'images' => $updateimage,
             'main_heading' => $request->heading,
             'text' => $request->text,
-            'rating_or_percentage' => json_encode($input),
+            // 'rating_or_percentage' => json_encode($input),
         ]);
 
 

@@ -119,8 +119,8 @@
                                     <img src="{{ asset('img/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                                 </div>
                                 <div>
-                                    <a href="#">
-                                        <h4 id="heading" class="mb-1">{{ $our_services->others_heading ?? ''}}</h4>
+                                    <a href="{{ route('services.enterpriseSolutionConsulting') }}">
+                                        <h4 id="heading" class="mb-1">Enterprise Solution Consulting</h4>
                                     </a>
 
                                 </div>
@@ -133,8 +133,8 @@
                                     <img src="{{ asset('img/icons/lineal/target.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                                 </div>
                                 <div>
-                                    <a href="#">
-                                        <h4 id="heading" class="mb-1">{{ $our_services->links ?? ''}}</h4>
+                                    <a href="{{ route('services.IPOCompliance') }}">
+                                        <h4 id="heading" class="mb-1">IPO Compliance</h4>
                                     </a>
 
                                 </div>
@@ -147,8 +147,8 @@
                                     <img src="{{ asset('img/icons/lineal/settings-3.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                                 </div>
                                 <div>
-                                    <a href="#">
-                                        <h4 id="heading" class="mb-1">{{ $our_services->text ?? ''}}</h4>
+                                    <a href="{{ route('services.applicationMigrationConversion') }}">
+                                        <h4 id="heading" class="mb-1">Application Migration & Conversion</h4>
                                     </a>
 
                                 </div>
@@ -161,8 +161,8 @@
                                     <img src="{{ asset('img/icons/lineal/bar-chart.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                                 </div>
                                 <div>
-                                    <a href="#">
-                                        <h4 id="heading" class="mb-1">{{ $our_services->text2 ?? ''}}</h4>
+                                    <a href="{{ route('services.SAPSupport') }}">
+                                        <h4 id="heading" class="mb-1">SAP Support</h4>
                                     </a>
 
                                 </div>
@@ -194,8 +194,8 @@
                                     <img src="{{ asset('img/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                                 </div>
                                 <div>
-                                    <a href="#">
-                                        <h4 id="heading" class="mb-1">{{ $our_product_and_solution->others_heading ?? ''}}</h4>
+                                    <a href="{{ route('productAndSolution.mesproPaperessManufacturing') }}">
+                                        <h4 id="heading" class="mb-1">Mespro Paperless Manufacturing</h4>
                                     </a>
 
                                 </div>
@@ -208,8 +208,8 @@
                                     <img src="{{ asset('img/icons/lineal/target.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                                 </div>
                                 <div>
-                                    <a href="#">
-                                        <h4 id="heading" class="mb-1">{{ $our_product_and_solution->links ?? ''}}</h4>
+                                    <a href="{{ route('productAndSolution.mesproOptimizedMRP') }}">
+                                        <h4 id="heading" class="mb-1">Mespro Optimized MRP</h4>
                                     </a>
 
                                 </div>
@@ -222,8 +222,8 @@
                                     <img src="{{ asset('img/icons/lineal/settings-3.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                                 </div>
                                 <div>
-                                    <a href="#">
-                                        <h4 id="heading" class="mb-1">{{ $our_product_and_solution->text2 ?? ''}}</h4>
+                                    <a href="{{ route('productAndSolution.MesproX-Steps') }}">
+                                        <h4 id="heading" class="mb-1">Mespro X-steps</h4>
                                     </a>
 
                                 </div>
@@ -236,8 +236,8 @@
                                     <img src="{{ asset('img/icons/lineal/bar-chart.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
                                 </div>
                                 <div>
-                                    <a href="#">
-                                        <h4 id="heading" class="mb-1">{{ $our_product_and_solution->text ?? ''}}</h4>
+                                    <a href="{{ route('productAndSolution.mesproGPSPreconfiguredAnalytics') }}">
+                                        <h4 id="heading" class="mb-1">Mespro GPS-Preconfigured Analytics</h4>
                                     </a>
 
                                 </div>
@@ -287,9 +287,9 @@
                                 @if($val->rating_or_percentage == 5)
                                 @php $rating = 'five'; @endphp
                                 @endif
-                                <img src="{{ asset('img/homePage/'.$val->images ?? '' )}}" alt="Los Angeles" style="width:100%;">
-                                <div class="carousel-caption" style="top: 22%; left: 8%">
-                                    <div class="col-lg-7 offset-lg-5 col-xl-6 box animate fadeIn five" style="text-shadow: none;">
+                                <img src="{{ asset('img/homePage/slider2.png' )}}" alt="Los Angeles" style="width:100%;">
+                                <div class="carousel-caption" style="top: 22%; left: 17%">
+                                    <div class="col-lg-12 col-xl-12 box animate fadeIn five" style="text-shadow: none;">
                                         <span class="ratings {{ $rating ?? ''}} mb-3"></span>
                                         <blockquote class="border-0 fs-lg mb-0" style="padding: 0;">
                                             <p>“{{ $val->text ?? ''}}”</p>
@@ -334,7 +334,53 @@
                     <div class="col-lg-5 col-xl-4 offset-lg-1">
                         <h3 id="heading" class="display-4 mb-3">{{ $percentage_section->main_heading ?? ''}}</h3>
                         <p class="lead fs-lg mb-6">{{ $percentage_section->text ?? ''}}</p>
-                        <ul class="progress-list">
+                        <div class="row gx-xl-10 gy-6 box animate fadeIn five">
+                        <div class="col-md-6 col-lg-6 col-xl-6">
+                            <div class="d-flex flex-row">
+                                <div>
+                                    <img src="{{ asset('img/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
+                                </div>
+                                <div>
+                                    <a href="{{ route('caseStudy.foodIndustry') }}">
+                                        <h4 id="heading" class="mb-1">Food Industry</h4>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6 col-xl-6">
+                            <div class="d-flex flex-row">
+                                <div>
+                                    <img src="{{ asset('img/icons/lineal/target.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
+                                </div>
+                                <div>
+                                    <a href="{{ route('caseStudy.digitalManufacturing') }}">
+                                        <h4 id="heading" class="mb-1">Digital Manufacturing</h4>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-lg-12 col-xl-12">
+                            <div class="d-flex flex-row">
+                                <div>
+                                    <img src="{{ asset('img/icons/lineal/settings-3.svg') }}" class="svg-inject icon-svg icon-svg-sm text-primary me-5" alt="" />
+                                </div>
+                                <div>
+                                    <a href="{{ route('caseStudy.mesproPaperlessManufacturing') }}">
+                                        <h4 id="heading" class="mb-1">Mespro Paperless Manufacturing</h4>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    {{--
+                        <!-- <ul class="progress-list">
                             @foreach(json_decode($percentage_section->rating_or_percentage) as $val)
                             <li>
                                 <p>{{ $val[0] ?? ''}}</p>
@@ -342,7 +388,8 @@
                             </li>
                             @endforeach
 
-                        </ul>
+                        </ul> -->
+                        --}}
                     </div>
 
                 </div>
