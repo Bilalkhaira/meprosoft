@@ -33,8 +33,8 @@ class HomeControler extends Controller
         $our_services = HomePage::where('for_section_identification', 'our_services')->first();
         $our_product_and_solution = HomePage::where('for_section_identification', 'our_product_and_solution')->first();
         $percentage_section = HomePage::where('for_section_identification', 'percentage_section')->first();
-        
-        return view('admin.pages.home.index', ['percentage_section' => $percentage_section,'slider1' => $slider1, 'slider2' => $slider2, 'satisfied_customer' => $satisfied_customer, 'satisfied_customer_images' => $satisfied_customer_images, 'building_efficiency' => $building_efficiency, 'our_services' => $our_services, 'our_product_and_solution' => $our_product_and_solution]);
+
+        return view('admin.pages.home.index', ['percentage_section' => $percentage_section, 'slider1' => $slider1, 'slider2' => $slider2, 'satisfied_customer' => $satisfied_customer, 'satisfied_customer_images' => $satisfied_customer_images, 'building_efficiency' => $building_efficiency, 'our_services' => $our_services, 'our_product_and_solution' => $our_product_and_solution]);
     }
 
     public function storeNewSlide(Request $request)
@@ -143,22 +143,22 @@ class HomeControler extends Controller
             'main_heading' => $request->heading,
             'text' => $request->text,
         ]);
+        if (!empty($request->file('files'))) {
+            $imgpath = public_path('img/homePage/');
 
-        $imgpath = public_path('img/homePage/');
+            foreach ($request->file('files') as $img) {
 
-        foreach ($request->file('files') as $img) {
+                $destinationPath = $imgpath;
+                $file = $img;
+                $fileName = time() . '.' . $file->clientExtension();
+                $file->move($destinationPath, $fileName);
 
-            $destinationPath = $imgpath;
-            $file = $img;
-            $fileName = time() . '.' . $file->clientExtension();
-            $file->move($destinationPath, $fileName);
-
-            HomePage::create([
-                'for_section_identification' => 'satisfied_customer_img',
-                'images' => $fileName,
-            ]);
+                HomePage::create([
+                    'for_section_identification' => 'satisfied_customer_img',
+                    'images' => $fileName,
+                ]);
+            }
         }
-
         toastr()->success('Created Successfully');
         return redirect()->route('home.setting');
     }

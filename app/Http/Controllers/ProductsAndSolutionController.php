@@ -82,7 +82,7 @@ class ProductsAndSolutionController extends Controller
 
     public function mesproPaperessManufacturing()
     {
-        $menu_id = NavMenu::where('name', 'Mespro Paperess Manufacturing')->first('id');
+        $menu_id = NavMenu::where('name', 'Mespro Paper Less Manufacturing')->first('id');
 
         $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
 

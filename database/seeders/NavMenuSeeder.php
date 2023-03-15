@@ -68,7 +68,7 @@ class NavMenuSeeder extends Seeder
             ['name' => 'Mespro GPS Preconfigured Analytics', 'parent_id' => $parent_id->id],
             ['name' => 'Mespro Life Science CFR Part 11', 'parent_id' => $parent_id->id],
             ['name' => 'Mespro Optimized MRP', 'parent_id' => $parent_id->id],
-            ['name' => 'Mespro Paperess Manufacturing ', 'parent_id' => $parent_id->id],
+            ['name' => 'Mespro Paper Less Manufacturing', 'parent_id' => $parent_id->id],
             ['name' => 'Mespro X-Steps', 'parent_id' => $parent_id->id],
             ['name' => 'O2C Automation', 'parent_id' => $parent_id->id],
             ['name' => 'Purchase Budget Check & Approval', 'parent_id' => $parent_id->id],

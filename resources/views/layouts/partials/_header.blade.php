@@ -86,7 +86,7 @@
                                     <div>
                                         <ul class="list-unstyled">
                                             <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproOptimizedMRP') }}">Mespro Optimized MRP</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproPaperessManufacturing') }}">Mespro Paperess Manufacturing </a></li>
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproPaperessManufacturing') }}">Mespro Paper Less Manufacturing</a></li>
                                             <li><a class="dropdown-item" href="{{ route('productAndSolution.MesproX-Steps') }}">Mespro X-Steps</a></li>
                                             <li><a class="dropdown-item" href="{{ route('productAndSolution.O2CAutomation') }}">O2C Automation</a></li>
                                             <!-- <li><a class="dropdown-item" href="./projects4.html" data-toggle="tooltip" title="Mespro Life Science – CFR Part 11 Compliant">Mespro Life Science</a></li> -->

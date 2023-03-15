@@ -22,7 +22,7 @@
                 <div class="card-body">
 
                     <div class="pt-3 setting_main">
-                        <form action="{{ route('home/corporateOverview.storeExplanationSection') }}" method="POST"  enctype="multipart/form-data">
+                        <form action="{{ route('home/corporateOverview.storeExplanationSection') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label"> Heading</label>
@@ -67,8 +67,8 @@
 @endsection
 @section('scripts')
 <script type="text/javascript">
-        $(document).ready(function() {
-          $('.summernote').summernote();
-        });
-    </script>
+    $(document).ready(function() {
+        $('.summernote').summernote();
+    });
+</script>
 @endsection

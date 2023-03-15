@@ -24,10 +24,10 @@
                         @else
                         <div class="item">
                             @endif
-                            <img src="{{ asset('img/homePage/'.$val->images ?? '' )}}" alt="Los Angeles" style="width:100%;">
+                            <img src="{{ asset('img/homePage/'.$val->images ?? '' )}}" alt="Los Angeles" style="width:100%;height: 650px !important">
                             <div class="carousel-caption box animate fadeInRight four" style="top: 22%; left: 8%">
                                 <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600" data-disabled="true" style="width: 80%">
-                                    <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 35px;margin-top:100px;text-shadow:none;">{{ $val->main_heading ?? ''}}</h1>
+                                    <h1 id="heading" class="display-2 mb-5" data-cue="slideInDown" data-group="page-title" data-delay="600" data-show="true" style="animation-name: slideInDown;animation-duration: 700ms;animation-timing-function: ease;animation-delay: 600ms;animation-direction: normal;animation-fill-mode: both;font-size: 35px;margin-top:100px;text-shadow:none;">{!! $val->main_heading ?? '' !!}</h1>
                                     <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
                                         <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a href="{{ $val->links ?? ''}}" class="btn btn-lg btn-primary rounded-pill me-2 slider_btn" style="background-color: #57a8c7; border: none">Read More</a></span>
                                         <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a href="{{ route('contactUs') }}" class="btn btn-lg btn-outline-primary rounded-pill slider_btn" style="border: 1px solid #57a8c7;">Contact Us</a></span>
@@ -292,7 +292,7 @@
                                     <div class="col-lg-12 col-xl-12 box animate fadeIn five" style="text-shadow: none;">
                                         <span class="ratings {{ $rating ?? ''}} mb-3"></span>
                                         <blockquote class="border-0 fs-lg mb-0" style="padding: 0;">
-                                            <p>“{{ $val->text ?? ''}}”</p>
+                                            <p>“{!! $val->text ?? '' !!}”</p>
                                             <div class="blockquote-details justify-content-center text-center">
                                                 <div class="info p-0">
                                                     <h5 class="mb-1" id="heading">{{ $val->main_heading ?? ''}}</h5>

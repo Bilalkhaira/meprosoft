@@ -16,7 +16,7 @@
 <section class="section">
     <div class="row">
         <div class="pagetitle">
-            <h1>Top Slider Setting</h1>
+            <h1>Slider Setting</h1>
         </div>
         <div>
             <button style="float: right;margin-bottom: 20px" type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addNewSlideModel"> Create New Slide</button>
@@ -24,15 +24,15 @@
 
         <div class="col-xl-12">
 
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        @if(!empty($slider1))
-                        @foreach($slider1 as $val)
-                        <div class="col-md-4 card_border">
+            <div class="row">
+                @if(!empty($slider1))
+                @foreach($slider1 as $val)
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
                             <div class="pt-3 setting_main">
                                 <div class="col-md-12 col-lg-12">
-                                    <p><span class="slider_label">Heading : </span></br> {{ $val->main_heading }}</p>
+                                    <p><span class="slider_label">Heading : </span></br> {!! $val->main_heading !!}</p>
                                 </div>
 
                                 <div class="col-md-12 col-lg-12">
@@ -57,14 +57,14 @@
 
                             </div>
                         </div>
-                        @endforeach
-                        @endif
 
                     </div>
-
                 </div>
+                @endforeach
+                @endif
 
             </div>
+
 
         </div>
     </div>
@@ -372,7 +372,7 @@
 <section class="section">
     <div class="row">
         <div class="pagetitle">
-            <h1>Second Slider On Home Page Setting</h1>
+            <h1>Testimonial Slider</h1>
         </div>
         <div>
             <button style="float: right;margin-bottom: 20px" type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addSlider2NewSlideModel"> Create New Slide</button>
@@ -380,56 +380,52 @@
 
         <div class="col-xl-12">
 
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        @if(!empty($slider2))
-                        @foreach($slider2 as $val)
-                        <div class="col-md-4 card_border">
-                            <div class="pt-3 setting_main">
-                                <div class="col-md-12 col-lg-12">
-                                    <p><span class="slider_label">Rating : </span> {{ $val->rating_or_percentage }}</p>
-                                </div>
-
-                                <div class="col-md-12 col-lg-12">
-                                    <p><span class="slider_label">Auther Name : </span> {{ $val->main_heading }} </p>
-                                </div>
-
-                                <div class="col-md-12 col-lg-12">
-                                    <p><span class="slider_label">Auther Profession : </span> {{ $val->others_heading }} </p>
-                                </div>
-
-                                <div class="col-md-12 col-lg-12">
-                                    <p><span class="slider_label">Explanation : </span></br> {{ $val->text }} </p>
-                                </div>
-                                {{--
-                                <!-- <div class="col-md-12 col-lg-12">
-                                <span class="slider_label">Image : </span> </br>
-                                    <img src="{{ asset('img/homePage/'.$val->images )}}" alt="">
-                            </div> -->
-                            --}}
-
-                            <div class="card_btn">
-                                <form action="{{ route('home.deleteSlider2Slide', $val->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="button" class="btn btn-sm btn-primary" id="slider2SlideEdit_btn" data-bs-toggle="modal" data-bs-target="#editSlider2SlideModel"> <i class="fa fa-edit"></i></button>
-                                    <input type="hidden" value="{{ $val->id }}" id="slideEdit_id">
-                                    <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')"> <i class="fa fa-trash"></i></button>
-                                </form>
-
-                            </div>
-
+            <div class="row">
+                @if(!empty($slider2))
+                @foreach($slider2 as $val)
+                <div class="col-md-4">
+                    <div class="card">
+                    <div class="card-body">
+                    <div class="pt-3 setting_main">
+                        <div class="col-md-12 col-lg-12">
+                            <p><span class="slider_label">Rating : </span> {{ $val->rating_or_percentage }}</p>
                         </div>
+
+                        <div class="col-md-12 col-lg-12">
+                            <p><span class="slider_label">Auther Name : </span> {{ $val->main_heading }} </p>
+                        </div>
+
+                        <div class="col-md-12 col-lg-12">
+                            <p><span class="slider_label">Auther Profession : </span> {!! $val->others_heading !!} </p>
+                        </div>
+
+                        <div class="col-md-12 col-lg-12">
+                            <p><span class="slider_label">Explanation : </span></br> {!! $val->text !!} </p>
+                        </div>
+                     
+
+                    <div class="card_btn">
+                        <form action="{{ route('home.deleteSlider2Slide', $val->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="button" class="btn btn-sm btn-primary" id="slider2SlideEdit_btn" data-bs-toggle="modal" data-bs-target="#editSlider2SlideModel"> <i class="fa fa-edit"></i></button>
+                            <input type="hidden" value="{{ $val->id }}" id="slideEdit_id">
+                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')"> <i class="fa fa-trash"></i></button>
+                        </form>
+
                     </div>
-                    @endforeach
-                    @endif
 
                 </div>
-
             </div>
 
         </div>
+    </div>
+    @endforeach
+    @endif
+
+
+
+    </div>
 
     </div>
     </div>
@@ -692,14 +688,14 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Create Card</h5>
+                <h5 class="modal-title">Edit Testimonial Slide</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('home.storeSlider2NewSlide') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body">
                     <div class="pt-3 setting_main">
-                    {{--
+                        {{--
                         <!-- <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Background Image</label>
                             <div class="col-md-8 col-lg-10">
@@ -718,7 +714,8 @@
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Explanation</label>
                             <div class="col-md-8 col-lg-10">
-                                <textarea name="exp" id="" cols="30" class="form-control" rows="3"></textarea>
+                                <!-- <textarea name="exp" id="" cols="30" class="form-control" rows="3"></textarea> -->
+                                <textarea class="summernote" name="exp" cols="30" rows="4"></textarea>
                             </div>
                         </div>
 
@@ -751,14 +748,14 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Create Card</h5>
+                <h5 class="modal-title">Create Testimonial Slide</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('home.updateSlider2Slide') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body">
                     <div class="pt-3 setting_main">
-                    {{--
+                        {{--
                         <!-- <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Background Image</label>
                             <div class="col-md-8 col-lg-10">
@@ -777,7 +774,8 @@
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Explanation</label>
                             <div class="col-md-8 col-lg-10">
-                                <textarea name="exp" id="slider2_exp" cols="30" class="form-control" rows="3" required></textarea>
+                                <!-- <textarea name="exp" id="slider2_exp" cols="30" class="form-control" rows="3" required></textarea> -->
+                                <textarea class="summernote" name="exp" id="slider2_exp" ols="30" rows="4"></textarea>
                             </div>
                         </div>
 
@@ -839,42 +837,42 @@
                             <label class="col-md-4 col-lg-2 label">Small Heading One</label>
                             <div class="col-md-8 col-lg-10">
                                 <input type="text" name="small_heading_one" class="form-control" value="{{ $our_product_and_solution->others_heading ?? ''}}" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Small Heading Two</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input type="text" name="small_heading_two" class="form-control" value="{{ $our_product_and_solution->text ?? ''}}" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Small Heading Three</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input type="text" name="small_heading_three" class="form-control" value="{{ $our_product_and_solution->text2 ?? ''}}" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Small Heading Four</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input type="text" name="small_heading_four" value="{{ $our_product_and_solution->links ?? ''}}" class="form-control" required>
-                            </div>
-                        </div> -->
-                        --}}
-
-
-
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-2 label">Small Heading Two</label>
+                    <div class="col-md-8 col-lg-10">
+                        <input type="text" name="small_heading_two" class="form-control" value="{{ $our_product_and_solution->text ?? ''}}" required>
+                    </div>
                 </div>
-            </form>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-2 label">Small Heading Three</label>
+                    <div class="col-md-8 col-lg-10">
+                        <input type="text" name="small_heading_three" class="form-control" value="{{ $our_product_and_solution->text2 ?? ''}}" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-2 label">Small Heading Four</label>
+                    <div class="col-md-8 col-lg-10">
+                        <input type="text" name="small_heading_four" value="{{ $our_product_and_solution->links ?? ''}}" class="form-control" required>
+                    </div>
+                </div> -->
+                --}}
+
+
+
         </div>
     </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+    </form>
+</div>
+</div>
 </div>
 
 <div class="modal fade" id="ourProductAndSolutionModel" tabindex="-1" aria-hidden="true" style="display: none;">
@@ -978,42 +976,42 @@
                             <label class="col-md-4 col-lg-2 label">Small Heading One</label>
                             <div class="col-md-8 col-lg-10">
                                 <input type="text" name="small_heading_one" class="form-control" value="{{ $our_services->others_heading ?? ''}}" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Small Heading Two</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input type="text" name="small_heading_two" class="form-control" value="{{ $our_services->text ?? ''}}" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Small Heading Three</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input type="text" name="small_heading_three" class="form-control" value="{{ $our_services->text2 ?? ''}}" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Small Heading Four</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input type="text" name="small_heading_four" value="{{ $our_services->links ?? ''}}" class="form-control" required>
-                            </div>
-                        </div> -->
-                        --}}
-
-
-
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-2 label">Small Heading Two</label>
+                    <div class="col-md-8 col-lg-10">
+                        <input type="text" name="small_heading_two" class="form-control" value="{{ $our_services->text ?? ''}}" required>
+                    </div>
                 </div>
-            </form>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-2 label">Small Heading Three</label>
+                    <div class="col-md-8 col-lg-10">
+                        <input type="text" name="small_heading_three" class="form-control" value="{{ $our_services->text2 ?? ''}}" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-lg-2 label">Small Heading Four</label>
+                    <div class="col-md-8 col-lg-10">
+                        <input type="text" name="small_heading_four" value="{{ $our_services->links ?? ''}}" class="form-control" required>
+                    </div>
+                </div> -->
+                --}}
+
+
+
         </div>
     </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+    </form>
+</div>
+</div>
 </div>
 
 <div class="modal fade" id="ourServicesModel" tabindex="-1" aria-hidden="true" style="display: none;">
@@ -1206,7 +1204,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Create Card</h5>
+                <h5 class="modal-title">Edit Satisfied Customer</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('home.updateSatisfiedCustomer') }}" method="POST" enctype="multipart/form-data">
@@ -1231,7 +1229,7 @@
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Logo Images</label>
                             <div class="col-md-8 col-lg-10">
-                                <input type="file" id="files" name="files[]" multiple class="form-control" required />
+                                <input type="file" id="files" name="files[]" multiple class="form-control" />
                             </div>
                         </div>
 
@@ -1250,7 +1248,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Create Card</h5>
+                <h5 class="modal-title">Create Satisfied Customer</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('home.storeSatisfiedCustomer') }}" method="POST" enctype="multipart/form-data">
@@ -1293,7 +1291,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Create Card</h5>
+                <h5 class="modal-title">Create Slide</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('home.storeNewSlide') }}" method="POST" enctype="multipart/form-data">
@@ -1311,7 +1309,8 @@
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Heading</label>
                             <div class="col-md-8 col-lg-10">
-                                <input type="text" name="heading" class="form-control" required>
+                                <!-- <input type="text" name="heading" class="form-control" required> -->
+                                <textarea class="summernote" name="heading" ols="30" rows="4"></textarea>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -1336,7 +1335,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Create Card</h5>
+                <h5 class="modal-title">Edit Slide</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('home.updateSlide') }}" method="POST" enctype="multipart/form-data">
@@ -1354,7 +1353,8 @@
                         <div class="row mb-3">
                             <label class="col-md-4 col-lg-2 label">Heading</label>
                             <div class="col-md-8 col-lg-10">
-                                <input type="text" name="heading" id="editSlide_hdng" class="form-control" required>
+                                <!-- <input type="text" name="heading" id="editSlide_hdng" class="form-control" required> -->
+                                <textarea class="summernote" name="heading" id="editSlide_hdng" ols="30" rows="4"></textarea>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -1380,6 +1380,11 @@
 @endsection
 @section('scripts')
 <script>
+    $(document).ready(function() {
+        $('.summernote').summernote();
+    });
+
+
     $(document).on('click', '#slider2SlideEdit_btn', function(e) {
         e.preventDefault();
         var slide_id = $(this).closest('form').find('#slideEdit_id').val();
@@ -1398,10 +1403,11 @@
             type: "POST",
             dataType: "json",
             success: function(responce) {
+                $('#editSlider2SlideModel').find('.note-editable').addClass('sliderModel2');
+                $(document).find('.sliderModel2').html(responce.main_heading);
 
                 $(document).find('#slider2_rating').val(responce.rating_or_percentage);
                 $(document).find('#slider2_exp').val(responce.text);
-                $(document).find('#slider2_auther_name').val(responce.main_heading);
                 $(document).find('#slider2_auther_profession').val(responce.others_heading);
 
                 $(document).find('#slider2_update_id').val(slide_id);
@@ -1429,8 +1435,9 @@
             type: "POST",
             dataType: "json",
             success: function(responce) {
+                $('#editSlideModel').find('.note-editable').addClass('sliderModel1');
+                $(document).find('.sliderModel1').html(responce.main_heading);
 
-                $(document).find('#editSlide_hdng').val(responce.main_heading);
                 $(document).find('#editSlide_link').val(responce.links);
                 $(document).find('#editSlide_id').val(slide_id);
 
