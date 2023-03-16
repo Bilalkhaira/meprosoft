@@ -400,7 +400,7 @@ class HomeControler extends Controller
     public function editSlider2Slide(Request $request)
     {
         $slideData = HomePage::find($request->slide_id);
-
+// dd($slideData);
         return response()->json($slideData);
     }
 

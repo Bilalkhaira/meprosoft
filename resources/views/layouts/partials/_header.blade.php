@@ -43,20 +43,16 @@
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
                             <div class="dropdown-menu dropdown-lg">
                                 <ul class="list-unstyled">
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.applicationMigrationConversion') }}">Application Migration & Conversion</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.enterpriseSolutionConsulting') }}">Enterprise Solution Consulting</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.GSTMigration') }}">GST Migration</a></li>
+                                   
+                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.businessConsulting') }}">Business Consulting</a></li>
+                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.digitalTransformationWithCloud') }}">Digital Transformation With Cloud</a></li>
+                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.hanaConversion') }}">S/4 Hana Conversion</a></li>
+                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.applicationSupport') }}">Application Support</a></li>
+                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.specificConsulting') }}">Specific Consulting</a></li>
                                     <li class="nav-item"><a class="dropdown-item" href="{{ route('services.IPOCompliance') }}">IPO Compliance</a></li>
                                     <li class="nav-item"><a class="dropdown-item" href="{{ route('services.PLCMESWeighBridgeIntegration') }}">PLC MES Weigh Bridge Integration</a>
                                     </li>
                                     <li class="nav-item"><a class="dropdown-item" href="{{ route('services.resourceArgumentation') }}">Resource Argumentation</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.riseWithS4HANAImplementation') }}">Rise with S4 HANA Implementation</a>
-                                    </li>
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.SAPSupport') }}">SAP Support</a></li>
-                                    <!-- <li class="nav-item"><a class="dropdown-item" href="#">Digital Manufacturing Cloud</a></li> -->
-                                    <!-- <li class="nav-item"><a class="dropdown-item" href="#">ALM(Application Life Cycle Management)</a></li> -->
-                                    <!-- <li class="nav-item"><a class="dropdown-item" href="#">SAP Fiori Development</a></li> -->
-
                                 </ul>
                             </div>
                         </li>
@@ -78,8 +74,7 @@
                                             <li><a class="dropdown-item" href="{{ route('productAndSolution.loanManagementSolution') }}">Loan Management Solution</a></li>
                                             <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproGPSPreconfiguredAnalytics') }}">Mespro GPS Preconfigured Analytics</a></li>
                                             <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproLifeScienceCFRPart11') }}">Mespro Life Science CFR Part 11</a></li>
-                                            
-
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.TS16949CompliantKAPA') }}">TS 16949 Compliant KAPA </a></li>
                                         </ul>
                                     </div>
                                     <!-- /.column -->
@@ -89,11 +84,12 @@
                                             <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproPaperessManufacturing') }}">Mespro Paper Less Manufacturing</a></li>
                                             <li><a class="dropdown-item" href="{{ route('productAndSolution.MesproX-Steps') }}">Mespro X-Steps</a></li>
                                             <li><a class="dropdown-item" href="{{ route('productAndSolution.O2CAutomation') }}">O2C Automation</a></li>
-                                            <!-- <li><a class="dropdown-item" href="./projects4.html" data-toggle="tooltip" title="Mespro Life Science – CFR Part 11 Compliant">Mespro Life Science</a></li> -->
                                             <li><a class="dropdown-item" href="{{ route('productAndSolution.purchaseBudgetCheckAndApproval') }}">Purchase Budget Check & Approval</a></li>
                                             <li><a class="dropdown-item" href="{{ route('productAndSolution.smartFoundry') }}">Smart Foundry</a></li>
-                                            <!-- <li><a class="dropdown-item" href="./projects4.html">REFX 16</a></li> -->
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.TS16949CompliantKAPA') }}">TS 16949 Compliant KAPA </a></li>
+
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.BTP') }}">BTP</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.IOT') }}">IOT</a></li>
+                                            
 
                                         </ul>
                                     </div>
@@ -109,8 +105,6 @@
                                     <li class="nav-item"><a class="dropdown-item" href="{{ route('caseStudy.foodIndustry') }}">Food Industry</a></li>
                                     <li class="nav-item"><a class="dropdown-item" href="{{ route('caseStudy.digitalManufacturing') }}">Digital Manufacturing</a></li>
                                     <li class="nav-item"><a class="dropdown-item" href="{{ route('caseStudy.mesproPaperlessManufacturing') }}">Mespro Paperless Manufacturing</a></li>
-                                    <!-- <li class="nav-item"><a class="dropdown-item" href="#">S/4 Hana Private cloud</a></li> -->
-                                    <!-- <li class="nav-item"><a class="dropdown-item" href="#">S/4 Hana Conversion</a></li> -->
 
                                 </ul>
                             </div>

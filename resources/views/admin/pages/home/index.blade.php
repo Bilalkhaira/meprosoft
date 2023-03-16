@@ -396,7 +396,7 @@
                         </div>
 
                         <div class="col-md-12 col-lg-12">
-                            <p><span class="slider_label">Auther Profession : </span> {!! $val->others_heading !!} </p>
+                            <p><span class="slider_label">Auther Profession : </span> {{ $val->others_heading }} </p>
                         </div>
 
                         <div class="col-md-12 col-lg-12">
@@ -1403,12 +1403,14 @@
             type: "POST",
             dataType: "json",
             success: function(responce) {
+                console.log(responce);
                 $('#editSlider2SlideModel').find('.note-editable').addClass('sliderModel2');
-                $(document).find('.sliderModel2').html(responce.main_heading);
+                $(document).find('.sliderModel2').html(responce.text);
 
                 $(document).find('#slider2_rating').val(responce.rating_or_percentage);
-                $(document).find('#slider2_exp').val(responce.text);
+                $(document).find('#slider2_auther_name').val(responce.main_heading);
                 $(document).find('#slider2_auther_profession').val(responce.others_heading);
+                $(document).find('#slider2_exp').val(responce.text);
 
                 $(document).find('#slider2_update_id').val(slide_id);
 
@@ -1438,6 +1440,7 @@
                 $('#editSlideModel').find('.note-editable').addClass('sliderModel1');
                 $(document).find('.sliderModel1').html(responce.main_heading);
 
+                $(document).find('#editSlide_hdng').val(responce.main_heading);
                 $(document).find('#editSlide_link').val(responce.links);
                 $(document).find('#editSlide_id').val(slide_id);
 

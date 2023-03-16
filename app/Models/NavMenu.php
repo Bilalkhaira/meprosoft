@@ -11,7 +11,7 @@ class NavMenu extends Model
 
     public function children()
     {
-        return $this->hasMany(NavMenu::class, 'parent_id');
+        return $this->hasMany(NavMenu::class, 'parent_id')->where('status', 'active');
     }
 
     public function parent()

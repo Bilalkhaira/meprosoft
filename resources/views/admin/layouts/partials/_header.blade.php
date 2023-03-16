@@ -44,20 +44,14 @@
                       </li>
 
                       <li class="notification-item">
-                          <i class="bi bi-exclamation-circle text-warning"></i>
                           <div>
-                              <div>
-                                  <i id="notifi_cross" class="fa fa-trash-o"></i>
-                              </div>
-
-
-                              <div class="notifi_body">
+                              <a class="notifi_body" href="{{ route('notificationDetail', $notification->id) }}">
                                   <input type="hidden" class="notifi_read_id" value="{{$notification->id}}">
                                   <h4>{{ $notification->data['first_name'] }} {{ $notification->data['last_name'] }}
                                   </h4>
                                   <p>{{ $notification->data['message'] }}</p>
                                   <p>{{ $notification->created_at->diffForHumans() }}</p>
-                              </div>
+                              </a>
                           </div>
                       </li>
                       @endforeach
@@ -68,19 +62,16 @@
                       </li>
 
                       <li class="notification-item" style="background-color: #8d888824;">
-                          <i class="bi bi-exclamation-circle text-warning"></i>
                           <div>
-                              <div>
-                                  <i id="notifi_cross" class="fa fa-trash-o"></i>
-                              </div>
+                              
 
-                              <div class="notifi_body">
+                              <a class="notifi_body" href="{{ route('notificationDetail', $notification->id) }}">
                                   <input type="hidden" class="notifi_read_id" value="{{$notification->id}}">
                                   <h4>{{ $notification->data['first_name'] }} {{ $notification->data['last_name'] }}
                                   </h4>
                                   <p>{{ $notification->data['message'] }}</p>
                                   <p>{{ $notification->created_at->diffForHumans() }}</p>
-                              </div>
+                              </a>
                           </div>
                       </li>
                       @endforeach
@@ -211,25 +202,25 @@
 
   @section('scripts')
   <script>
-      $('body').on('click', '.notifi_body', function() {
-          var notifi_read_id = $(this).closest('li').find('.notifi_read_id').val();
-          $.ajaxSetup({
-              headers: {
-                  "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-              },
-          });
-          $.ajax({
-              data: {
-                  notifi_read_id: notifi_read_id
-              },
-              url: "{{ route('notifiMarkAsRead') }}",
-              type: "POST",
-              dataType: "json",
-              success: function(data) {
-                  window.location.href = `/notificationDetail/` + notifi_read_id + ``;
-              }
-          });
-      })
+    //   $('body').on('click', '.notifi_body', function() {
+    //       var notifi_read_id = $(this).closest('li').find('.notifi_read_id').val();
+    //       $.ajaxSetup({
+    //           headers: {
+    //               "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+    //           },
+    //       });
+    //       $.ajax({
+    //           data: {
+    //               notifi_read_id: notifi_read_id
+    //           },
+    //           url: "{{ route('notifiMarkAsRead') }}",
+    //           type: "POST",
+    //           dataType: "json",
+    //           success: function(data) {
+    //               window.location.href = `/notificationDetail/` + notifi_read_id + ``;
+    //           }
+    //       });
+    //   })
 
       $('body').on('click', '#notifi_cross', function() {
           var notifi_read_id = $(this).closest('li').find('.notifi_read_id').val();

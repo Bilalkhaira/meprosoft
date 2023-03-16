@@ -31,10 +31,10 @@
       <!-- /column -->
       <div class="col-md-4 col-lg-3">
         <div class="widget">
-          <h4 class="widget-title text-white mb-3">Learn More</h4>
+          <h4 class="widget-title text-white mb-3">Quick Links</h4>
           <ul class="list-unstyled  mb-0">
             <li><a href="{{ route('home.about') }}">Home</a></li>
-            <li><a href="{{ route('services.applicationMigrationConversion') }}">Our Services</a></li>
+            <li><a href="{{ route('services.businessConsulting') }}">Our Services</a></li>
             <li><a href="{{ route('productAndSolution.dispatchAutomation') }}">Products & Solutions</a></li>
             <li><a href="{{ route('caseStudy.foodIndustry') }}">Case Study</a></li>
             <li><a href="{{ route('eventAndNews.index') }}">News & Events</a></li>
@@ -55,9 +55,9 @@
               <form action="https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a" method="post" id="mc-embedded-subscribe-form2" name="mc-embedded-subscribe-form" class="validate dark-fields" target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll2">
                   <div class="mc-field-group input-group form-floating">
-                    <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email Address" id="mce-EMAIL2">
+                    <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email Address" readonly id="mce-EMAIL2">
                     <label for="mce-EMAIL2">Email Address</label>
-                    <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2" class="btn btn-primary ">
+                    <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2" class="btn btn-primary " disabled>
                   </div>
                   <div id="mce-responses2" class="clear">
                     <div class="response" id="mce-error-response2" style="display:none"></div>

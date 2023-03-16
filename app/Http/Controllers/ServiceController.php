@@ -8,31 +8,31 @@ use App\Models\MenuPagesData;
 
 class ServiceController extends Controller
 {
-    public function applicationMigrationConversion()
+    public function businessConsulting()
     {
-        $menu_id = NavMenu::where('name', 'Application Migration & Conversion')->first('id');
+        $menu_id = NavMenu::where('name', 'Business Consulting')->first('id');
 
         $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
 
-        return view('pages.services.applicationMigrationConversion', ['data' => $data]);
+        return view('pages.services.businessConsulting', ['data' => $data]);
     }
 
-    public function enterpriseSolutionConsulting()
+    public function digitalTransformationWithCloud()
     {
-        $menu_id = NavMenu::where('name', 'Enterprise Solution Consulting')->first('id');
+        $menu_id = NavMenu::where('name', 'Digital Transformation With Cloud')->first('id');
 
         $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
 
-        return view('pages.services.enterpriseSolutionConsulting', ['data' => $data]);
+        return view('pages.services.digitalTransformationWithCloud', ['data' => $data]);
     }
 
-    public function GSTMigration()
+    public function hanaConversion()
     {
-        $menu_id = NavMenu::where('name', 'GST Migration')->first('id');
+        $menu_id = NavMenu::where('name', 'S/4 Hana Conversions')->first('id');
 
         $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
-
-        return view('pages.services.GSTMigration', ['data' => $data]);
+        
+        return view('pages.services.hanaConversion', ['data' => $data]);
     }
 
     public function IPOCompliance()
@@ -62,21 +62,21 @@ class ServiceController extends Controller
         return view('pages.services.resourceArgumentation', ['data' => $data]);
     }
 
-    public function riseWithS4HANAImplementation()
+    public function applicationSupport()
     {
-        $menu_id = NavMenu::where('name', 'Rise with S4 HANA Implementation')->first('id');
+        $menu_id = NavMenu::where('name', 'Application Support')->first('id');
 
         $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
 
-        return view('pages.services.riseWithS4HANAImplementation', ['data' => $data]);
+        return view('pages.services.applicationSupport', ['data' => $data]);
     }
 
-    public function SAPSupport()
+    public function specificConsulting()
     {
-        $menu_id = NavMenu::where('name', 'SAP Support')->first('id');
+        $menu_id = NavMenu::where('name', 'Specific Consulting')->first('id');
 
         $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
 
-        return view('pages.services.SAPSupport', ['data' => $data]);
+        return view('pages.services.specificConsulting', ['data' => $data]);
     }
 }

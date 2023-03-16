@@ -17,7 +17,7 @@ class ServicesController extends Controller
     public function index($id)
     {
         $services = NavMenu::with('children')->where('name', 'Services')->get();
-
+        
         $pageData = MenuPagesData::with('cards')->where('menu_id', $id)->first();
 
         if (empty($pageData)) {
@@ -242,6 +242,7 @@ class ServicesController extends Controller
         $parrent = MenuPagesData::find($updated_row->parent_id);
 
         $updated_row->update([
+            'heading' => $request->heading,
             'explanation' => json_encode($request->lists)
         ]);
 

@@ -147,8 +147,8 @@ class ContactsUsController extends Controller
         
         $input = [
             'address' => $request->address,
-            'phone' => $request->phone,
-            'email' => $request->email
+            'phone' => $request->phone ?? '',
+            'email' => $request->email ?? ''
         ];
         $navbar_id = MenuPagesData::find($request->parent_id);
 

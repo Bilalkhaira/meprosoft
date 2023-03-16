@@ -206,6 +206,7 @@ class MenuHomeController extends Controller
         $parrent = MenuPagesData::find($updated_row->parent_id);
 
         $updated_row->update([
+            'heading' => $request->heading,
             'explanation' => json_encode($request->lists)
         ]);
 

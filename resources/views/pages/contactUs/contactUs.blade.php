@@ -63,6 +63,27 @@
                                         <div class="invalid-feedback"> Please select a department. </div>
                                     </div>
                                 </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-4">
+                                        <input id="form_lastname" type="text" name="company" class="form-control"
+                                            placeholder="Doe" required>
+                                        <label for="form_lastname">Company Name *</label>
+                                        <div class="valid-feedback"> Looks good! </div>
+                                        <div class="invalid-feedback"> Please enter your last name. </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-4">
+                                        <input id="form_lastname" type="text" name="city" class="form-control"
+                                            placeholder="Doe" required>
+                                        <label for="form_lastname">City Name *</label>
+                                        <div class="valid-feedback"> Looks good! </div>
+                                        <div class="invalid-feedback"> Please enter your last name. </div>
+                                    </div>
+                                </div>
+
                                 <div class="col-12">
                                     <div class="form-floating mb-4">
                                         <textarea id="form_message" name="message" class="form-control"
@@ -96,7 +117,7 @@
                     @foreach($data->cards as $key => $val)
                     <div class="col-lg-4">
                         <div>
-                            <h3>Bangalore</h3>
+                            <h3>{{ $val->heading ?? '' }}</h3>
                         </div>
                         <div class="d-flex flex-row">
                             <div>

@@ -59,14 +59,14 @@ Route::post('saveMsg', [ContactusController::class, 'save'])->name('saveMsg');
 
 // NavMenu Routes
 // Services Routes
-Route::get('/application_migration_conversion', [ServiceController::class, 'applicationMigrationConversion'])->name('services.applicationMigrationConversion');
-Route::get('/enterprise_solution_consulting', [ServiceController::class, 'enterpriseSolutionConsulting'])->name('services.enterpriseSolutionConsulting');
-Route::get('/GST_migration', [ServiceController::class, 'GSTMigration'])->name('services.GSTMigration');
+Route::get('/business_consulting', [ServiceController::class, 'businessConsulting'])->name('services.businessConsulting');
+Route::get('/digital_transformation_with_cloud', [ServiceController::class, 'digitalTransformationWithCloud'])->name('services.digitalTransformationWithCloud');
+Route::get('/hana_conversion', [ServiceController::class, 'hanaConversion'])->name('services.hanaConversion');
 Route::get('/IPO_compliance', [ServiceController::class, 'IPOCompliance'])->name('services.IPOCompliance');
 Route::get('/PLCMES_weigh_bridge_integration', [ServiceController::class, 'PLCMESWeighBridgeIntegration'])->name('services.PLCMESWeighBridgeIntegration');
 Route::get('/resource_argumentation', [ServiceController::class, 'resourceArgumentation'])->name('services.resourceArgumentation');
-Route::get('/rise_with_S4HANA_implementation', [ServiceController::class, 'riseWithS4HANAImplementation'])->name('services.riseWithS4HANAImplementation');
-Route::get('/SAP_support', [ServiceController::class, 'SAPSupport'])->name('services.SAPSupport');
+Route::get('/application_support', [ServiceController::class, 'applicationSupport'])->name('services.applicationSupport');
+Route::get('/specific_consulting', [ServiceController::class, 'specificConsulting'])->name('services.specificConsulting');
 // home menu routes
 Route::get('/about_mesprosoft', [HomeMenuController::class, 'aboutUs'])->name('home.about');
 Route::get('/management_team', [HomeMenuController::class, 'managementTeam'])->name('home.managementTeam');
@@ -87,6 +87,9 @@ Route::get('/O2C_automation', [ProductsAndSolutionController::class, 'O2CAutomat
 Route::get('/purchase_budget_check_and_approval', [ProductsAndSolutionController::class, 'purchaseBudgetCheckAndApproval'])->name('productAndSolution.purchaseBudgetCheckAndApproval');
 Route::get('/smart_foundry', [ProductsAndSolutionController::class, 'smartFoundry'])->name('productAndSolution.smartFoundry');
 Route::get('/TS16949_compliant_KAPA', [ProductsAndSolutionController::class, 'TS16949CompliantKAPA'])->name('productAndSolution.TS16949CompliantKAPA');
+
+Route::get('/BTP', [ProductsAndSolutionController::class, 'BTP'])->name('productAndSolution.BTP');
+Route::get('/IOT', [ProductsAndSolutionController::class, 'IOT'])->name('productAndSolution.IOT');
 // case study routes
 Route::get('/food_industry', [CaseStudyControler::class, 'foodIndustry'])->name('caseStudy.foodIndustry');
 Route::get('/mespro_paperless_manufacturing', [CaseStudyControler::class, 'mesproPaperlessManufacturing'])->name('caseStudy.mesproPaperlessManufacturing');

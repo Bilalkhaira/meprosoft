@@ -47,6 +47,20 @@
                             </div>
 
                             <div class="row mb-3">
+                                <label class="col-md-4 col-lg-3 col-form-label">Company</label>
+                                <div class="col-md-8 col-lg-9">
+                                {{ $notifi_detail[0]->data['company'] ?? ''}}
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-md-4 col-lg-3 col-form-label">City</label>
+                                <div class="col-md-8 col-lg-9">
+                                {{ $notifi_detail[0]->data['city'] ?? ''}}
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
                                 <label class="col-md-4 col-lg-3 col-form-label">Message</label>
                                 <div class="col-md-8 col-lg-9">
                                 {{ $notifi_detail[0]->data['message'] ?? ''}}

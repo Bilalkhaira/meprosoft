@@ -12,12 +12,44 @@ class ContactusController extends Controller
 {
     public function save(Request $request) 
     {
-        $user = User::where('email', 'admin@gmail.com')->first();
+        $user = User::where('type', 'admin')->first();
+
         $details = [
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
             'department' => $request->department,
+            'company' => $request->company,
+            'city' => $request->city,
+            'message' => $request->message,
+        ];
+
+        $user->notify(new \App\Notifications\ContactusNotification($details));
+
+
+        $user = User::where('email', 'sales@mesprosoft.com')->first();
+        
+        $details = [
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'department' => $request->department,
+            'company' => $request->company,
+            'city' => $request->city,
+            'message' => $request->message,
+        ];
+
+        $user->notify(new \App\Notifications\ContactusNotification($details));
+
+        $user = User::where('email', 'info@mesprosoft.com')->first();
+        
+        $details = [
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'department' => $request->department,
+            'company' => $request->company,
+            'city' => $request->city,
             'message' => $request->message,
         ];
 

@@ -155,14 +155,15 @@
         @endif
         <div class="col-xl-12">
 
-            <div class="card">
 
-                <div class="card-body">
-                    <div class="row">
-                        @if(!empty($pageData['cards']))
-                        @foreach($pageData['cards'] as $key => $val)
-                        @if(!empty($val->heading))
-                        <div class="col-md-4 card_border">
+            <div class="row">
+                @if(!empty($pageData['cards']))
+                @foreach($pageData['cards'] as $key => $val)
+                @if(!empty($val->heading))
+                <div class="col-md-4">
+                    <div class="card">
+
+                        <div class="card-body">
 
                             <div class="pt-3 setting_main">
 
@@ -178,19 +179,19 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-md-12 col-lg-12">
-                                          {!! json_decode($val->explanation) !!}
+                                        {!! json_decode($val->explanation) !!}
                                     </div>
                                 </div>
 
                             </div>
-
                         </div>
-                        @endif
-                        @endforeach
-
-                        @endif
                     </div>
                 </div>
+                @endif
+                @endforeach
+
+                @endif
+
             </div>
 
         </div>
@@ -211,7 +212,7 @@
                 <div class="modal-body">
                     <div class="pt-3 setting_main">
 
-                    <div class="row mb-3">
+                        <div class="row mb-3">
                             <div class="col-md-12 col-lg-12">
                                 <textarea class="summernote" id="currentOpeningTextarea" name="exp" cols="30" rows="4"></textarea>
                                 <input type="hidden" name="currentOpeningTextarea_parent_id" id="currentOpeningTextarea_parent_id">
@@ -301,7 +302,7 @@
                 <div class="modal-body">
                     <div class="pt-3 setting_main">
 
-                    <div class="row mb-3">
+                        <div class="row mb-3">
                             <div class="col-md-12 col-lg-12">
                                 <textarea class="summernote" id="job_textarea" name="job_exp" cols="30" rows="4"></textarea>
                                 <input type="hidden" name="updated_cardId" id="job_parent_id">
@@ -359,7 +360,7 @@
     $(document).on('click', '#editJob_btn', function(e) {
         e.preventDefault();
         var card_id = $(this).closest('form').find('#card_id').val();;
-        
+
         var data;
         $(document).find('.note-editable').html('');
         $.ajaxSetup({

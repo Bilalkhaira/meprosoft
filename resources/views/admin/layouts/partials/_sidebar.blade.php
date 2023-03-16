@@ -14,7 +14,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-gem"></i><span>Nav Menu</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="fa fa-bars"></i><span>Nav Menu</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="pages" class="nav-content collapse navMenu" data-bs-parent="#sidebar-nav">
           <li>
@@ -24,7 +24,7 @@
           </li>
           <li class="sidebar_btn">
 
-            <a href="{{ route('service.index', 8) }}">
+            <a href="{{ route('service.index', 11) }}">
               <i class="bi bi-circle"></i><span>Services</span>
             </a>
           </li>
@@ -73,7 +73,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{ route('home.setting') }}">
-          <i class="bi bi-envelope"></i>
+          <i class="fa fa-home"></i>
           <span>Home</span>
         </a>
 

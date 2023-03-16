@@ -15,10 +15,12 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name' => 'Admin',
-            'email' => 'admin@gmail.com',
-            'password' => bcrypt('admin@gmail.com'),
-        ]);
+        $input = [
+            ['name' => 'Admin', 'email' => 'admin@gmail.com', 'password' => bcrypt('admin@gmail.com'), 'type' => 'admin'],
+            ['name' => 'Admin', 'email' => 'bilalkhaira8989@gmail.com', 'password' => bcrypt('bilalkhaira8989@gmail.com'), 'type' => 'subAdmin'],
+            ['name' => 'Sub Admin', 'email' => 'sales@mesprosoft.com', 'password' => bcrypt('sales@mesprosoft.com'), 'type' => 'subAdmin'],
+            ['name' => 'Sub Admin', 'email' => 'info@mesprosoft.com', 'password' => bcrypt('info@mesprosoft.com'), 'type' => 'subAdmin'],
+        ];
+        User::insert($input);
     }
 }

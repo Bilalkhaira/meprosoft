@@ -133,4 +133,24 @@ class ProductsAndSolutionController extends Controller
 
         return view('pages.productAndSolution.TS16949CompliantKAPA', ['data' => $data]);
     }
+
+    public function BTP()
+    {
+        $menu_id = NavMenu::where('name', 'BTP')->first('id');
+
+        $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
+
+        return view('pages.productAndSolution.BTP', ['data' => $data]);
+    }
+
+    public function IOT()
+    {
+        $menu_id = NavMenu::where('name', 'IOT')->first('id');
+
+        $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
+
+        return view('pages.productAndSolution.IOT', ['data' => $data]);
+    }
+
+    
 }

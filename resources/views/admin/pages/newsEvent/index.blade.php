@@ -136,13 +136,14 @@
         @endif
         <div class="col-xl-12">
 
-            <div class="card">
 
-                <div class="card-body">
-                    <div class="row">
-                        @if(!empty($pageData['cards']))
-                        @foreach($pageData['cards'] as $key => $val)
-                        <div class="col-md-4 card_border">
+            <div class="row">
+                @if(!empty($pageData['cards']))
+                @foreach($pageData['cards'] as $key => $val)
+                <div class="col-md-4">
+                    <div class="card">
+
+                        <div class="card-body">
 
                             <div class="pt-3 setting_main">
 
@@ -178,11 +179,12 @@
                             </div>
 
                         </div>
-                        @endforeach
-
-                        @endif
                     </div>
                 </div>
+                @endforeach
+
+                @endif
+
             </div>
 
         </div>
@@ -237,7 +239,6 @@
 @endsection
 @section('scripts')
 <script>
-
     $(document).on('click', '#cardEdit_btn', function(e) {
         e.preventDefault();
         var card_id = $(this).closest('form').find('#card_id').val();
@@ -257,7 +258,7 @@
             dataType: "json",
             success: function(responce) {
                 $('.editCard_li').html('');
-               console.log(responce.explanation.exp);
+                console.log(responce.explanation.exp);
 
                 $(document).find('#edit_exp').val(responce.explanation.exp);
                 $(document).find('#edit_link').val(responce.explanation.link);

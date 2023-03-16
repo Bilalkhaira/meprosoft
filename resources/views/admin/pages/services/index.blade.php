@@ -249,13 +249,14 @@
         @endif
         <div class="col-xl-12">
 
-            <div class="card">
 
-                <div class="card-body">
-                    <div class="row">
-                        @if(!empty($pageData['cards']))
-                        @foreach($pageData['cards'] as $key => $val)
-                        <div class="col-md-4 card_border">
+            <div class="row">
+                @if(!empty($pageData['cards']))
+                @foreach($pageData['cards'] as $key => $val)
+                <div class="col-md-4">
+                    <div class="card">
+
+                        <div class="card-body">
 
                             <div class="pt-3 setting_main">
 
@@ -287,13 +288,14 @@
                             </div>
 
                         </div>
-                        @endforeach
-
-                        @endif
                     </div>
 
 
                 </div>
+                @endforeach
+
+                @endif
+
 
 
 

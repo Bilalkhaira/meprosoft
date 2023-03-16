@@ -80,11 +80,11 @@
 <section class="section">
     <div class="row">
         <div class="pagetitle">
-            <h1>Card Section</h1>
+            <h1>Corporate Offices Section</h1>
         </div>
         @if(!empty($pageData))
         <div>
-            <button style="float: right;margin-bottom: 20px" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal"> Add New Card</button>
+            <button style="float: right;margin-bottom: 20px" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basicModal">Create New Office</button>
 
         </div>
         @else
@@ -94,13 +94,14 @@
         @endif
         <div class="col-xl-12">
 
-            <div class="card">
 
-                <div class="card-body">
-                    <div class="row">
-                        @if(!empty($pageData['cards']))
-                        @foreach($pageData['cards'] as $key => $val)
-                        <div class="col-md-4 card_border">
+            <div class="row">
+                @if(!empty($pageData['cards']))
+                @foreach($pageData['cards'] as $key => $val)
+                <div class="col-md-4">
+                    <div class="card">
+
+                        <div class="card-body">
 
                             <div class="pt-3 setting_main">
 
@@ -116,7 +117,7 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-md-8 col-lg-10">
-                                    <span class="slider_label">Country: </span><br>{{ $val->heading ?? '' }}
+                                        <span class="slider_label">Country: </span><br>{{ $val->heading ?? '' }}
                                     </div>
                                 </div>
                                 <div class="row mb-3">
@@ -126,7 +127,7 @@
                                 </div>
                                 <div class="row mb-3">
                                     <div class="col-md-12 col-lg-12">
-                                    <span class="slider_label">Phone: </span><br>
+                                        <span class="slider_label">Phone: </span><br>
                                         @foreach((json_decode($val->explanation))->phone as $key => $li)
                                         {{ $li }}<br>
                                         @endforeach
@@ -143,13 +144,13 @@
                                 </div>
 
                             </div>
-
                         </div>
-                        @endforeach
-
-                        @endif
                     </div>
                 </div>
+                @endforeach
+
+                @endif
+
             </div>
 
         </div>
@@ -163,7 +164,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Create Card</h5>
+                <h5 class="modal-title">Update Office Address</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('contactUs.updateCard') }}" method="POST">
@@ -229,7 +230,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Create Card</h5>
+                <h5 class="modal-title">Create New Office</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('contactUs.storeCard') }}" method="POST">
@@ -256,7 +257,7 @@
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label">Phone</label>
                                 <div class="col-md-8 col-lg-9">
-                                    <input name="phone[]" class="form-control" type="number" required>
+                                    <input name="phone[]" class="form-control" type="text">
                                 </div>
 
                             </div>
@@ -271,7 +272,7 @@
                             <div class="row mb-3">
                                 <label class="col-md-4 col-lg-2 label">Email:</label>
                                 <div class="col-md-8 col-lg-9">
-                                    <input name="email[]" class="form-control" type="email" required>
+                                    <input name="email[]" class="form-control" type="email">
                                 </div>
 
                             </div>
@@ -336,21 +337,32 @@
             dataType: "json",
             success: function(responce) {
                 $('.editCard_li').html('');
-                console.log(responce.explanation);
 
                 $(document).find('#country').val(responce.heading);
                 $(document).find('#adress').val(responce.explanation.address);
                 $(document).find('#updated_cardId').val(card_id);
 
                 $.each(responce.explanation.phone, function(index, el) {
-                    data = '<div class="row mb-3"><label class="col-md-4 col-lg-2 label"></label><div class="col-md-8 col-lg-9"><input name="phone[]" class="form-control" value="' + el + '" type="text" required></div>';
-                    data += '<div class="col-md-1"><a class="remove_more"> <i style="color:red" class="fa fa-trash"></i></a></div>';
+                    if (el == null) {
+                        data = '<div class="row mb-3"><label class="col-md-4 col-lg-2 label"></label><div class="col-md-8 col-lg-9"><input name="phone[]" class="form-control" value="" type="text"></div>';
+                        data += '<div class="col-md-1"><a class="remove_more"> <i style="color:red" class="fa fa-trash"></i></a></div>';
+                    } else {
+                        data = '<div class="row mb-3"><label class="col-md-4 col-lg-2 label"></label><div class="col-md-8 col-lg-9"><input name="phone[]" class="form-control" value="' + el + '" type="text"></div>';
+                        data += '<div class="col-md-1"><a class="remove_more"> <i style="color:red" class="fa fa-trash"></i></a></div>';
+                    }
+
                     $('.addMore_phoneEdit').append(data);
                 });
 
                 $.each(responce.explanation.email, function(index, el) {
-                    data = '<div class="row mb-3"><label class="col-md-4 col-lg-2 label"></label><div class="col-md-8 col-lg-9"><input name="email[]" class="form-control" value="' + el + '" type="text" required></div>';
-                    data += '<div class="col-md-1"><a class="remove_more"> <i style="color:red" class="fa fa-trash"></i></a></div>';
+                    if (el == null) {
+                        data = '<div class="row mb-3"><label class="col-md-4 col-lg-2 label"></label><div class="col-md-8 col-lg-9"><input name="email[]" class="form-control" value="" type="text"></div>';
+                        data += '<div class="col-md-1"><a class="remove_more"> <i style="color:red" class="fa fa-trash"></i></a></div>';
+                    } else {
+                        data = '<div class="row mb-3"><label class="col-md-4 col-lg-2 label"></label><div class="col-md-8 col-lg-9"><input name="email[]" class="form-control" value="' + el + '" type="text"></div>';
+                        data += '<div class="col-md-1"><a class="remove_more"> <i style="color:red" class="fa fa-trash"></i></a></div>';
+                    }
+
                     $('.addMore_emailEdit').append(data);
                 });
 

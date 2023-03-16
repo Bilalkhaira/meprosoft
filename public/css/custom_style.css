@@ -96,7 +96,9 @@ img {
   color: white !important;
 }
 
-
+.dropdown-item {
+  font-weight: 400 !important;
+}
 
 
 
