@@ -98,7 +98,13 @@ class NewsEventController extends Controller
 
     public function storeCard(Request $request)
     {
-        
+        $imgpath = public_path('img/newsEvent/');
+
+        $destinationPath = $imgpath;
+        $file = $request->img;
+        $fileName = time() . '.' . $file->clientExtension();
+        $file->move($destinationPath, $fileName);
+
         $input = [
             'exp' => $request->exp,
             'link' => $request->link
@@ -108,7 +114,8 @@ class NewsEventController extends Controller
         MenuPagesCardData::create([
             'parent_id' => $request->parent_id,
             'heading' => $request->heading,
-            'explanation' => json_encode($input)
+            'explanation' => json_encode($input),
+            'img' => $fileName
         ]);
 
         toastr()->success('Created Successfully');
@@ -117,18 +124,41 @@ class NewsEventController extends Controller
 
     public function updateCard(Request $request)
     {
+
+        $updated_row = MenuPagesCardData::find($request->updated_cardId);
+
+        $imgpath = public_path('img/newsEvent/');
+
+        if (empty($request->img)) {
+
+            $updateimage = $updated_row->img;
+        } else {
+
+            $imagePath =  $imgpath . $updated_row->img;
+
+            if (File::exists($imagePath)) {
+
+                File::delete($imagePath);
+            }
+
+            $destinationPath = $imgpath;
+            $file = $request->img;
+            $fileName = time() . '.' . $file->clientExtension();
+            $file->move($destinationPath, $fileName);
+            $updateimage = $fileName;
+        }
+
         $input = [
             'exp' => $request->exp,
             'link' => $request->link
         ];
        
-        $updated_row = MenuPagesCardData::find($request->updated_cardId);
-
         $parrent = MenuPagesData::find($updated_row->parent_id);
 
         $updated_row->update([
             'heading' => $request->heading,
-            'explanation' => json_encode($input)
+            'explanation' => json_encode($input),
+            'img' => $updateimage
         ]);
 
         toastr()->success('Card Update Successfully');
@@ -138,6 +168,15 @@ class NewsEventController extends Controller
     public function deleteCard($id)
     {
         $delete_row = MenuPagesCardData::find($id);
+
+        $imgpath = public_path('img/newsEvent/');
+
+        $imagePath =  $imgpath . $delete_row->img;
+
+        if (File::exists($imagePath)) {
+
+            File::delete($imagePath);
+        }
 
         $parrent = MenuPagesData::find($delete_row->parent_id);
 

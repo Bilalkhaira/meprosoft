@@ -28,7 +28,6 @@
       <div class="col-lg-12">
         <img src="{{ asset('img/productAndSolution/'.$data->explanationSection_img ?? '' )}}" alt="">
       </div>
-
       @endif
 
 

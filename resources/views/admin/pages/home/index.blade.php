@@ -170,22 +170,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Other Heading</label>
-                            <div class="col-md-8 col-lg-9">
-                                {{ $building_efficiency->others_heading ?? ''}}
-                            </div>
-                        </div>
-
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Other Text</label>
-                            <div class="col-md-8 col-lg-9">
-                                {{ $building_efficiency->text2 ?? ''}}
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Card Icon</label>
+                            <label class="col-md-4 col-lg-3 label">Image</label>
                             <div class="col-md-8 col-lg-9">
                                 <img src="{{ asset('img/homePage/'.$building_efficiency->images )}}" alt="">
                             </div>
@@ -231,36 +216,6 @@
                                 {{ $our_services->main_heading ?? ''}}
                             </div>
                         </div>
-                        {{--
-                        <!-- <div class="row mb-3">
-                            <label class="col-md-4 col-lg-3 label">Small Heading One</label>
-                            <div class="col-md-8 col-lg-9">
-                                {{ $our_services->others_heading ?? ''}}
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label class="col-md-4 col-lg-3 label">Small Heading Two</label>
-                    <div class="col-md-8 col-lg-9">
-                        {{ $our_services->text ?? ''}}
-                    </div>
-                </div>
-
-
-                <div class="row mb-3">
-                    <label class="col-md-4 col-lg-3 label">Small Heading Three</label>
-                    <div class="col-md-8 col-lg-9">
-                        `{{ $our_services->text2 ?? ''}}`
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label class="col-md-4 col-lg-3 label">Small Heading Four</label>
-                    <div class="col-md-8 col-lg-9">
-                        {{ $our_services->links ?? ''}}
-                    </div>
-                </div> -->
-                --}}
 
                 <div class="row mb-3">
                     <label class="col-md-4 col-lg-3 label">Image</label>
@@ -1116,21 +1071,6 @@
                             </div>
                         </div>
 
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Other Heading</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input type="text" name="other_heading" class="form-control" value="{{ $building_efficiency->others_heading ?? ''}}" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Other Text</label>
-                            <div class="col-md-8 col-lg-10">
-                                <textarea name="other_text" id="" class="form-control" cols="30" rows="4"> {{ $building_efficiency->text2 ?? ''}}</textarea>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -1171,21 +1111,6 @@
                             <label class="col-md-4 col-lg-2 label">Image</label>
                             <div class="col-md-8 col-lg-10">
                                 <input type="file" id="" name="img" class="form-control" required />
-                            </div>
-                        </div>
-
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Other Heading</label>
-                            <div class="col-md-8 col-lg-10">
-                                <input type="text" name="other_heading" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-md-4 col-lg-2 label">Other Text</label>
-                            <div class="col-md-8 col-lg-10">
-                                <textarea name="other_text" id="" class="form-control" cols="30" rows="4"></textarea>
                             </div>
                         </div>
 

@@ -25,8 +25,9 @@
       </div>
 
       @if(!empty($data->explanationSection_img))
-      <div class="col-lg-12">
-        <img src="{{ asset('img/caseStudy/'.$data->explanationSection_img ?? '' )}}" alt="">
+      
+      <div class="col-lg-12" style="width: 80%;margin: auto">
+        <img style="height:400px" src="{{ asset('img/caseStudy/'.$data->explanationSection_img ?? '' )}}" alt="">
       </div>
 
       @endif

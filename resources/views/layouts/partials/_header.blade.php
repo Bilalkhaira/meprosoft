@@ -1,6 +1,6 @@
 <header class="wrapper bg-light pt-1">
     <nav class="navbar navbar-expand-lg classic transparent navbar-light">
-        <div class="container flex-lg-row flex-nowrap align-items-center">
+        <div class="container-fluid flex-lg-row flex-nowrap align-items-center">
             <div class="navbar-brand w-100">
                 <a href="{{ route('home') }}">
                     <img style="width: 170px !important; margin-top: -22px !important" src="{{ asset('img/logo-dark.png') }}" srcset="{{ asset('img/logo-dark@2x.png 2x') }}" alt="" />
@@ -17,7 +17,7 @@
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a>
                             <div class="dropdown-menu dropdown-lg">
                             <ul class="list-unstyled">
-                                <li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Corporate Overview</a>
+                                <li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" style="margin-right: 15px">Corporate Overview</a>
                                     <div class="dropdown-menu dropdown-lg">
                                         <ul class="list-unstyled">
                                             <li class="nav-item"><a class="dropdown-item" href="{{ route('home.about') }}">About
@@ -121,8 +121,8 @@
 
                         </li>
                     
-                        <li class="nav-item dropdown dropdown-mega">
-                            <a class="nav-link" href="{{ route('contactUs') }}">Contact Us</a>
+                        <li class="nav-item dropdown dropdown-mega" id="getInTouch">
+                            <a class="nav-link btn btn-primary" href="{{ route('contactUs') }}">Get In Touch</a>
                         </li>
 
                     </ul>

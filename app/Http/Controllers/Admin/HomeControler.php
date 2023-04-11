@@ -196,8 +196,6 @@ class HomeControler extends Controller
             'images' => $fileName,
             'main_heading' => $request->heading,
             'text' => $request->text,
-            'others_heading' => $request->other_heading,
-            'text2' => $request->other_text,
         ]);
 
         toastr()->success('Created Successfully');
@@ -235,8 +233,6 @@ class HomeControler extends Controller
             'images' => $updateimage,
             'main_heading' => $request->heading,
             'text' => $request->text,
-            'others_heading' => $request->other_heading,
-            'text2' => $request->other_text,
         ]);
 
 

@@ -8,7 +8,6 @@
     <div class="row">
       <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
         <h1 class="display-1 text-white mb-3">{{ $data->topSection_heading ?? ''}}</h1>
-        <span class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">{{ $data->topSection_explanation ?? ''}}</span>
       </div>
     </div>
   </div>
@@ -25,6 +24,11 @@
         <h4>{{ $val->heading ?? ''}}</h4>
        <p>{{ (json_decode($val->explanation))->exp ?? '' }} <a href="{{ (json_decode($val->explanation))->link ?? '' }}"  style="color: #ffd000;">read more</a></p>
       </div>
+      @if(!empty($val->img))
+      <div class="col-lg-12">
+        <img src="{{ asset('img/newsEvent/'.$val->img ?? '' )}}" alt="">
+      </div>
+      @endif
       @endforeach
       @endif
 

@@ -22,7 +22,7 @@
                       <i class="bi bi-search"></i>
                   </a>
               </li><!-- End Search Icon-->
-
+              @if(!empty(auth()->user()))
               <li class="nav-item dropdown">
 
                   <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
@@ -63,7 +63,7 @@
 
                       <li class="notification-item" style="background-color: #8d888824;">
                           <div>
-                              
+
 
                               <a class="notifi_body" href="{{ route('notificationDetail', $notification->id) }}">
                                   <input type="hidden" class="notifi_read_id" value="{{$notification->id}}">
@@ -82,76 +82,16 @@
 
               </li><!-- End Notification Nav -->
 
-              <!-- <li class="nav-item dropdown">
-
-                  <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-                      <i class="bi bi-chat-left-text"></i>
-                      <span class="badge bg-success badge-number">3</span>
-                  </a>
-
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-                      <li class="dropdown-header">
-                          You have 3 new messages
-                          <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-                      </li>
-                      <li>
-                          <hr class="dropdown-divider">
-                      </li>
-
-                      <li class="message-item">
-                          <a href="#">
-                              <img src="{{ asset('img/admin/img/messages-1.jpg') }}" alt="" class="rounded-circle">
-                              <div>
-                                  <h4>Maria Hudson</h4>
-                                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                                  <p>4 hrs. ago</p>
-                              </div>
-                          </a>
-                      </li>
-                      <li>
-                          <hr class="dropdown-divider">
-                      </li>
-
-                      <li class="message-item">
-                          <a href="#">
-                              <img src="{{ asset('img/admin/img/messages-2.jpg') }}" alt="" class="rounded-circle">
-                              <div>
-                                  <h4>Anna Nelson</h4>
-                                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                                  <p>6 hrs. ago</p>
-                              </div>
-                          </a>
-                      </li>
-                      <li>
-                          <hr class="dropdown-divider">
-                      </li>
-
-                      <li class="message-item">
-                          <a href="#">
-                              <img src="{{ asset('img/admin/img/messages-3.jpg') }}" alt="" class="rounded-circle">
-                              <div>
-                                  <h4>David Muldon</h4>
-                                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                                  <p>8 hrs. ago</p>
-                              </div>
-                          </a>
-                      </li>
-                      <li>
-                          <hr class="dropdown-divider">
-                      </li>
-
-                      <li class="dropdown-footer">
-                          <a href="#">Show all messages</a>
-                      </li>
-
-                  </ul>
-
-              </li> -->
+              @endif
 
               <li class="nav-item dropdown pe-3">
 
                   <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                      <img src="{{ asset('img/admin/profile/'.auth()->user()->profile_photo ) }}" alt="Profile" class="rounded-circle">
+                      @if(!empty(auth()->user()->id))
+                      <img src="{{ asset('img/admin/profile/'.auth()->user()->profile_photo ?? '' ) }}" alt="Profile" class="rounded-circle">
+                      @else
+                      <img src="" alt="Profile" class="rounded-circle">
+                      @endif
                       <span class="d-none d-md-block dropdown-toggle ps-2">{{ auth()->user()->name ?? '' }}</span>
                   </a><!-- End Profile Iamge Icon -->
 
@@ -202,25 +142,25 @@
 
   @section('scripts')
   <script>
-    //   $('body').on('click', '.notifi_body', function() {
-    //       var notifi_read_id = $(this).closest('li').find('.notifi_read_id').val();
-    //       $.ajaxSetup({
-    //           headers: {
-    //               "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-    //           },
-    //       });
-    //       $.ajax({
-    //           data: {
-    //               notifi_read_id: notifi_read_id
-    //           },
-    //           url: "{{ route('notifiMarkAsRead') }}",
-    //           type: "POST",
-    //           dataType: "json",
-    //           success: function(data) {
-    //               window.location.href = `/notificationDetail/` + notifi_read_id + ``;
-    //           }
-    //       });
-    //   })
+      //   $('body').on('click', '.notifi_body', function() {
+      //       var notifi_read_id = $(this).closest('li').find('.notifi_read_id').val();
+      //       $.ajaxSetup({
+      //           headers: {
+      //               "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+      //           },
+      //       });
+      //       $.ajax({
+      //           data: {
+      //               notifi_read_id: notifi_read_id
+      //           },
+      //           url: "{{ route('notifiMarkAsRead') }}",
+      //           type: "POST",
+      //           dataType: "json",
+      //           success: function(data) {
+      //               window.location.href = `/notificationDetail/` + notifi_read_id + ``;
+      //           }
+      //       });
+      //   })
 
       $('body').on('click', '#notifi_cross', function() {
           var notifi_read_id = $(this).closest('li').find('.notifi_read_id').val();

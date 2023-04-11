@@ -92,7 +92,7 @@
                             <h5 class="modal-title">Create Card</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form action="{{ route('newsEvent.storeCard') }}" method="POST">
+                        <form action="{{ route('newsEvent.storeCard') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="modal-body">
                                 <div class="pt-3 setting_main">
@@ -111,6 +111,14 @@
                                             <textarea name="exp" class="form-control" id="" cols="12" rows="3" required></textarea>
                                         </div>
                                     </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-md-4 col-lg-2 label">Image</label>
+                                        <div class="col-md-8 col-lg-10">
+                                            <input type="file" class="form-control" name="img">
+                                        </div>
+                                    </div>
+
                                     <div class="row mb-3">
                                         <label class="col-md-4 col-lg-2 label">Detail Link</label>
                                         <div class="col-md-8 col-lg-10">
@@ -167,7 +175,7 @@
                                         <ul>
                                             @foreach(json_decode($val->explanation) as $key => $li)
                                             @if($key == 'exp')
-                                            <li><span class="slider_label">Explanation: </span>{{ $li }}sss</li>
+                                            <li><span class="slider_label">Explanation: </span>{{ $li }}</li>
                                             @else
                                             <li><span class="slider_label">Link: </span>{{ $li }}</li>
                                             @endif
@@ -175,6 +183,14 @@
                                         </ul>
                                     </div>
                                 </div>
+                                @if(!empty($val->img))
+                                <div class="row mb-3">
+                                    <div class="col-md-8 col-lg-10">
+                                        <span class="slider_label">Image: </span><br>
+                                        <img src="{{ asset('img/newsEvent/'.$val->img )}}" alt="">
+                                    </div>
+                                </div>
+                                @endif
 
                             </div>
 
@@ -196,7 +212,7 @@
                     <h5 class="modal-title">Create Card</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="{{ route('newsEvent.updateCard') }}" method="POST">
+                <form action="{{ route('newsEvent.updateCard') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
                         <div class="pt-3 setting_main">
@@ -218,6 +234,12 @@
                                 <label class="col-md-4 col-lg-2 label">Detail Link</label>
                                 <div class="col-md-8 col-lg-10">
                                     <input name="link" class="form-control" id="edit_link" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label class="col-md-4 col-lg-2 label">Image</label>
+                                <div class="col-md-8 col-lg-10">
+                                    <input type="file" class="form-control" name="img">
                                 </div>
                             </div>
 

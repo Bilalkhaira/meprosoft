@@ -3,8 +3,9 @@
     <div class="row gy-6 gy-lg-0">
       <div class="col-md-4 col-lg-3">
         <div class="widget">
-          <img class="mb-4" src="./assets/img/logo-light.png" srcset="./assets/img/logo-light@2x.png 2x" alt="" />
-          <p class="mb-4">© 2022 Mesprosoft. <br class="d-none d-lg-block" />All rights reserved.</p>
+          <!-- <img class="mb-4" src="./assets/img/logo-light.png" srcset="./assets/img/logo-light@2x.png 2x" alt="" /> -->
+          <!-- <p class="mb-4">© 2022 Mesprosoft. <br class="d-none d-lg-block" />All rights reserved.</p> -->
+          <h4 class="widget-title text-white mb-3">Social Links</h4>
           <nav class="nav social social-white">
             <!-- <a href="#"><i class="uil uil-twitter"></i></a> -->
             <a href="https://www.facebook.com/profile.php?id=100064046084575"><i class="uil uil-facebook-f"></i></a>
@@ -75,6 +76,12 @@
         <!-- /.widget -->
       </div>
       <!-- /column -->
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+         <img class="mb-4" src="./assets/img/logo-light.png" srcset="./assets/img/logo-light@2x.png 2x" alt="" />
+          <p class="mb-4">© 2022 Mesprosoft. <span style="margin-left: 15px;">All rights reserved.</span></p>
+      </div>
     </div>
     <!--/.row -->
   </div>

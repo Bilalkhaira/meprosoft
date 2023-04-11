@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('for_section_identification')->nullable();
             $table->string('images')->nullable();
-            $table->string('main_heading')->nullable();
+            $table->text('main_heading')->nullable();
             $table->string('others_heading')->nullable();
             $table->string('links')->nullable();
             $table->string('rating_or_percentage')->nullable();

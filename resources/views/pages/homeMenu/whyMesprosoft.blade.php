@@ -25,6 +25,7 @@
       </div>
 
       @if(!empty($data->explanationSection_img))
+     
       <div class="col-lg-12">
         <img src="{{ asset('img/homeMenu/'.$data->explanationSection_img ?? '' )}}" alt="">
       </div>

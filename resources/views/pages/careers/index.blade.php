@@ -18,11 +18,15 @@
             @if(!empty($data->cards[0]))
             @foreach($data->cards as $val)
             @if($val->heading != 'abc')
-            {!! json_decode($val->explanation ?? '') !!}
+            <div>
+                {!! json_decode($val->explanation ?? '') !!}
+            </div>
             <hr>
             @else
            
-            {!! json_decode($val->explanation ?? '') !!}
+            <div>
+                {!! json_decode($val->explanation ?? '') !!}
+            </div>
             <hr>
             @endif
             @endforeach
