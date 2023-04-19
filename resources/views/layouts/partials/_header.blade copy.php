@@ -1,4 +1,4 @@
-<header class="wrapper bg-light pt-1 nav_main">
+<header class="wrapper bg-light pt-1">
     <nav class="navbar navbar-expand-lg classic transparent navbar-light">
         <div class="container-fluid flex-lg-row flex-nowrap align-items-center">
             <div class="navbar-brand w-100">
@@ -121,8 +121,8 @@
 
                         </li>
                     
-                        <li class="nav-item dropdown dropdown-mega">
-                            <a class="nav-link" href="{{ route('contactUs') }}">Contact Us</a>
+                        <li class="nav-item dropdown dropdown-mega" id="getInTouch">
+                            <a class="nav-link btn btn-primary" href="{{ route('contactUs') }}">Get In Touch</a>
                         </li>
 
                     </ul>

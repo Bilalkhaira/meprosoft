@@ -1,42 +1,46 @@
 h5{
-    font-weight: bold;
-    color: #b2b3b7;
+    font-weight: bold !important;
+    color: #b2b3b7 !important;
+    font-size: 19px !important;
 }
 h2{
-    font-weight: bold;
+    font-weight: bold !important;
 }
 h1{
-    font-weight: bolder;
-    font-size: 40px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    color: #b2b3b7;
+    font-weight: bolder !important;
+    font-size: 40px !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    color: #b2b3b7 !important;
 }
 .nav_main {
-    padding:5px 200px 5px 200px;
+    padding:5px 200px 5px 200px !important;
 }
 
 .nav_main .nav-link:hover {
-    color: #fbb217;
+    color: #fbb217 !important;
+    text-decoration: none;
 }
 .nv_mrgin{
-    margin-top: 25px;
+    margin-top: 25px !important;
 }
 
 .nav_main .nav-link {
-    color: #b2b3b7;
-    font-weight: bold;
+    color: #b2b3b7 !important;
+    font-weight: bold !important;
+}
+.list-unstyled a{
+    color: #b2b3b7 !important;
+}
+
+.list-unstyled a:hover {
+    color: #fbb217 !important;
+    text-decoration: none;
 }
 
 .navbar-brand {
     margin-right: 0px !important;
 }
-
-/* @font-face {
-    font-family: myFirstFont;
-    src: url(assets/fonts/arialbd.ttf);
-    font-weight: bold;
-  } */
 
 body {
     font-family: Arial !important;
@@ -47,257 +51,266 @@ body {
 }
 
 .bg_img {
-    min-height: calc(100vh);
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height: calc(100vh) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
 }
 
 .slider_sec h1{
-    font-weight: bolder;
-    font-size: 50px;
-    border-bottom: 5px solid #fbb217;
-    padding-bottom: 20px;
-    color: black;
+    font-weight: bolder !important;
+    font-size: 50px !important;
+    border-bottom: 5px solid #fbb217 !important;
+    padding-bottom: 20px !important;
+    color: black !important;
 }
 .slider_sec{
-    padding-top: 140px;
-    padding-left: 350px;
-    text-align: center;
+    padding-top: 140px !important;
+    padding-left: 350px !important;
+    text-align: center !important;
 }
 .sec_padding{
-    padding:5px 200px 5px 200px;
+    padding:5px 200px 5px 200px !important;
 }
 
 .srvc_brder_rw{
-    padding: 40px 20px;
-    border: 1px solid #b2b3b7;
-    border-radius: 10px;
-    margin-bottom: 55px;
+    padding: 40px 20px !important;
+    border: 1px solid #b2b3b7 !important;
+    border-radius: 10px !important;
+    margin-bottom: 55px !important;
 }
 
 .srvc_brder_rw .circle{
-    padding: 28px 38px;
-    background-color:#fbb217;
-    border-radius: 100px;
-    margin-top: 20px;
+    padding: 28px 38px !important;
+    background-color:#fbb217 !important;
+    border-radius: 100px !important;
+    margin-top: 20px !important;
 }
 .srvc_brder_rw .circle_col{
-    padding-top: 60px;
+    padding-top: 60px !important;
 }
 .readMore_btn{
-    font-weight: 600;
-    color: #1c6ca2;
+    /* font-weight: 600 !important; */
+    color: #1c6ca2 !important;
+    border: 1px solid lightgray !important;
 }
 .about_gray_dv{
-    width: 100%;
-    height: 56vh;
-    background-color: #b2b3b7;;
-    margin-top: 60px;
+    width: 100% !important;
+    height: 56vh !important;
+    background-color: #b2b3b7 !important; !important;
+    margin-top: 60px !important;
 }
 .about_yellow_dv{
-    background-color: #fbb217;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 80px;
-    padding-bottom: 20px;
+    background-color: #fbb217 !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    padding-top: 80px !important;
+    padding-bottom: 20px !important;
     
     
 }
 .about_sec img{
-    position: absolute;
-    top: 0;
-    width: 68%;
-    left: 16%;
-    margin: auto;
+    position: absolute !important;
+    top: 0 !important;
+    width: 68% !important;
+    left: 16% !important;
+    margin: auto !important;
 }
 
 .about_sec{
-    padding:0px 220px 5px 220px;
-    position: relative;
-    margin-bottom: 40px;
+    padding:0px 220px 5px 220px !important;
+    position: relative !important;
+    margin-bottom: 40px !important;
 }
 .about_sec p{
-    margin-top: 30px;
+    margin-top: 30px !important;
 }
 .ftr_above_sec{
- border: 1px solid #b2b3b7;
- border-radius: 10px;
- padding: 30px 40px;
- margin: 50px 0px;
- text-align: center;   
+ border: 1px solid #b2b3b7 !important;
+ border-radius: 10px !important;
+ padding: 30px 40px !important;
+ margin: 50px 0px !important;
+ text-align: center !important;   
 }
 .ftr_abv_dv{
-    background-color: #fbb217;
-    padding: 10px;
+    background-color: #fbb217 !important;
+    padding: 10px !important;
 }
 .footer{
-    background-color: #b2b3b7;
-    /* margin-bottom: 200px; */
+    background-color: #b2b3b7 !important;
     color: black !important;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+.footer a{
+    color: black;
+}
+.footer a:hover{
+    text-decoration: none;
+    color: #fbb217;
 }
 .social_img img{
-    margin-left: 10px;
+    margin-left: 10px !important;
 }
 .social_img{
-    margin-left: 30px;
+    margin-left: 30px !important;
 }
 .footer .nv_col h5{
     color: black !important;
-    margin-left: 40px;
+    font-size: 19px;
+    /* margin-left: 40px !important; */
 }
 .footer .nv_col ul{
-    list-style-type: none;
+    list-style-type: none !important;
 }
 .first_li{
-    margin-right: 100px;
+    margin-right: 100px !important;
 }
 
 @media only screen and (min-width : 1360px) and (max-width : 1500px){
     .first_li {
-        margin-right: 0px;
+        margin-right: 0px !important;
     }
     .nav_main {
-        padding: 5px 150px 5px 150px;
+        padding: 5px 150px 5px 150px !important;
     }
     .slider_sec {
-        padding-top: 30px;
-        padding-left: 180px;
-        text-align: center;
+        padding-top: 30px !important;
+        padding-left: 180px !important;
+        text-align: center !important;
     }
     .sec_padding {
-        padding: 5px 150px 5px 150px;
+        padding: 5px 150px 5px 150px !important;
     }
     .srvc_brder_rw .circle {
-        padding: 15px 24px;
+        padding: 15px 24px !important;
     }
     .about_gray_dv {
-        height: 65vh;
+        height: 65vh !important;
     }
     .about_yellow_dv {
-        padding-top: 48px;
-        padding-bottom: 13px;
+        padding-top: 48px !important;
+        padding-bottom: 13px !important;
     }
     .footer{
-        padding-top: 30px;
+        padding-top: 30px !important;
     }
 }
 
 
 @media only screen and (min-width : 768px) and (max-width : 1360px){
     .nav_main .nav-link {
-        font-weight: 600;
-        font-size: 13px;
+        font-weight: 600 !important;
+        font-size: 13px !important;
     }
 
     .nav_main{
-        padding: 0px;
+        padding: 0px !important;
     }
     .first_li {
-        margin-right: 0px;
+        margin-right: 0px !important;
     }
 
     .slider_sec {
-        padding-left: 126px;
-        padding-bottom: 50px;
+        padding-left: 126px !important;
+        padding-bottom: 50px !important;
     }
     .slider_sec h1 {
-        font-size: 35px;
+        font-size: 35px !important;
     }
     .sec_padding {
-        padding: 5px 30px 5px 30px;
+        padding: 5px 30px 5px 30px !important;
     }
     .srvc_brder_rw .circle {
-        padding: 9px 18px;
+        padding: 9px 18px !important;
     }
     .about_sec {
-        padding: 0px 80px 5px 80px;
+        padding: 0px 80px 5px 80px !important;
     }
     h1 {
-        font-size: 30px;
+        font-size: 30px !important;
     }
     h2 {
-        font-size: 25px;
+        font-size: 25px !important;
     }
     h5 {
-        font-size: 19px;
+        font-size: 19px !important;
     }
     .footer{
-        padding-top: 40px;
-        padding-bottom: 30px;
+        padding-top: 40px !important;
+        padding-bottom: 30px !important;
     }
     .readMore_btn {
-        font-size: 13px;
+        font-size: 13px !important;
+        
     }
     .social_img img {
-        margin-left: 0px;
+        margin-left: 0px !important;
     }
     .social_img {
-        margin-left: 0px;
+        margin-left: 0px !important;
     }
 } 
 
 
 @media only screen and (max-width: 768px) {
     .nv_mrgin {
-        margin-top: 0px;
+        margin-top: 0px !important;
     }
     .nav_main .nav-link {
-        font-weight: 100;
-        font-size: 12px;
+        font-weight: 100 !important;
+        font-size: 12px !important;
     }
     .nav_main {
-        padding: 0px;
+        padding: 0px !important;
     }
     .first_li {
-        margin-right: 0px;
+        margin-right: 0px !important;
     }
     .slider_sec {
-        padding-top: 50px;
-        padding-left: 40px;
-        padding-bottom: 40px;
-        text-align: center;
+        padding-top: 50px !important;
+        padding-left: 40px !important;
+        padding-bottom: 40px !important;
+        text-align: center !important;
     }
 
     .slider_sec h1 {
-        font-size: 30px;
+        font-size: 30px !important;
     }
     h1 {
-        font-size: 25px;
+        font-size: 25px !important;
     }
     h2 {
-        font-size: 20px;
+        font-size: 20px !important;
     }
     h5 {
-        font-size: 15px;
+        font-size: 15px !important;
     }
 
     .srvc_brder_rw .circle {
-        display: none;
+        display: none !important;
     }
     .sec_padding {
-        padding: 5px 80px 5px 80px;
-        text-align: center;
+        padding: 5px 80px 5px 80px !important;
+        text-align: center !important;
     }
     .about_sec {
-        padding: 0px 100px 5px 100px;
+        padding: 0px 100px 5px 100px !important;
     }
     .about_gray_dv {
-        height: 8vh;
-        margin-top: 40px;
+        height: 8vh !important;
+        margin-top: 40px !important;
     }
     .about_yellow_dv {
-        padding-top: 32px;
-        padding-bottom: 15px;
+        padding-top: 32px !important;
+        padding-bottom: 15px !important;
     }
     .ftr_above_sec {
-        margin: 25px 0px;
+        margin: 25px 0px !important;
     }
     .nv_col{
-        margin-top: 25px;
+        margin-top: 25px !important;
     }
     .bg_img {
-        min-height: auto;
+        min-height: auto !important;
     }
 }
