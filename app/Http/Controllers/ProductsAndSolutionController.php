@@ -14,7 +14,8 @@ class ProductsAndSolutionController extends Controller
 
         $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
 
-        return view('pages.productAndSolution.dispatchAutomation', ['data' => $data]);
+        // return view('pages.productAndSolution.dispatchAutomation', ['data' => $data]);
+        return view('pages.productAndSolution.index');
     }
 
     public function dynamicMachineScheduling()

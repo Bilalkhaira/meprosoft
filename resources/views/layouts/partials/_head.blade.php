@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/aqua.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/dm.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/new_custom_style.css') }}" />
 
     @if(\Request::route()->getName() != 'home')
     <link rel="stylesheet" href="{{ asset('css/custom_style.css') }}" />
     @endif
     <!-- <link rel="stylesheet" href="{{ asset('css/custom_style.css') }}" /> -->
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}" />
+    <!-- <link rel="stylesheet" href="{{ asset('css/home.css') }}" /> -->
     @yield('css')
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">

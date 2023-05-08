@@ -14,7 +14,8 @@ class ServiceController extends Controller
 
         $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
 
-        return view('pages.services.businessConsulting', ['data' => $data]);
+        // return view('pages.services.businessConsulting', ['data' => $data]);
+        return view('pages.services.index');
     }
 
     public function digitalTransformationWithCloud()

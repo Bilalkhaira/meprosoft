@@ -14,7 +14,8 @@ class CaseStudyControler extends Controller
 
         $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
 
-        return view('pages.caseStudy.foodIndustry', ['data' => $data]);
+        // return view('pages.caseStudy.foodIndustry', ['data' => $data]);
+        return view('pages.caseStudy.index');
     }
 
     public function mesproPaperlessManufacturing()

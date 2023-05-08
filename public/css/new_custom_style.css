@@ -1,0 +1,45 @@
+#service_head_img{
+    height: 100vh;
+    background: round;
+}
+.service_link_bg{
+    background-color: #eaf6ee;
+}
+.service_link{
+    padding: 50px;
+}
+.service_link_below_sec{
+    padding: 60px 0px;
+}
+.product_vedio_sec{
+    padding: 50px 0px;
+}
+.product_vedio_sec .hdg_dv{
+    padding-top: 80px;
+}
+.optimize_envolvement{
+    background-color: #e6e8ea;
+}
+.optimize_envolvement div{
+    padding-top: 100px;
+    padding-bottom: 130px;
+    padding-left: 100px;
+}
+.envolvement_img{
+    background-size: cover;
+}
+.envolvement{
+    margin-bottom: 50px;
+}
+.img_dv{
+    background-color: #fbb217;
+    padding: 40px;
+    position: absolute !important;
+    bottom: 18%;
+    left: 0%;
+    width: 39%;
+    color: black !important;
+}
+.img_dv h1{
+    font-weight: bold;
+}
