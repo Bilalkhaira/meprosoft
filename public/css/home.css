@@ -157,7 +157,7 @@ body {
 .footer .nv_col h5{
     color: black !important;
     font-size: 19px;
-    /* margin-left: 40px !important; */
+    font-weight: bold !important;
 }
 .footer .nv_col ul{
     list-style-type: none !important;

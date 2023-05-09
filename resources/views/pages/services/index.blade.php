@@ -2,15 +2,18 @@
 
 @section('content')
 
-<section class="wrapper image-wrapper bg-image bg-overlay text-white" id="service_head_img" data-image-src="{{ asset('img/new_design_img/service.png' )}}">
-    <!-- <div class="container pt-19 pt-md-21 pb-18 pb-md-20 text-center">
-    <div class="row">
-      <div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto">
-        <h1 class="display-1 text-white mb-3">sss</h1>
-        <span class="lead fs-lg px-md-3 px-lg-7 px-xl-9 px-xxl-10">ooo</span>
-      </div>
+<section class="hdr_bg">
+  <div class="container wrapper bg-image" id="service_head_img" data-image-src="{{ asset('img/new_design_img/service.jpg' )}}"></div>
+    <div class="img_dv">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <h1>Services</h1>
+                <p>Mesprosoft has designed tailored solutions. So however distinctive your processes may be, you can now integrate and streamline your business processes with our SAP solutions,</p>
+            </div>
+        </div>
+
     </div>
-  </div> -->
 </section>
 
 <section class="wrapper bg-light">
