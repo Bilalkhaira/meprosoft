@@ -13,100 +13,194 @@
                 </div>
                 <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
                     <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
+
+                        <li class="nav-item dropdown hdr_dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a>
-                            <div class="dropdown-menu dropdown-lg">
-                            <ul class="list-unstyled">
-                                <li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" style="margin-right: 15px">Corporate Overview</a>
-                                    <div class="dropdown-menu dropdown-lg">
-                                        <ul class="list-unstyled">
-                                            <li class="nav-item"><a class="dropdown-item" href="{{ route('home.about') }}">About
-                                                    Mesprosoft</a></li>
-                                            <li class="nav-item"><a class="dropdown-item" href="{{ route('home.managementTeam') }}">Management
-                                                    Team</a>
-                                            </li>
-                                            <li class="nav-item"><a class="dropdown-item" href="{{ route('home.coreValues') }}">Core
-                                                    Values</a>
-                                            </li>
-                                            <li class="nav-item"><a class="dropdown-item" href="{{ route('home.whyMesprosoft') }}">Why
-                                                    Mesprosoft</a>
-                                                </liv>
-
-                                        </ul>
+                            <div class="dropdown-menu dropdown-lg" id="menu">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h3 class="display-7 mb-5">HOME</h3>
+                                        <p>Mesprosoft has designed tailored solutions for industries across verticals requirements operations and business performance are strengthened enough.</p>
                                     </div>
-                            </ul>
-                        </div>
-                        </li>
-
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
-                            <div class="dropdown-menu dropdown-lg">
-                                <ul class="list-unstyled">
-                                   
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.businessConsulting') }}">Business Consulting</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.digitalTransformationWithCloud') }}">Digital Transformation With Cloud</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.hanaConversion') }}">S/4 Hana Conversion</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.applicationSupport') }}">Application Support</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.specificConsulting') }}">Specific Consulting</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.IPOCompliance') }}">IPO Compliance</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.PLCMESWeighBridgeIntegration') }}">PLC MES Weigh Bridge Integration</a>
-                                    </li>
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('services.resourceArgumentation') }}">Resource Argumentation</a></li>
-                                </ul>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-center">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('home.about') }}">About Mesprosoft</a>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('home.managementTeam') }}">Management Team</a>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('home.coreValues') }}">Core Values</a>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('home.whyMesprosoft') }}">Why Mesprosoft</a>
+                                    </div>
+                                </div>
                             </div>
                         </li>
 
-                        <li class="nav-item dropdown">
+
+                        <li class="nav-item dropdown hdr_dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown-menu dropdown-lg" id="menu">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h3 class="display-7 mb-5">SERVICES</h3>
+                                        <p>Mesprosoft has designed tailored solutions for industries across verticals requirements operations and business performance are strengthened enough.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('services.businessConsulting') }}">Business Consulting</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('services.digitalTransformationWithCloud') }}">Digital Transformation With Cloud</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('services.hanaConversion') }}">S/4 Hana Conversion</a>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('services.applicationSupport') }}">Application Support</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('services.specificConsulting') }}">Specific Consulting</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('services.IPOCompliance') }}">IPO Compliance</a>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('services.PLCMESWeighBridgeIntegration') }}">PLC MES Weigh Bridge Integration</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('services.resourceArgumentation') }}">Resource Argumentation</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="nav-item dropdown hdr_dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products &
                                 Solutions</a>
-                            <div class="dropdown-menu dropdown-lg">
-                                <div class="dropdown-lg-content">
-                                    <div>
-                                        <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.dispatchAutomation') }}">Dispatch Automation</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.dynamicMachineScheduling') }}">Dynamic Machine Scheduling </a>
-                                            </li>
-                                            <li><a class="dropdown-item" data-toggle="tooltip" title="Electronic Batch Manufacturing ( Pharmaceuticals & Chemicals )" href="{{ route('productAndSolution.electronicBatchManufacturing') }}">Electronic Batch Manufacturing</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.handheldMobileBarCode') }}">Handheld Mobile Bar Code</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.loanManagementSolution') }}">Loan Management Solution</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproGPSPreconfiguredAnalytics') }}">Mespro GPS Preconfigured Analytics</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproLifeScienceCFRPart11') }}">Mespro Life Science CFR Part 11</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.TS16949CompliantKAPA') }}">TS 16949 Compliant KAPA </a></li>
-                                        </ul>
+                            <div class="dropdown-menu dropdown-lg" id="menu">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h3 class="display-7 mb-5">PRODUCT & SOLUTION</h3>
+                                        <p>Mesprosoft has designed tailored solutions for industries across verticals requirements operations and business performance are strengthened enough.</p>
                                     </div>
-                                    <!-- /.column -->
-                                    <div>
-                                        <ul class="list-unstyled">
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproOptimizedMRP') }}">Mespro Optimized MRP</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.mesproPaperessManufacturing') }}">Mespro Paper Less Manufacturing</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.MesproX-Steps') }}">Mespro X-Steps</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.O2CAutomation') }}">O2C Automation</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.purchaseBudgetCheckAndApproval') }}">Purchase Budget Check & Approval</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.smartFoundry') }}">Smart Foundry</a></li>
-
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.BTP') }}">BTP</a></li>
-                                            <li><a class="dropdown-item" href="{{ route('productAndSolution.IOT') }}">IOT</a></li>
-                                            
-
-                                        </ul>
-                                    </div>
-                                    <!-- /.column -->
                                 </div>
-                                <!-- /auto-column -->
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Case Study</a>
-                            <div class="dropdown-menu dropdown-lg">
-                                <ul class="list-unstyled">
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('caseStudy.foodIndustry') }}">Food Industry</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('caseStudy.digitalManufacturing') }}">Digital Manufacturing</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="{{ route('caseStudy.mesproPaperlessManufacturing') }}">Mespro Paperless Manufacturing</a></li>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.dispatchAutomation') }}">Dispatch Automation</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.dynamicMachineScheduling') }}">Dynamic Machine Scheduling </a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a data-toggle="tooltip" title="Electronic Batch Manufacturing ( Pharmaceuticals & Chemicals )" href="{{ route('productAndSolution.electronicBatchManufacturing') }}">Electronic Batch Manufacturing</a>
+                                    </div>
 
-                                </ul>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.handheldMobileBarCode') }}">Handheld Mobile Bar Code</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.loanManagementSolution') }}">Loan Management Solution</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.mesproGPSPreconfiguredAnalytics') }}">Mespro GPS Preconfigured Analytics</a>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.mesproLifeScienceCFRPart11') }}">Mespro Life Science CFR Part 11</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.TS16949CompliantKAPA') }}">TS 16949 Compliant KAPA </a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.mesproOptimizedMRP') }}">Mespro Optimized MRP</a>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.mesproPaperessManufacturing') }}">Mespro Paper Less Manufacturing</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.MesproX-Steps') }}">Mespro X-Steps</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.O2CAutomation') }}">O2C Automation</a>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.purchaseBudgetCheckAndApproval') }}">Purchase Budget Check & Approval</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.smartFoundry') }}">Smart Foundry</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.BTP') }}">BTP</a>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('productAndSolution.IOT') }}">IOT</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="nav-item dropdown hdr_dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Case Study</a>
+                            <div class="dropdown-menu dropdown-lg" id="menu">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h3 class="display-7 mb-5">Case Study</h3>
+                                        <p>Mesprosoft has designed tailored solutions for industries across verticals requirements operations and business performance are strengthened enough.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 text-center">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('caseStudy.foodIndustry') }}">Food Industry</a>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('caseStudy.digitalManufacturing') }}">Digital Manufacturing</a>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('caseStudy.mesproPaperlessManufacturing') }}">Mespro Paperless Manufacturing</a>
+                                    </div>
+                                </div>
                             </div>
                         </li>
 
@@ -120,7 +214,7 @@
                             <a class="nav-link" href="{{ route('careers.index') }}">Careers</a>
 
                         </li>
-                    
+
                         <li class="nav-item dropdown dropdown-mega">
                             <a class="nav-link" href="{{ route('contactUs') }}">Contact Us</a>
                         </li>

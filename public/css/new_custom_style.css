@@ -2,8 +2,12 @@
     height: 100vh;
     background: round;
     width: 100%;
-    margin-left: 12rem;
-    margin-right: 12rem;
+    /* margin-left: 12rem; */
+    /* margin-right: 12rem; */
+}
+
+.container {
+    width: 100% !important;
 }
 
 .service_link_bg {
@@ -158,33 +162,114 @@
 .paperLess_form_sec {
     margin-bottom: 50px;
 }
-.paperLess_form_sec img{
+
+.paperLess_form_sec img {
     margin-top: 25px;
 }
-.paperLess_form_outer{
+
+.paperLess_form_outer {
     padding: 40px;
     background-color: #7173ac;
     text-align: center;
     margin-top: 35px;
 }
 
-.paperLess_form_outer form{
+.paperLess_form_outer form {
     padding: 40px;
     background-color: #eaf6ee;
     border-radius: 20px;
 }
-.paperLess_form_outer form textarea{
+
+.paperLess_form_outer form textarea {
     border-radius: 20px;
 }
-.paperLess_form_outer form input{
+
+.paperLess_form_outer form input {
     border-radius: 20px;
 }
+
 .paperLess_form_outer button {
     background-color: #29b7cb;
     border: none;
     border-radius: 20px;
     padding: 5px 30px;
 }
-.hdr_bg{
+
+.hdr_bg {
     background-color: #606161;
+}
+
+.events {
+    padding: 50px 0px;
+}
+
+.events .col-md-3 {
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.img_preview_p {
+    padding: 10px 20px;
+    background-color: #fbb217;
+    ;
+}
+
+.news_col {
+    border: 1px solid lightgray;
+    text-align: center;
+}
+
+.news_col .heading {
+    background-color: #1771a8;
+    font-weight: 700;
+    color: white;
+    padding: 30px;
+}
+
+.news_col img {
+    width: 50%;
+    margin: auto;
+}
+
+.news_col .desc {
+    padding: 30px 50px;
+}
+.news_col a{
+    margin-bottom: -25px;
+}
+.news .col-md-4{
+    margin-bottom: 50px;
+}
+#menu{
+    /* -moz-box-sizing: border-box; */
+    /* -webkit-box-sizing: border-box; */
+    /* box-sizing: border-box; */
+    /* -moz-border-radius-topleft: 0; */
+    /* -webkit-border-top-left-radius: 0; */
+    /* border-top-left-radius: 0; */
+    /* -moz-border-radius-topright: 0; */
+    /* -webkit-border-top-right-radius: 0; */
+    /* border-top-right-radius: 0; */
+    min-width: auto;
+    width: 100%;
+    margin-top: 0;
+    padding: 30px 200px;
+    background-color: #fbb217;
+}
+#menu .row{
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-bottom: 10px;
+}
+#menu .row a{
+    color: black;
+}
+#menu .row img{
+    margin-bottom: 5px;
+}
+.hdr_dropdown{
+    position: static !important;
+}
+#menu .row .col-md-4{
+    margin-bottom: 10px;
 }
