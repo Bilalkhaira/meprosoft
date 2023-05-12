@@ -24,19 +24,19 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4">
                                         <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
                                         <a href="{{ route('home.about') }}">About Mesprosoft</a>
                                     </div>
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4">
                                         <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
                                         <a href="{{ route('home.managementTeam') }}">Management Team</a>
                                     </div>
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4">
                                         <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
                                         <a href="{{ route('home.coreValues') }}">Core Values</a>
                                     </div>
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4">
                                         <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
                                         <a href="{{ route('home.whyMesprosoft') }}">Why Mesprosoft</a>
                                     </div>
@@ -188,15 +188,15 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4">
                                         <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
                                         <a href="{{ route('caseStudy.foodIndustry') }}">Food Industry</a>
                                     </div>
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4">
                                         <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
                                         <a href="{{ route('caseStudy.digitalManufacturing') }}">Digital Manufacturing</a>
                                     </div>
-                                    <div class="col-md-4 text-center">
+                                    <div class="col-md-4">
                                         <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
                                         <a href="{{ route('caseStudy.mesproPaperlessManufacturing') }}">Mespro Paperless Manufacturing</a>
                                     </div>
