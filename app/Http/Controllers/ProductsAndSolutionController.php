@@ -8,14 +8,18 @@ use App\Models\MenuPagesData;
 
 class ProductsAndSolutionController extends Controller
 {
+    public function index()
+    {
+        return view('pages.productAndSolution.index');
+    }
+
     public function dispatchAutomation()
     {
         $menu_id = NavMenu::where('name', 'Dispatch Automation')->first('id');
 
         $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
 
-        // return view('pages.productAndSolution.dispatchAutomation', ['data' => $data]);
-        return view('pages.productAndSolution.index');
+        return view('pages.productAndSolution.dispatchAutomation', ['data' => $data]);
     }
 
     public function dynamicMachineScheduling()

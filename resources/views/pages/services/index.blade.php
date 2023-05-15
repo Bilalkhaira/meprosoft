@@ -36,38 +36,38 @@
         <div class="col-md-4 service_link service_link_bg text-center">
             <img src="{{ asset('img/new_design_img/service_link2.png') }}" width="100px" height="100px" alt="">
             <h3 class="display-7 mb-5">Business Consulting </h3>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+            <a href="{{ route('services.businessConsulting') }}" class="btn btn-primary btn-sm">Read More</a>
         </div>
 
         <div class="col-md-4 service_link text-center">
             <img src="{{ asset('img/new_design_img/service_link1.png') }}" width="100px" height="100px" alt="">
             <h3 class="display-7 mb-5">Digital Transformation With S4 Hana Cloud</h3>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+            <a href="{{ route('services.digitalTransformationWithCloud') }}" class="btn btn-primary btn-sm">Read More</a>
         </div>
 
         <div class="col-md-4 service_link service_link_bg text-center">
             <img src="{{ asset('img/new_design_img/service_link2.png') }}" width="100px" height="100px" alt="">
             <h3 class="display-7 mb-5">S/4 Hana Conversion </h3>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+            <a href="{{ route('services.hanaConversion') }}" class="btn btn-primary btn-sm">Read More</a>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4 service_link text-center">
             <img src="{{ asset('img/new_design_img/service_link2.png') }}" width="100px" height="100px" alt="">
-            <h4 class="display-7 mb-5">Business Consulting </h4>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+            <h4 class="display-7 mb-5"> Application Support</h4>
+            <a href="{{ route('services.applicationSupport') }}" class="btn btn-primary btn-sm">Read More</a>
         </div>
 
         <div class="col-md-4 service_link service_link_bg text-center">
             <img src="{{ asset('img/new_design_img/service_link1.png') }}" width="100px" height="100px" alt="">
-            <h3 class="display-7 mb-5">Digital Transformation With S4 Hana Cloud</h3>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+            <h3 class="display-7 mb-5">PLC MES Weigh Bridge Integration</h3>
+            <a href="{{ route('services.PLCMESWeighBridgeIntegration') }}" class="btn btn-primary btn-sm">Read More</a>
         </div>
 
         <div class="col-md-4 service_link text-center">
             <img src="{{ asset('img/new_design_img/service_link2.png') }}" width="100px" height="100px" alt="">
-            <h3 class="display-7 mb-5">S/4 Hana Conversion </h3>
-            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+            <h3 class="display-7 mb-5">Resource Argumentation</h3>
+            <a href="{{ route('services.resourceArgumentation') }}" class="btn btn-primary btn-sm">Read More</a>
         </div>
     </div>
     <div class="container">

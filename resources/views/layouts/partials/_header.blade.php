@@ -15,7 +15,7 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item dropdown hdr_dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a>
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">HOME</a>
                             <div class="dropdown-menu dropdown-lg" id="menu">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
@@ -46,7 +46,7 @@
 
 
                         <li class="nav-item dropdown hdr_dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+                            <a class="nav-link dropdown-toggle" id="service_route" href="#" data-bs-toggle="dropdown">SERVICES</a>
                             <div class="dropdown-menu dropdown-lg" id="menu">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
@@ -95,8 +95,8 @@
                         </li>
 
                         <li class="nav-item dropdown hdr_dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products &
-                                Solutions</a>
+                            <a class="nav-link dropdown-toggle" id="product_route" href="#" data-bs-toggle="dropdown">PRODUCTS &
+                                SOLUTION</a>
                             <div class="dropdown-menu dropdown-lg" id="menu">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
@@ -180,9 +180,9 @@
                         </li>
 
 
-                        
+
                         <li class="nav-item dropdown hdr_dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Case Study</a>
+                            <a class="nav-link dropdown-toggle ss" href="#" data-bs-toggle="dropdown">CASE STUDY</a>
                             <div class="dropdown-menu dropdown-lg" id="menu">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
@@ -207,19 +207,38 @@
                             </div>
                         </li>
 
+                        <li class="nav-item dropdown hdr_dropdown">
+                            <a class="nav-link dropdown-toggle" id="event_route" href="#" data-bs-toggle="dropdown">NEWS & EVENTS</a>
+                            <div class="dropdown-menu dropdown-lg" id="menu">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h3 class="display-7 mb-5">Event & News</h3>
+                                        <p>Mesprosoft is now ranked among the 20 most promising SAP implementation partners in India.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-2 text-center">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('eventAndNews.event') }}">Events</a>
+                                    </div>
+                                    <div class="col-md-2 text-center">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('eventAndNews.news') }}">News</a>
+                                    </div>
+                                    <div class="col-md-4"></div>
+                                </div>
+                            </div>
+                        </li>
+
 
                         <li class="nav-item dropdown dropdown-mega">
-                            <a class="nav-link" href="{{ route('eventAndNews.index') }}">News & Events</a>
+                            <a class="nav-link" href="{{ route('careers.index') }}"> CAREERS</a>
 
                         </li>
 
                         <li class="nav-item dropdown dropdown-mega">
-                            <a class="nav-link" href="{{ route('careers.index') }}">Careers</a>
-
-                        </li>
-
-                        <li class="nav-item dropdown dropdown-mega">
-                            <a class="nav-link" href="{{ route('contactUs') }}">Contact Us</a>
+                            <a class="nav-link" href="{{ route('contactUs') }}">CONTACT US</a>
                         </li>
 
                     </ul>
@@ -353,4 +372,17 @@
         <!-- /.container -->
     </div>
     <!-- /.offcanvas -->
+    <script>
+        $('#service_route').on('click', function() {
+            window.location.href = "{{ route('services.index') }}";
+        })
+
+        $('#product_route').on('click', function() {
+            window.location.href = "{{ route('productsAndSolutions.index') }}";
+        })
+
+        $('#event_route').on('click', function() {
+            window.location.href = "{{ route('eventAndNews.index') }}";
+        })
+    </script>
 </header>

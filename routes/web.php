@@ -60,6 +60,7 @@ Route::post('saveMsg', [ContactusController::class, 'save'])->name('saveMsg');
 // NavMenu Routes
 // Services Routes
 Route::get('/business_consulting', [ServiceController::class, 'businessConsulting'])->name('services.businessConsulting');
+Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 Route::get('/digital_transformation_with_cloud', [ServiceController::class, 'digitalTransformationWithCloud'])->name('services.digitalTransformationWithCloud');
 Route::get('/hana_conversion', [ServiceController::class, 'hanaConversion'])->name('services.hanaConversion');
 Route::get('/IPO_compliance', [ServiceController::class, 'IPOCompliance'])->name('services.IPOCompliance');
@@ -73,6 +74,7 @@ Route::get('/management_team', [HomeMenuController::class, 'managementTeam'])->n
 Route::get('/core_values', [HomeMenuController::class, 'coreValues'])->name('home.coreValues');
 Route::get('/why_mesprosoft', [HomeMenuController::class, 'whyMesprosoft'])->name('home.whyMesprosoft');
 // product and solution routes
+Route::get('/product_and_solution', [ProductsAndSolutionController::class, 'index'])->name('productsAndSolutions.index');
 Route::get('/dispatch_automation', [ProductsAndSolutionController::class, 'dispatchAutomation'])->name('productAndSolution.dispatchAutomation');
 Route::get('/dynamic_machine_scheduling', [ProductsAndSolutionController::class, 'dynamicMachineScheduling'])->name('productAndSolution.dynamicMachineScheduling');
 Route::get('/electronic_batch_manufacturing', [ProductsAndSolutionController::class, 'electronicBatchManufacturing'])->name('productAndSolution.electronicBatchManufacturing');
@@ -96,6 +98,8 @@ Route::get('/mespro_paperless_manufacturing', [CaseStudyControler::class, 'mespr
 Route::get('/digital_manufacturing', [CaseStudyControler::class, 'digitalManufacturing'])->name('caseStudy.digitalManufacturing');
 // event and news route
 Route::get('/event_and_news', [NewsAndEventController::class, 'index'])->name('eventAndNews.index');
+Route::get('/events', [NewsAndEventController::class, 'event'])->name('eventAndNews.event');
+Route::get('/news', [NewsAndEventController::class, 'news'])->name('eventAndNews.news');
 // careers route
 Route::get('/career', [CareerController::class, 'index'])->name('careers.index');
 // contact us route

@@ -26,7 +26,7 @@ h1{
 }
 
 .nav_main .nav-link {
-    color: #b2b3b7 !important;
+    /* color: #b2b3b7 !important; */
     font-weight: bold !important;
 }
 .list-unstyled a{

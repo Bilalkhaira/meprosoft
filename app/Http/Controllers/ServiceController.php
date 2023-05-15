@@ -8,14 +8,18 @@ use App\Models\MenuPagesData;
 
 class ServiceController extends Controller
 {
+    public function index()
+    {
+        return view('pages.services.index');
+    }
+
     public function businessConsulting()
     {
         $menu_id = NavMenu::where('name', 'Business Consulting')->first('id');
 
         $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
 
-        // return view('pages.services.businessConsulting', ['data' => $data]);
-        return view('pages.services.index');
+        return view('pages.services.businessConsulting', ['data' => $data]);
     }
 
     public function digitalTransformationWithCloud()

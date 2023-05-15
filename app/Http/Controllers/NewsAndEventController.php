@@ -16,4 +16,13 @@ class NewsAndEventController extends Controller
 
         return view('pages.eventAndNews.index', ['data' => $data]);
     }
+    public function event()
+    {
+        return view('pages.eventAndNews.events');
+    }
+
+    public function news()
+    {
+        return view('pages.eventAndNews.news');
+    }
 }
