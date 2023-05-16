@@ -159,12 +159,9 @@
 <img src="{{ asset('img/newHome/img.png') }}" width="100%" alt="">
 
 <div class="container">
-<div class="row">
-        <div class="col-md-12 text-center">
-            <h1>PRODUCTS & SOLUTIONS</h1>
-        </div>
-    </div>
+  
     <div class="row">
+    <h1 class="product_heading">PRODUCTS & SOLUTIONS</h1>
         <div class="col-md-4">
             <div class="ftr_above_sec">
                 <h5>BTP</h5>

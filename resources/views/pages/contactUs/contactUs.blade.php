@@ -6,10 +6,9 @@
   <div class="container-fluid wrapper bg-image" id="service_head_img" data-image-src="{{ asset('img/new_design_img/contactUs.png' )}}"></div>
     <div class="img_dv1">
         <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12 text-left">
                 <p><b>Have any question ? <br>Reach out to us from our contact form <br> and we will get back to you shortly.</b></p>
             </div>
-            <div class="col-md-3"></div>
            
         </div>
 

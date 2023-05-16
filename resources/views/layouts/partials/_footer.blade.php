@@ -6,14 +6,14 @@
                         <a href="#"><img src="{{ asset('img/newHome/logo2.png') }}" alt="" width="70%"></a>
                     </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-12 social_img">
                         <a href="https://www.facebook.com/profile.php?id=100064046084575"><img src="{{ asset('img/newHome/fb.png') }}" width="40px" alt=""></a>
                         <a href="https://twitter.com/Mesprosoft"><img src="{{ asset('img/newHome/t.png') }}" width="40px" alt=""></a>
                         <a href="https://www.linkedin.com/company/mesprosoft?trk=hb_tab_compy_id_2543913"><img src="{{ asset('img/newHome/in.png') }}" width="40px" alt=""></a>
                     </div>
 
-                </div>
+                </div> -->
 
 
             </div>
@@ -40,10 +40,17 @@
             </div>
             <div class="col-md-3 nv_col">
                 <h5>CONTACT US</h5> 
-                <div class="widget">
+                <div class="row">
+                    <div class="col-md-12 social_img">
+                        <a href="https://www.facebook.com/profile.php?id=100064046084575"><img src="{{ asset('img/newHome/fb.png') }}" width="40px" alt=""></a>
+                        <a href="https://twitter.com/Mesprosoft"><img src="{{ asset('img/newHome/t.png') }}" width="40px" alt=""></a>
+                        <a href="https://www.linkedin.com/company/mesprosoft?trk=hb_tab_compy_id_2543913"><img src="{{ asset('img/newHome/in.png') }}" width="40px" alt=""></a>
+                    </div>
+
+                </div>
+                <!-- <div class="widget">
                     <p class="mb-5">Subscribe to our newsletter to get our news & deals delivered to you.</p>
                     <div class="newsletter-wrapper" style="display: none;">
-                        <!-- Begin Mailchimp Signup Form -->
                         <div id="mc_embed_signup2">
                             <form action="https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a" method="post" id="mc-embedded-subscribe-form2" name="mc-embedded-subscribe-form" class="validate dark-fields" target="_blank" novalidate>
                                 <div id="mc_embed_signup_scroll2">
@@ -55,16 +62,14 @@
                                     <div id="mce-responses2" class="clear">
                                         <div class="response" id="mce-error-response2" style="display:none"></div>
                                         <div class="response" id="mce-success-response2" style="display:none"></div>
-                                    </div> <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    </div> 
                                     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ddc180777a163e0f9f66ee014_4b1bcfa0bc" tabindex="-1" value=""></div>
                                     <div class="clear"></div>
                                 </div>
                             </form>
                         </div>
-                        <!--End mc_embed_signup-->
                     </div>
-                    <!-- /.newsletter-wrapper -->
-                </div>
+                </div> -->
             </div>
         </div>
 

@@ -9,9 +9,11 @@ h2{
 h1{
     font-weight: bolder !important;
     font-size: 40px !important;
+    color: #b2b3b7;
+}
+.sec_padding h1{
     padding-top: 40px !important;
     padding-bottom: 40px !important;
-    color: #b2b3b7;
 }
 .nav_main {
     /* padding:5px 200px 5px 200px !important; */
@@ -80,7 +82,7 @@ body {
 }
 
 .srvc_brder_rw .circle{
-    padding: 28px 38px !important;
+    padding: 20px 28px !important;
     background-color:#fbb217 !important;
     border-radius: 100px !important;
     margin-top: 20px !important;
@@ -128,13 +130,7 @@ body {
 .about_sec p{
     margin-top: 30px !important;
 }
-.ftr_above_sec{
- border: 1px solid #b2b3b7 !important;
- border-radius: 10px !important;
- padding: 30px 40px !important;
- margin: 50px 0px !important;
- text-align: center !important;   
-}
+
 .ftr_abv_dv{
     background-color: #fbb217 !important;
     padding: 10px !important;
@@ -150,14 +146,9 @@ body {
 }
 .footer a:hover{
     text-decoration: none;
-    color: #fbb217;
+    color: white;
 }
-.social_img img{
-    margin-left: 10px !important;
-}
-.social_img{
-    margin-left: 30px !important;
-}
+
 .footer .nv_col h5{
     color: black !important;
     font-size: 19px;

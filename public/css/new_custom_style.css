@@ -78,6 +78,7 @@
     padding: 30px 40px !important;
     margin: 50px 0px !important;
     text-align: center !important;
+    height: 250px;
 }
 
 .ftr_abv_dv {
@@ -99,14 +100,6 @@
 .footer a:hover {
     text-decoration: none;
     color: #fbb217;
-}
-
-.social_img img {
-    margin-left: 10px !important;
-}
-
-.social_img {
-    margin-left: 30px !important;
 }
 
 .footer .nv_col h5 {
@@ -288,6 +281,16 @@
 .nav_main .nav-link:hover {
     color: #fbb217 !important;
     text-decoration: none;
+}
+.product_heading{
+    text-align: center;
+}
+
+.social_img img{
+    /* margin-left: 10px !important; */
+}
+.social_img{
+    /* margin-left: 30px !important; */
 }
 
 
