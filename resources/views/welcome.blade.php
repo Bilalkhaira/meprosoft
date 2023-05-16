@@ -10,7 +10,7 @@
             <p>In this example the navigation bar is In this example the navigation bar is In this example the
                 navigation bar is In this example the navigation bar is In this example the navigation bar is In
                 this example the navigation bar is </p>
-            <button class="btn btn-primary"> Read More</button>
+            <button class="btn btn-primary read_btn"> Read More</button>
         </div>
         <div class="col-md-6"></div>
     </div>
@@ -19,55 +19,111 @@
 <div class="container-fluid sec_padding">
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1>OUT SERVICES</h1>
+            <h1>OUR SERVICES</h1>
         </div>
     </div>
 
     <div class="row srvc_brder_rw">
         <div class="col-md-3">
             <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">
+                    <h5>Business Consulting</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">
+                    <h5>Digital Transformation With Cloud</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">
+                    <h5>S/4 Hana Conversion</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">
+                    <h5>Application Support</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
                 <div class="col-md-3 circle_col">
                     <span class="circle"></span>
                 </div>
                 <div class="col-md-9">
-                    <h5>Business Consulting</h5>
                     <p>In this example the navigation bar is In this example the navigation bar is In this example</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-3 circle_col">
+                    <span class="circle"></span>
+                </div>
+                <div class="col-md-9">
+                    <p>Mesprosoft understand that digital transformation is the key to improving business operations and enhancing customer experiences.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-3 circle_col">
+                    <span class="circle"></span>
+                </div>
+                <div class="col-md-9">
+                    <p>Mesprosoft has extensive expertise in S/4HANA conversion, helping businesses to migrate from their existing SAP systems to the powerful</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-3 circle_col">
+                    <span class="circle"></span>
+                </div>
+                <div class="col-md-9">
+                    <p>In this example the navigation bar is In this example the navigation bar is In this example</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">
                     <a href="{{ route('services.businessConsulting') }}" class="btn btn-outline-secondary readMore_btn">Read More</a>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="row">
-                <div class="col-md-3 circle_col">
-                    <span class="circle"></span>
-                </div>
+                <div class="col-md-3"></div>
                 <div class="col-md-9">
-                    <h5>Digital Transformation With Cloud</h5>
-                    <p>Mesprosoft understand that digital transformation is the key to improving business operations and enhancing customer experiences.</p>
                     <a href="{{ route('services.digitalTransformationWithCloud') }}" class="btn btn-outline-secondary readMore_btn">Read More</a>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="row">
-                <div class="col-md-3 circle_col">
-                    <span class="circle"></span>
-                </div>
+                <div class="col-md-3"></div>
                 <div class="col-md-9">
-                    <h5>S/4 Hana Conversion</h5>
-                    <p>Mesprosoft has extensive expertise in S/4HANA conversion, helping businesses to migrate from their existing SAP systems to the powerful</p>
                     <a href="{{ route('services.hanaConversion') }}" class="btn btn-outline-secondary readMore_btn">Read More</a>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="row">
-                <div class="col-md-3 circle_col">
-                    <span class="circle"></span>
-                </div>
+                <div class="col-md-3"></div>
                 <div class="col-md-9">
-                    <h5>Application Support</h5>
-                    <p>In this example the navigation bar is In this example the navigation bar is In this example</p>
                     <a href="{{ route('services.applicationSupport') }}" class="btn btn-outline-secondary readMore_btn">Read More</a>
                 </div>
             </div>
@@ -103,7 +159,11 @@
 <img src="{{ asset('img/newHome/img.png') }}" width="100%" alt="">
 
 <div class="container">
-
+<div class="row">
+        <div class="col-md-12 text-center">
+            <h1>PRODUCTS & SOLUTIONS</h1>
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-4">
             <div class="ftr_above_sec">

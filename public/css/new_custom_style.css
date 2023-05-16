@@ -135,6 +135,7 @@
 .case_study_outer_list p {
     padding: 10px 5px;
     background-color: #fbb217;
+    color: black;
 }
 
 .case_study_outer_list p i {
@@ -220,7 +221,7 @@
 .img_preview_p {
     padding: 10px 20px;
     background-color: #fbb217;
-    ;
+    color: black;
 }
 
 .news_col {
@@ -253,7 +254,7 @@
     min-width: auto;
     width: 100%;
     margin-top: 0;
-    padding: 30px 200px;
+    /* padding: 30px 200px; */
     background-color: #fbb217;
 }
 #menu .row{
@@ -272,4 +273,27 @@
 }
 #menu .row .col-md-4{
     margin-bottom: 10px;
+}
+#menu a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.hdr_dropdown .dropdown-toggle::after {
+    content: none;
+}
+.nav-link{
+    font-size: 14px !important;
+}
+.nav_main .nav-link:hover {
+    color: #fbb217 !important;
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+#menu .col-md-4{
+    display: block;
+    width: 100%;
+}   
 }

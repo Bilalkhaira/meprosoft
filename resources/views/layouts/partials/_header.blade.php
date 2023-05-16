@@ -15,7 +15,7 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item dropdown hdr_dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">HOME</a>
+                            <a class="nav-link dropdown-toggle" id="home_route" href="#" data-bs-toggle="dropdown">HOME</a>
                             <div class="dropdown-menu dropdown-lg" id="menu">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
@@ -383,6 +383,9 @@
 
         $('#event_route').on('click', function() {
             window.location.href = "{{ route('eventAndNews.index') }}";
+        })
+        $('#home_route').on('click', function() {
+            window.location.href = "{{ route('home') }}";
         })
     </script>
 </header>

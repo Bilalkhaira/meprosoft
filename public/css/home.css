@@ -14,7 +14,7 @@ h1{
     color: #b2b3b7;
 }
 .nav_main {
-    padding:5px 200px 5px 200px !important;
+    /* padding:5px 200px 5px 200px !important; */
 }
 
 .nav_main .nav-link:hover {
@@ -86,12 +86,16 @@ body {
     margin-top: 20px !important;
 }
 .srvc_brder_rw .circle_col{
-    padding-top: 60px !important;
+    /* padding-top: 60px !important; */
 }
 .readMore_btn{
-    /* font-weight: 600 !important; */
     color: #1c6ca2 !important;
     border: 1px solid lightgray !important;
+}
+.readMore_btn:hover{
+    color: #fff !important;
+    background-color: #286090;
+    border-color: #204d74;
 }
 .about_gray_dv{
     width: 100% !important;
@@ -171,7 +175,7 @@ body {
         margin-right: 0px !important;
     }
     .nav_main {
-        padding: 5px 150px 5px 150px !important;
+        padding: 5px 0px 5px 0px !important;
     }
     .slider_sec {
         padding-top: 30px !important;

@@ -42,7 +42,7 @@
                 <h5>CONTACT US</h5> 
                 <div class="widget">
                     <p class="mb-5">Subscribe to our newsletter to get our news & deals delivered to you.</p>
-                    <div class="newsletter-wrapper">
+                    <div class="newsletter-wrapper" style="display: none;">
                         <!-- Begin Mailchimp Signup Form -->
                         <div id="mc_embed_signup2">
                             <form action="https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a" method="post" id="mc-embedded-subscribe-form2" name="mc-embedded-subscribe-form" class="validate dark-fields" target="_blank" novalidate>
