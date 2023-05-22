@@ -94,8 +94,18 @@ Route::get('/BTP', [ProductsAndSolutionController::class, 'BTP'])->name('product
 Route::get('/IOT', [ProductsAndSolutionController::class, 'IOT'])->name('productAndSolution.IOT');
 // case study routes
 Route::get('/food_industry', [CaseStudyControler::class, 'foodIndustry'])->name('caseStudy.foodIndustry');
-Route::get('/mespro_paperless_manufacturing', [CaseStudyControler::class, 'mesproPaperlessManufacturing'])->name('caseStudy.mesproPaperlessManufacturing');
-Route::get('/digital_manufacturing', [CaseStudyControler::class, 'digitalManufacturing'])->name('caseStudy.digitalManufacturing');
+Route::get('/machine_tool_industry', [CaseStudyControler::class, 'machineToolIndustry'])->name('caseStudy.machineToolIndustry');
+Route::get('/sap_Hospitals_capability', [CaseStudyControler::class, 'SAPHospitalsCapability'])->name('caseStudy.SAPHospitalsCapability');
+Route::get('/SAP_NBFC', [CaseStudyControler::class, 'SAPNBFC'])->name('caseStudy.SAPNBFC');
+Route::get('/food_processing_consumer_ware', [CaseStudyControler::class, 'foodProcessingConsumerWare'])->name('caseStudy.foodProcessingConsumerWare');
+Route::get('/manufacturing', [CaseStudyControler::class, 'manufacturing'])->name('caseStudy.manufacturing');
+Route::get('/pharmaceuticals', [CaseStudyControler::class, 'pharmaceuticals'])->name('caseStudy.pharmaceuticals');
+Route::get('/automotive_components', [CaseStudyControler::class, 'automotiveComponents'])->name('caseStudy.automotiveComponents');
+Route::get('/foam_packaging_products', [CaseStudyControler::class, 'foamPackagingProducts'])->name('caseStudy.foamPackagingProducts');
+Route::get('/rubber_and_polymers', [CaseStudyControler::class, 'rubberandPolymers'])->name('caseStudy.rubberandPolymers');
+Route::get('/AIRCRAFT_industries', [CaseStudyControler::class, 'AIRCRAFTIndustries'])->name('caseStudy.AIRCRAFTIndustries');
+Route::get('/real_estate_industries', [CaseStudyControler::class, 'realEstateIndustries'])->name('caseStudy.realEstateIndustries');
+Route::get('/UTILITIES_industries', [CaseStudyControler::class, 'UTILITIESIndustries'])->name('caseStudy.UTILITIESIndustries');
 // event and news route
 Route::get('/event_and_news', [NewsAndEventController::class, 'index'])->name('eventAndNews.index');
 Route::get('/events', [NewsAndEventController::class, 'event'])->name('eventAndNews.event');

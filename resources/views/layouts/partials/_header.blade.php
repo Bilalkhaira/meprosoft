@@ -96,11 +96,11 @@
 
                         <li class="nav-item dropdown hdr_dropdown">
                             <a class="nav-link dropdown-toggle" id="product_route" href="#" data-bs-toggle="dropdown">PRODUCTS &
-                                SOLUTION</a>
+                                SOLUTIONS</a>
                             <div class="dropdown-menu dropdown-lg" id="menu">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                        <h3 class="display-7 mb-5">PRODUCT & SOLUTION</h3>
+                                        <h3 class="display-7 mb-5">PRODUCTS & SOLUTIONS</h3>
                                         <p>Mesprosoft has designed tailored solutions for industries across verticals requirements operations and business performance are strengthened enough.</p>
                                     </div>
                                 </div>
@@ -182,26 +182,71 @@
 
 
                         <li class="nav-item dropdown hdr_dropdown">
-                            <a class="nav-link dropdown-toggle ss" href="#" data-bs-toggle="dropdown">CASE STUDY</a>
+                            <a class="nav-link dropdown-toggle ss" href="#" data-bs-toggle="dropdown">CASE STUDIES</a>
                             <div class="dropdown-menu dropdown-lg" id="menu">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                        <h3 class="display-7 mb-5">Case Study</h3>
+                                        <h3 class="display-7 mb-5">CASE STUDIES</h3>
                                         <p>Mesprosoft has designed tailored solutions for industries across verticals requirements operations and business performance are strengthened enough.</p>
                                     </div>
                                 </div>
                                 <div class="row">
+
                                     <div class="col-md-4">
                                         <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
                                         <a href="{{ route('caseStudy.foodIndustry') }}">Food Industry</a>
                                     </div>
                                     <div class="col-md-4">
                                         <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
-                                        <a href="{{ route('caseStudy.digitalManufacturing') }}">Digital Manufacturing</a>
+                                        <a href="{{ route('caseStudy.machineToolIndustry') }}">Machine Tool Industry</a>
                                     </div>
                                     <div class="col-md-4">
                                         <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
-                                        <a href="{{ route('caseStudy.mesproPaperlessManufacturing') }}">Mespro Paperless Manufacturing</a>
+                                        <a href="{{ route('caseStudy.SAPHospitalsCapability') }}">SAP Hospitals Capability</a>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('caseStudy.SAPNBFC') }}">SAP NBFC</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('caseStudy.foodProcessingConsumerWare') }}">Food Processing & Consumer Ware</a>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('caseStudy.manufacturing') }}">Manufacturing</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('caseStudy.pharmaceuticals') }}">Pharmaceuticals</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('caseStudy.automotiveComponents') }}">Automotive Components</a>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('caseStudy.foamPackagingProducts') }}">Foam Packaging Products</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('caseStudy.rubberandPolymers') }}">Rubber and Polymers</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('caseStudy.AIRCRAFTIndustries') }}">AIRCRAFT Industries</a>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('caseStudy.realEstateIndustries') }}">Real Estate Industries</a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="{{ asset('img/new_design_img/header.png') }}" width="15px" alt="">
+                                        <a href="{{ route('caseStudy.UTILITIESIndustries') }}">UTILITIES Industries</a>
                                     </div>
                                 </div>
                             </div>

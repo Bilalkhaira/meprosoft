@@ -107,7 +107,7 @@
 
 .footer a:hover {
     text-decoration: none;
-    color: #fbb217;
+    color: white;
 }
 
 .footer .nv_col h5 {
@@ -136,7 +136,7 @@
 .case_study_outer_list p {
     padding: 10px 5px;
     background-color: #fbb217;
-    color: black;
+    color: white;
 }
 
 .case_study_outer_list p i {
@@ -300,6 +300,40 @@
 .social_img{
     /* margin-left: 30px !important; */
 }
+
+#demo{
+    margin-top: -20px;
+}
+.carousel-caption {
+    right: 50% !important;
+    top: 30% !important;
+    text-shadow: none !important;
+}
+.carousel-caption h1{
+    font-weight: bolder;
+    font-size: 50px;
+    border-bottom: 5px solid #fbb217;
+    padding-bottom: 20px;
+    color: black !important;
+}
+
+.carousel-caption p{
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (max-width: 768px) {

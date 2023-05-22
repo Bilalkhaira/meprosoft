@@ -17,21 +17,63 @@ class CaseStudyControler extends Controller
         return view('pages.caseStudy.foodIndustry', ['data' => $data]);
     }
 
-    public function mesproPaperlessManufacturing()
+    public function machineToolIndustry()
     {
-        $menu_id = NavMenu::where('name', 'Mespro Paperless Manufacturing')->first('id');
-
-        $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
-
-        return view('pages.caseStudy.mesproPaperlessManufacturing', ['data' => $data]);
+        return view('pages.caseStudy.machine_tool_industry');
     }
 
-    public function digitalManufacturing()
+    public function SAPHospitalsCapability()
     {
-        $menu_id = NavMenu::where('name', 'Digital Manufacturing')->first('id');
+        return view('pages.caseStudy.sap_Hospitals_capability');
+    }
 
-        $data = MenuPagesData::with('cards')->where('menu_id', $menu_id->id)->first();
+    public function SAPNBFC()
+    {
+        return view('pages.caseStudy.SAP_NBFC');
+    }
 
-        return view('pages.caseStudy.digitalManufacturing', ['data' => $data]);
+    public function foodProcessingConsumerWare()
+    {
+        return view('pages.caseStudy.food_processing_consumer_ware');
+    }
+
+    public function manufacturing()
+    {
+        return view('pages.caseStudy.manufacturing');
+    }
+
+    public function pharmaceuticals()
+    {
+        return view('pages.caseStudy.pharmaceuticals');
+    }
+
+    public function automotiveComponents()
+    {
+        return view('pages.caseStudy.automotive_components');
+    }
+
+    public function foamPackagingProducts()
+    {
+        return view('pages.caseStudy.foam_packaging_products');
+    }
+
+    public function rubberandPolymers()
+    {
+        return view('pages.caseStudy.rubber_and_polymers');
+    }
+
+    public function AIRCRAFTIndustries()
+    {
+        return view('pages.caseStudy.AIRCRAFT_industries');
+    }
+
+    public function realEstateIndustries()
+    {
+        return view('pages.caseStudy.real_estate_industries');
+    }
+
+    public function UTILITIESIndustries()
+    {
+        return view('pages.caseStudy.UTILITIES_industries');
     }
 }
